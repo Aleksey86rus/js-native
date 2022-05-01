@@ -23,7 +23,7 @@
 // Так и бесконечность (Infinity / -Infinity)
 
 // 4. Задача
-//let test
+// let test;
 // Значение переменной будет равняться - undefined.
 
 // 5. Задача
@@ -33,33 +33,38 @@
 //let text = 'JavaScript';
 
 // 7. Задача
-//let nameFieldChecked = true;
+// let isChecked = true;
 
 // 8. Задача
-//let Variable = 'null'
+// let Variable = null;
 
 // 9. Задача
-//const EXPONENTIAL = '1e3'
+// const EXPONENTIAL = '1e3'
+// const EXP = 2.718;
+
+// Стандартный вид записи: 3.7654 * 10 ^ 8 === 3.7654e8
+// Экспонента: e (exp) =  2.718
+
 
 // 10. Задача
-//const BACGROUND_COLOR_CSS = '#000'
+// const BACKGROUND_COLOR = '#000';
 
 // 11. Задача
 // Variable declarations
-// var studlyCapVar
-// var properCamelCase;
-// var titleCaseOver;
+// let studlyCapVar;
+// let properCamelCase;
+// let titleCaseOver;
 
-// Variable assignments
-// var studlyCapVar = 10;
-// var properCamelCase = 'A String';
-// var titleCaseOver = 9000;
+// // Variable assignments
+// studlyCapVar = 10;
+// properCamelCase = 'A String';
+// titleCaseOver = 9000;
 
 
 // 12. Задача
 // var numTest = 10;
 // var numTest = 15;
-// Оператор объявления var можно объявить повторно. Данная переменная продолжит существовать по заверщении выполнения блока.
+// Оператор объявления var: можно объявить переменную повторно. Данная переменная продолжит существовать по заверщении выполнения блока.
 
 
 // let numberTest = 10;

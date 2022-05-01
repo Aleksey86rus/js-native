@@ -43,7 +43,8 @@ let userName = 'Pavel';
 // let userName = "Pavel";
 // let userName = `Pavel`; // Используется для шаблонных литералов
 
-let hasUserAccess = true; // is - является / has - имеет
+// ! Boolean
+let hasUserAccess = true; // * is - является / has - имеет
 let isAdmin = false;
 
 let testNull = null;
