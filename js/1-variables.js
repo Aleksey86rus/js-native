@@ -49,7 +49,7 @@ let isAdmin = false;
 
 let testNull = null;
 let testUndefined; // undefined
-// let testUndefined = undefined; // undefind
+// let testUndefined = undefined; // undefinds
 
 
 // let / const / var
