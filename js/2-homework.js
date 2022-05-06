@@ -1,47 +1,57 @@
 // 1. Задача
 // Создать 3 перемнных, все разного типа данных. Вывести в консоль в одну строчку через пробел.
 
-/*let season = 'весна';
-let month = 5;
-let nullVar = null;
-console.log("На дворе " + season + " месяц " + month + " null");*/
+// let season = 'весна';
+// let month = 5;
+// let nullVar = null;
+
+// console.log(season + " " + month + " " + nullVar);
+// console.log(season, month, nullVar);
+
+
+// console.log("На дворе " + season + " месяц " + month + " null");
 
 //-------------------------------------------------------------------------------
 
-//2. Задача
+// 2. Задача
 //Создать переменную, которая хранит имя. Вывести в консоль приветствие:
 //Привет, <имя из переменной>!
+//  <имя из переменной>, привет!
 
-/*let userName = " I am Aleksey";
-console.log("Привет " + userName);*/
+// let userName = "Алексей";
+// console.log(userName + ", Привет!");
+
+
 
 //-------------------------------------------------------------------------------
 
 //3. Задача
-//Объяви переменные intValue, numericValue, size, number типа number. Присвой им любые разные значения. Вывести в консоль переменные в консоль через пробел, в обратном порядке их создания.
+//Объяви переменные intValue, numericValue, size, number типа number. Присвой им любые разные значения. Вывести в консоль переменные через пробел, в обратном порядке их создания.
 
-/*let intValue = "100";
-let numbericValue = 100;
-let size = 20 > 10;
-let number = "number";
+// let intValue = 20;
+// let numbericValue = 100;
+// let size = 50;
+// let number = NaN;
 
-console.log(typeof number);
-console.log(typeof size);
-console.log(typeof numbericValue);
-console.log(typeof intValue);*/
+// console.log(number + " " + size + " " + numbericValue + " " + intValue);
+
+// console.log(typeof number);
+// console.log(typeof size);
+// console.log(typeof numbericValue);
+// console.log(typeof intValue);
 
 //-------------------------------------------------------------------------------
 
 //4. Задача
 //Создать 3 перемнных, все разного типа данных. Вывести их тип в консоль.
 
-/*let number = 20;
-let string = "JavaScript";
-let hasUserRight = true;
+// let number = 20;
+// let string = "JavaScript";
+// let hasUserRight = true;
 
-console.log(number);
-console.log(string);
-console.log(hasUserRight);*/
+// console.log(typeof number); // "number"
+// console.log(typeof string);
+// console.log(typeof hasUserRight);
 
 //-------------------------------------------------------------------------------
 
@@ -54,10 +64,10 @@ console.log(hasUserRight);*/
 //console.log(chiclo boolian user__text)
 
 
-//userAge = 10;
-//boolean = false;
-//userText = "Какой-то текст";
-//console.log(useAge + boolean + userText);
+// userAge = 10;
+// isBoolean = false;
+// userText = "Какой-то текст";
+// console.log(userAge, isBoolean, userText);
 
 //-------------------------------------------------------------------------------
 
@@ -72,12 +82,12 @@ console.log(hasUserRight);*/
 //console.log(uzerName + "имеет" + "доступ:" + "true")
 
 
-/*let userName = "Валентин";
-let userMoney = 2000;
-let hasAreAccess = true;
+// let userName = "Валентин";
+// let userMoney = 2000;
+// let hasAccess = true;
 
-console.log("У " + userName + "a " + " есть " + userMoney + " монет");
-console.log(userName + " имеет " + "доступ: " + hasAreAccess);*/
+// console.log("У " + userName + "a есть " + userMoney + " монет");
+// console.log(userName + " имеет доступ: " + hasAccess);
 
 //-------------------------------------------------------------------------------
 
@@ -98,17 +108,17 @@ console.log(userName + " имеет " + "доступ: " + hasAreAccess);*/
 //console.log(text);
 
 
-/*//let text = '';
-// text = text + "Merry";
-// text = text + "Christmas\n";
-// text = text + "Merry New\n";
-// text = text + "New";
-// text = text + "weekend\n";
-text = text + "Happy New";
-// text = text + "Merry New!";
-// text = text + " ";
-text = text + " Year";
-//console.log(text);*/
+// let text = '';
+// // text = text + "Merry";
+// // text = text + "Christmas\n";
+// // text = text + "Merry New\n";
+// // text = text + "New";
+// // text = text + "weekend\n";
+// text = text + "Happy New";
+// // text = text + "Merry New!";
+// // text = text + " ";
+// text = text + " Year";
+// console.log(text);
 
 //-------------------------------------------------------------------------------
 
@@ -118,16 +128,16 @@ text = text + " Year";
 //Нельзя изменять строки с объявлением переменных.
 //Нельзя изменять строки отвечающие за вывод в консоль.
 //Нужно раскомментировать одну строку и не менять остальные.
-/*let x = 2;
-let y = 12;
+// let x = 2;
+// let y = 12;
 
-//y = x * y;
-y = x + y;
+// //y = x * y;
+// y = x + y;
 
-x = y - x;
-y = y - x;
-console.log(x);
-console.log(y);*/
+// x = y - x;
+// y = y - x;
+// console.log(x);
+// console.log(y);
 
 //-------------------------------------------------------------------------------
 
@@ -152,19 +162,20 @@ console.log("пять");
 console.log(a + b);*/
 
 
-/*let a = 3;
-let b = 2;
+// // 2 плюс 3 равно 5
+// let a = 3;
+// let b = 2;
 
-console.log("два");
-console.log(b);
-console.log(" плюс ");
-//console.log(" минус ");
-console.log(a);
-console.log("три");
-console.log(" равно ");
-console.log(" будет ");2545454
-console.log("пять");
-console.log(a + b);*/
+// //console.log("два");
+// console.log(b);
+// console.log(" плюс ");
+// //console.log(" минус ");
+// console.log(a);
+// //console.log("три");
+// console.log(" равно ");
+// //console.log(" будет ");
+// //console.log("пять");
+// console.log(a + b);
 
 //-------------------------------------------------------------------------------
 
@@ -172,8 +183,9 @@ console.log(a + b);*/
 //Пользователь вводит с клавиатуры любое сначала число, а затем текст. Вывести в консоль в следующем виде:
 //Вы ввели текст: <текст пользователя>, вы ввели число: <число пользователя>
 
-/*let textUser = prompt('Вы ввели текст');
-let numberUser = prompt('вы ввели число');*/
+// let textUser = prompt('Введите текст');
+// let numberUser = prompt('Введите число');
+// console.log("Вы ввели текст: " + textUser + ", вы ввели число: " + numberUser);
 
 //-------------------------------------------------------------------------------
 
@@ -201,7 +213,7 @@ let numberUser = prompt('вы ввели число');*/
 //console.log(typeof 200);//number
 //console.log(typeof "");//string
 //console.log(typeof "true");//string
-//console.log(typeof null);//null
+//console.log(typeof null);// object
 
 //console.log(typeof "tester");//string
 //console.log(typeof NaN);//number
@@ -218,13 +230,24 @@ let numberUser = prompt('вы ввели число');*/
 //var numTest = 7;
 //console.log(numTest); // В консоли так же увидим значение -7 т.к оператор у нас "var" который позволяет нам использовать значение в переменно повторно?
 
-
 //console.log(numberTest); //В консоли мы увидим ошибку т.к  допускается повторное объявление данной переменной?
 //let numberTest = 12;
 //console.log(numberTest); // Мы столкнемся с ошибкой.?
-
 
 //console.log(PI); // В консоли мы увидим число 3.1415?
 //const PI = 3.1415;
 //console.log(PI); // А вот повторное использование const приведет нас к ошибке т.к значение можно присвоить лишь один раз?
 
+
+
+// console.log(numTest); // undefined
+// var numTest = 7;
+// console.log(numTest); // 7
+
+// console.log(numberTest); // ReferenceError
+// let numberTest = 12;
+// console.log(numberTest); // Код не дойдёт из-за ошибки на 237
+
+// console.log(PI); // ReferenceError
+// const PI = 3.1415;
+// console.log(PI); // Код не дойдёт из-за ошибки на 241
