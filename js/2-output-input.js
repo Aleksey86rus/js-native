@@ -64,3 +64,6 @@ console.log(typeof -104.657465); // number
 // let nameUser = prompt('Введите имя'); // let nameUser = "<имя>"
 // console.log("Я " + nameUser + "!");
 
+// Если хотим запросить число, то:
+let numberUser = Number(prompt('Write your number'));
+

@@ -4,11 +4,12 @@
 //Пользователь вводит склавиатуры 2 числа. Выполнить деление первого на второе и записать в подробном виде:
 //10 : 5 = 2
 
-//let num = 10;
-//let num2 = 5;
 
-//let = prompt('Введите через пробел два числа 10 и 5');
-//console.log(num + " / " + num2 + (num + num2));
+
+// let num = Number(prompt('Введите число 1'));
+// let num2 = Number(prompt('Введите число 2'));
+// console.log(num + " : " + num2 + " = " + num / num2);
+// 10 : 5 = 2
 
 
 // -------------------------------------------------------------
@@ -18,32 +19,17 @@
 //Запросить у пользователя 1 число. Прибавить к нему 10, записать в подробном виде:
 //25 + 10 = 35
 
-//let num = 25;
-//let num2 = 10;
-
-//let = prompt('Введите число 25');
-//console.log(num);
-
-
-//console.log(num + " + " + num2 + " = " + (num + num2));
-//console.log(num + num2);
+// let num = Number(prompt('Введите число'));
+// console.log(num + ' + 10 = ' + (num + 10));
 
 
 // -----------------------------------------------------------
 
-
 //3. Задача
 //Запросить у пользователя 1 число. Из 100 вычитаем запрошенное число, записать в подробном виде:
-//100 - 17 = 83
 
-//let num = 100;
-//let num2 = 17;
-
-//let = prompt('Введите число 17');
-//console.log(num2);
-//console.log(num + ' - ' + num2 + ' = ' + (num - num2));
-//console.log(num - num2);
-
+// let num = Number(prompt('Введите число'));
+// console.log('100 - ' + num + ' = ' + (100 - num));
 
 // -----------------------------------------------------------
 
@@ -53,19 +39,10 @@
 //5 × 7 = 35
 
 
-//let num = 5;
-//let num2 = 7;
+// let num = Number(prompt('Write your number 1'));
+// let num2 = Number(prompt('Write your number 2'));
 
-
-//let = prompt('Введите число 5');
-//let = prompt('Введите число 7');
-
-//console.log(num);
-//console.log(num2);
-
-
-//1 - console.log(num * num2);
-//2 - console.log(num + " * " + num2 + " = " + (num * num2));
+// console.log(num + ' × ' + num2 + ' = ' + num * num2);
 
 
 // -----------------------------------------------------------
@@ -76,20 +53,11 @@
 //10 - 13 = -3
 
 
-//let num = 10;
-//let num2 = 13;
+// let num = Number(prompt('Write your number 1'));
+// let num2 = Number(prompt('Write your number 2'));
 
+// console.log(num + ' - ' + num2 + ' = ' + (num - num2));
 
-//let = prompt('Введите число 10');
-//let = prompt('Введите число 13');
-
-//console.log(num);
-//console.log(num2);
-
-
-
-// 1-console.log(num - num2);
-//2 - console.log(num + " - " + num2 + " = " + (num - num2));
 
 // ----------------------------------------------------------
 
@@ -99,28 +67,11 @@
 //10 × 50 : 2 = 250
 
 
-//let num = 10;
-//let num2 = 50;
-//let num3 = 2;
+// let num = Number(prompt('Write your number 1'));
+// let num2 = Number(prompt('Write your number 2'));
 
-
-
-//let = prompt('Введите чмсло 10');
-//let = prompt('Введите чмсло 50');
-
-//console.log(num);
-//console.log(num2);
-
-
-//console.log(num + " * " + num2 + " = " + (num * num2));
-
-
-//let firstResult = (num * num2);
-//console.log(firstResult);
-
-//console.log(firstResult + ' / ' + num3 + ' = ' + (firstResult / num3));
-//let sum = (firstResult / num3);
-//console.log(sum);
+// let sum = (num + ' × ' + num2 + ' : 2 ' + ' = ' + num * num2 / 2);
+// console.log(sum);
 
 
 
@@ -132,21 +83,8 @@
 //17 × 2 = 34
 
 
-//let num = 17;
-//let num2 = 2;
-
-//let sum = 34;
-
-
-//let = prompt('Введите число 17');
-
-//let sum = (num + ' * ' + num2 + ' = ' + (num * num2));
-//console.log(sum);
-
-
-
-//console.log(num * num2);
-//console.log(num + ' * ' + num2 + ' = ' + (num * num2));
+// let num = Number(prompt('Write your number'));
+// console.log(num + ' × ' + '2 ' + '= ' + num * 2);
 
 
 // ---------------------------------------------------------------------
@@ -158,10 +96,6 @@
 //Тебя зовут <имя>, после дня рождения тебе будет <возраст> лет!
 
 
-// let nameUser = 'Егор';
-// let ageUser = 20;
-
-
-// let = prompt('Введите имя');
-// let = prompt('Введите Ваш возраст');
-// console.log('Тебя зовут ' + nameUser + ', после дня рождения тебе будет ' + ageUser + '!');
+// let nameUser = prompt('Введите имя');
+// let ageUser = Number(prompt('Введите Ваш возраст'));
+// console.log('Тебя зовут ' + nameUser + ', после дня рождения тебе будет ' + (ageUser + 1) + '!');
