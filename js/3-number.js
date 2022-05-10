@@ -53,7 +53,7 @@ let testNum = 0;
 testNum += 10; // testNum = testNum + 10;
 // testNum *= 10; // testNum = testNum * 10;
 // testNum /= 10; // testNum = testNum / 10;
-// testNum -= 10; // testNum = testNum - 10;
+// testNum -= 10; // testNum = testNum - 10;|
 // testNum %= 10; // testNum = testNum % 10;
 
 
@@ -63,8 +63,8 @@ console.log(testNum);
 console.log("333" + 3); // "3333"
 console.log("333" * 3); // 999
 console.log("333" + "333"); // "333333"
-console.log("5" * "5"); // 25
-console.log("5px" * 3); // NaN
+// console.log("5" * "5"); // 25
+// console.log("5px" * 3); // NaN
 console.log(3 * "20"); // 60
 console.log(3 + "20px"); // "320px"
 console.log("40" + 20 + 10); // "402010" // ! Следи за порядком действия
