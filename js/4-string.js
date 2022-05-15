@@ -44,6 +44,3 @@ console.log('My name is', userName);
 
 // !  Шаблонные литералы
 console.log(`My name is ${userName}`);
-
-
-
