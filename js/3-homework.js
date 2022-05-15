@@ -83,7 +83,7 @@
 
 
 // let num = Number(prompt('Write your number'));
-// console.log(num + ' × ' + '2 ' + '= ' + num * 2);
+// console.log(num + ' × 2 = ' + num * 2);
 
 
 // ---------------------------------------------------------------------
@@ -108,6 +108,10 @@
 // let seven = 9;
 // console.log(++seven);
 
+// let seven = 9;
+// seven++;
+// console.log(seven);
+
 
 // -------------------------------------------------------------------------------
 
@@ -119,6 +123,11 @@
 // console.log(7 + tetraVar++ - 3 * --tetraVar);
 
 // 7 + 4 - 3 * 4 = -1
+
+// let index = 1; // 2
+// console.log(1); // 1
+// console.log(3); // 3
+
 
 
 // --------------------------------------------------------------------------------
@@ -132,6 +141,8 @@
 
 // 1 + 1 - 3 * 0 + 2 * (1 + 2) = 8
 
+
+
 // --------------------------------------------------------------------------------
 
 
@@ -140,6 +151,10 @@
 
 // let tetraVar = 4;
 // console.log(3 - ++tetraVar - 3 + ++1 * 2 * (++tetraVar + --tetraVar));
+
+// console.log(3 - ++tetraVar - 3 + 2 * 2 * (++tetraVar + --tetraVar));
+// 3 - 5 - 3 + 2 * 2 * (6 + 5) = 3 - 5 - 3 + 4 * 11 = 39
+
 
 // В консль выведется синтаксическая ошибка (SyntaxError) так как инкремент, или декремент можно применить только к переменной. В нашем случае преинкремент был присвоен, значению 1.
 
@@ -156,9 +171,8 @@
 // let num2 = Number(prompt('Write tour number 2'));
 // let num3 = Number(prompt('Write your number 3'));
 
-
-// console.log(num + ' + ' + num2 + ' + ' + num3 + ' = ' + ((num + num2 + num3) / 3));
-
+// // "(8 + 6 + 10) : 3 = 8"
+// console.log('(' + num + ' + ' + num2 + ' + ' + num3 + ') / 3 = ' + ((num + num2 + num3) / 3));
 
 // ------------------------------------------------------------------------------
 
@@ -178,7 +192,6 @@
 // console.log("10" - 7 + 5 + "3"); // 3 + 5 + '3' = 83
 // console.log("10" + (7 + 5) + "3"); // '10' + 12 + '3' = 10123
 
-// console.log();
 // console.log(Number("10") + 7 + 5 + "3"); // 223
 // console.log(Number("10") + Number(String(7)) + String(5) + "3"); // 1753
 
@@ -190,13 +203,13 @@
 //Укажите все значения NaN:
 
 // console.log("2px" - 2); // NaN
-// console.log(0 + 3);
-// console.log("10" + 10);
-// console.log("3" - 4);
+// console.log(0 + 3); // 3
+// console.log("10" + 10); // "1010"
+// console.log("3" - 4); // -1
 // console.log("4px" * 2); // NaN
-// console.log(10 - "7");
+// console.log(10 - "7"); // 3
 // console.log(7 - "2px"); // NaN
-// console.log("4px" + 2);
+// console.log("4px" + 2); // '4px2'
 // console.log("8px" / 2); // NaN
 
 
@@ -218,16 +231,15 @@
 
 
 // let index = 0;
-// index = index + 1;
-// console.log(index++);
+// index++;
 
 // let anotherNum = 10;
-// anotherNum = anotherNum / 5;
-// console.log(anotherNum);
+// anotherNum /= 5;
 
 // let indexTest = 5;
-// indexTest = indexTest - 1;
-// console.log(indexTest);
+// // indexTest -= 1;
+// indexTest--;
+
 
 
 // ----------------------------------------------------------------------------
@@ -250,20 +262,25 @@
 //Пользователь вводит кол-во людей в очереди. Фиксированное время приема одного покупателя всегда равна 5 минутам.
 
 // Пример ввода:
-// Введите кол - во людей: 40
+// Введите кол-во людей: 40
 
 // Пример вывода:
 //   Вы должны отстоять в очереди 3 часа и 20 минут.
 
 
+// 23
+// 115
+// 60 + 55
+// 1 час 55 минут
+// let quantity = Number(prompt('Введите кол-во людей:'));
+// let people = quantity * 5;
 
-// let quantity = Number(prompt('Введите кол - во людей: 40'));
-// let people = (quantity * 5);
-
-// let hour = (Math.round(people / 60));
-// let min = (people % 60);
+// // let hour = (Math.floor(people / 60));
+// let hour = parseInt(people / 60);
+// let min = people % 60;
 
 // console.log('Вы должны отстоять в очереди ' + hour + ' часа и ' + min + ' минут.');
+
 
 
 // ----------------------------------------------------------------------------
@@ -272,10 +289,11 @@
 //19. ★ Задача ★
 //В переменной number записано целое число. В переменную lastDigit нужно записать последнюю цифру этого числа. Для вычисления используй переменную number и оператор «остаток от деления».
 
-// let number = 546;
-
-// let lastDigit = (number % 90);
+// let number = 545;
+// let lastDigit = number % 10;
 // console.log(lastDigit);
+
+
 
 
 // ------------------------------------------------------------------------------
@@ -283,6 +301,12 @@
 
 //20. ★★ Задача ★★
 //Решить задачу 18 без использования функций parseInt и Math.floor.
+
+
+// let target = 76.543654
+// console.log((target - target % 60) / 60);
+
+
 
 
 // -----------------------------------------------------------------------------
