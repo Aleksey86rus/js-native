@@ -21,11 +21,11 @@
 // console.log(typeof num == "number");
 
 
-console.log(67 == "67"); // true
-console.log(false == "0"); // true
-console.log(false === "0"); // false
-console.log('text' == 'text'); // true
-console.log('text' === 'text'); // true
+// console.log(67 == "67"); // true
+// console.log(false == "0"); // true
+// console.log(false === "0"); // false
+// console.log('text' == 'text'); // true
+// console.log('text' === 'text'); // true
 
 
 // 3 == '3'
@@ -108,7 +108,7 @@ console.log('text' === 'text'); // true
 // console.log(isNaN(testVar)); // true
 
 
-// console.log(isNaN('105px'));
+// console.log(isNaN('105px')); // true
 
 // console.log(isNaN(Number('105'))); // Под капотом
 
