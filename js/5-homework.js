@@ -16,8 +16,32 @@
 //Что выведется в консоль? Ответ записать в комментарий.
 
 // let num = "10"
-// // console.log(Boolean("10"));
-// console.log(typeof num === "number");///???
+// // // console.log(Boolean("10"));
+// // console.log(typeof num === "number");///???
+// console.log(typeof num == "number");
+
+
+console.log(67 == "67"); // true
+console.log(false == "0"); // true
+console.log(false === "0"); // false
+console.log('text' == 'text'); // true
+console.log('text' === 'text'); // true
+
+
+// 3 == '3'
+
+// 6 - "3" == '3'
+
+// 6 + "3" => "63"
+// 6 - "3" => 3
+
+// 3 == '3'
+// 3 == 3
+
+
+// console.log(6 - "3" === '3');
+// console.log(6 - "3" == '3');
+
 
 
 // --------------------------------------------------------------
@@ -28,7 +52,9 @@
 //Что выведется в консоль? Ответ записать в комментарий.
 
 // let text = "Victor"
-// console.log(typeof text === "string"); // true. Так как, строка строго равна строке.
+// console.log(typeof "Victor" === "string"); // true. Так как, строка строго равна строке.
+
+
 
 
 // --------------------------------------------------------------
@@ -50,7 +76,7 @@
 
 // let a = 10;
 // let b = 20;
-// console.log(a !== b); // true. Так как, обе переменные являтся, числом.
+// console.log(a !== b); // true. Так как, обе переменные являются, числом и не равны по значению.
 
 
 // --------------------------------------------------------------
@@ -65,24 +91,38 @@
 // console.log(b == c); // true. Так как, оператор "равно" сравнивает значения не смотря, на тип.
 
 
+// console.log(typeof null); // "object"
+// console.log(null === undefined);
+
+
+// null, undefined, string, number(NaN, Infinity, -Infinity), boolean,
+// object (array, function ...) *** symbol, bigint
+
 // --------------------------------------------------------------
 
 
 // 7. Задача
 //Не выполняя код, дать ответ:
 //Что выведется в консоль? Ответ записать в комментарий.
+// let testVar = NaN;
+// console.log(isNaN(testVar)); // true
+
+
+// console.log(isNaN('105px'));
+
+// console.log(isNaN(Number('105'))); // Под капотом
 
 // console.log(NaN == NaN); // false
 // console.log(NaN === NaN); // false
-// console.log(false == "false"); // 0 == "false" // false
-// console.log(true == "true"); // 1 == "true" // false
-// console.log(isNaN(10 + "5")); // ?
+// console.log(false == "false"); // 0 == NaN // false
+// console.log(true == "true"); // 1 == NaN // false
+// console.log(isNaN(10 + "5")); // '105'-> 105 -> false
 
-// console.log(isNaN(10 - "5")); // ?
-// console.log(isNaN(false)); // ?
-// console.log("" == false); //   false == false //true
-// console.log("0" == false); // "0" == 0 // true
-// console.log(10 == true); // 10 == 1 // true
+// console.log(isNaN(10 - "5")); // 5 -> false
+// console.log(isNaN(false)); // false
+// console.log("" == false); // 0 == 0 // true
+// console.log("0" == false); // 0 == 0 // true
+// console.log(10 == true); // 10 == 1 // false
 
 
 // --------------------------------------------------------
@@ -112,11 +152,11 @@
 //Не выполняя код, дать ответ:
 //Что выведется в консоль? Ответ записать в комментарий.
 
-// console.log(null == undefined); // false (exception)
-// console.log('Кит' < 'Киндер'); //  false
+// console.log(null == undefined); // true (exception)
+// console.log('Кит' > 'Киндер'); // false (н п р с т)
 // console.log(0 == ""); // true
 // console.log('Я' > 'Ю'); // true
-// console.log(null == false); // false
+// console.log(null == false); // true
 
 // console.log(isNaN(10 - "10") == 1); // false
 // console.log("" == false); // true
@@ -147,6 +187,7 @@
 // -----------------------------------------------------------
 
 
+// console.log(typeof ""); // "string"
 // 11. Задача
 //Не выполняя код, дать ответ:
 //Что выведется в консоль? Ответ записать в комментарий.
@@ -159,8 +200,8 @@
 
 // console.log(typeof false === "Boolean"); // false
 // console.log(50 + String(Number(Boolean(null))) == 500 || false); // true
-// console.log(!"" && !null && !(2 + 2 * 2 === 8)); //
-// console.log(5 > 3 && 7 < 10 && 5 == "5"); //
+// console.log(!"" && !null && !(2 + 2 * 2 === 8)); // true
+// console.log(5 > 3 && 7 < 10 && 5 == "5"); // true
 // console.log(typeof true == "boolean"); // true
 
 
