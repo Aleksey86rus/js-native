@@ -298,6 +298,47 @@
 //   }
 // }
 
+// ------------------------------------------------------------------------
+// let userNum1 = Number(prompt('Write your number 1'));
+// let userNum2 = Number(prompt('Write your number 2'));
+// let userNum3 = Number(prompt('Write your number 3'));
+
+// if (userNum1 >= userNum2) { // 5 >= 10 -- false. Условие не выполнено.
+//   console.log(userNum2);    // В консоль ничего не выведется т.к условие не выполнено!
+// }
+
+// if (userNum1 >= userNum2) { // 10 >= 5 -- true. Условие выполнено.
+//   console.log(userNum2);    // В консоль выведется 5 т.к условие выполнено!
+// }
+
+// if (userNum1 >= userNum2) { // 10 >= 5 -- true. Условие выполнено.
+//   console.log(userNum1);    // В консоль выведется 10 т.к условие выполнено!
+// }
+
+// if (userNum1 >= userNum2) { // 5 >= 10 -- false. Условие не выполнено.
+//   console.log(userNum1);    // В консоль ничего не выведется т.к условие не выполнено!
+// }
+
+// if (userNum1 >= userNum2) {
+//   if (userNum1 >= userNum3) {
+//     console.log(userNum1);
+//   } else {
+//     console.log(userNum3);
+//   }
+// } else {
+//   if (userNum2 > userNum3) {
+//     console.log(userNum2);
+//   } else {
+//     console.log(userNum3);
+//   }
+// }
+
+
+// let Num1 = Number(prompt('Write your number 1'));
+// let Num2 = Number(prompt('Write your number 2'));
+// let Num3 = Number(prompt('Write your number 3'));
+// let Num4 = Number(prompt('Write your number 4'));
+
 // -----------------------------------------------------------------------------------
 
 //? ★ 19. Задача ★
