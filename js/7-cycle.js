@@ -2,12 +2,12 @@
 
 // * 1. Цикл (оператор for)
 
-for (let i = 0; i < 4; i++) {
-  // i < 10;
-  console.log('Hello Aleksey!');
-  // Тело цикла
-  // i++
-}
+// for (let i = 0; i < 4; i++) {
+//   // i < 10;
+//   console.log('Hello Aleksey!');
+//   // Тело цикла
+//   // i++
+// }
 
 // let result = '+';
 // for (let i = 0; i < 6; i++) {
