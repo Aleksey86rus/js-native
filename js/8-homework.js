@@ -227,11 +227,11 @@
 // 18. Задача
 // Вывести в консоль индекс самого минимального значения из массива numberArray.
 
-// const numberArray = [13, 6, 12, -11, 5, 4, -19, 13, -1, 0, 5, -9];
+// const numberArray = [15, 6, 12, -11, 5, 4, -19, 13, -1, 0, 5, -9];
 
 // let minNumber = numberArray[0];
 // let minIndex = 0;
-// for (let i = 1; i < numberArray.length; i++) {
+// for (let i = 0; i < numberArray.length; i++) {
 //   debugger
 //   if (numberArray[i] < minNumber) {
 //     minNumber = numberArray[i];
@@ -240,6 +240,23 @@
 //   debugger
 // }
 // console.log(minIndex);
+
+
+
+// const numberArray = [11, 6, 12, -11, 5, 4, -19, 13, -1, 0, 22, 5, -9];
+
+// let maxNumber = numberArray[0];
+// let maxIndex = 0;
+// for (let i = 0; i < numberArray.length; i++) {
+//   // debugger
+//   if (maxNumber < numberArray[i]) {
+//     maxNumber = numberArray[i];
+//     maxIndex = i
+//   }
+//   // debugger
+// }
+// console.log(maxNumber);
+// console.log(maxIndex);
 
 
 
@@ -259,9 +276,6 @@
 // -11 < 6 -> true
 // minNumber = -11
 // minIndex = 3
-
-
-
 
 
 // -9 -8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9
@@ -292,6 +306,16 @@
 
 // const numberArray = [-13, 6, 12, -11, 5, 4, 19, 13, -1, 0, 5, -9];
 
+// let sumNumber = 0;
+// for (let i = 0; i < numberArray.length; i++) {
+//   if (numberArray[i] % 3 === 0) {
+//     sumNumber = numberArray[i];
+//     sumNumber += numberArray[i];
+//   }
+// }
+// console.log(sumNumber);
+
+// ==========================================================================
 
 
 // 21. Задача
@@ -300,20 +324,73 @@
 // const numberArray = [-13, 6, 12, -11, 5, 4, 19, 13, -1, 0, 5, -9];
 // const newArr = [];
 
+// for (let i = 0; i < numberArray.length; i++) {
+//   if (numberArray[i] % 3 === 0) {
+//     newArr.push(numberArray[i]);
+//   }
+// }
+// console.log(newArr);
+
+
+// ==========================================================================
+
 // 22. Задача
 // Написать программу, которая посчитает количество строк и чисел в массиве varArray. Результат вывести в консоль с подписью, где число строк, а где чисел.
 
 // const varArray = [15, 12, 'text', true, 6, 7, 21, [], false, 0, 1, '', -1, 'world', 'piece'];
+// let countString = 0;
+// let countNumber = 0;
+
+// for (let i = 0; i < varArray.length; i++) {
+//   if (typeof varArray[i] === 'string') {
+//     countString++
+//   } else if (typeof varArray[i] === 'number') {
+//     countNumber++
+//   }
+// }
+
+// console.log(countString);
+// console.log(countNumber);
+
+// ==========================================================================
 
 // 23. Задача
 // Написать программу, которая посчитает количество массивов внутри массива testArray.
 
-// const testArray = [11, 17, [18, 10], -5, 7, [], 9, [-1], [4, 5]];
+// const testArray = [11, 17, [18, 10], -5, 7, [], 9, [-1], [4, 5], null, {}];
+// let quantityArray = 0;
+// for (let i = 0; i < testArray.length; i++) {
+
+//   // null - тоже даёт object
+//   // {} - объект тоже объект
+//   // if (typeof testArray[i] === 'object') {
+//   //   quantityArray++;
+//   // }
+
+//   if (Array.isArray(testArray[i])) {
+//     quantityArray++
+//   }
+// }
+// console.log(quantityArray);
+// ==========================================================================
+
 // 24. Задача
 
 // Дан массив чисел. Вывести в консоль среднее арифметическое отрицательных элементов массива numberArray.
 
-// const numberArray = [-13, 6, 12, -11, 5, -4, 19, 13, -1, 0, 5, -9];
+// const numberArray = [-13, 6, 12, -11, 5, -4, 19, 13, -1, 0, 5, -9, -1, -2];
+// let sumNegativeArr = 0;
+// let countNegativeNumbers = 0;
+// for (let i = 0; i < numberArray.length; i++) {
+//   if (numberArray[i] < 0) {
+//     sumNegativeArr += numberArray[i]
+//     countNegativeNumbers++;
+//   }
+// }
+// console.log(sumNegativeArr / countNegativeNumbers);
+
+
+// ==========================================================================
 
 // 25. Задача
 // Не выполняя код, дать ответ:
@@ -321,8 +398,12 @@
 
 // const arr = [3, 7, 4];
 // const newArr = arr;
+
 // newArr.push(7);
-// console.log(arr); // ?
+// console.log(arr); // ? arr [3, 7, 4, 7]
+
+
+// ==========================================================================
 
 // 26. Задача
 // Не выполняя код, дать ответ:
@@ -333,7 +414,8 @@
 // const newArr = arr;
 // arr.pop();
 
-// console.log(newArr); // ?
+// console.log(newArr); // ? newArr [2, 1]
+// ==========================================================================
 
 // 27. Задача
 // Не выполняя код, дать ответ:
@@ -344,10 +426,12 @@
 // const antArr = newArr;
 
 // antArr.unshitf(5, 4);
+// antArr.unshift(5, 4);
 
-// console.log(arr); // ?
-// console.log(newArr); // ?
-// console.log(antArr); // ?
+// console.log(arr); // ? arr [5, 4, 2, 1, 5]
+// console.log(newArr); // ? newArr [5, 4, 2, 1, 5]
+// console.log(antArr); // ? antArr [5, 4, 2, 1, 5]
+// ==========================================================================
 
 // 28. Задача
 // Не выполняя код, дать ответ:
@@ -359,8 +443,10 @@
 // list[2] = 7;
 // arr[4] = 12;
 
-// console.log(arr); // ?
-// console.log(list); // ?
+// console.log(arr); // ? arr [6, 9, 7, 12]
+// console.log(list); // ? list [6, 9, 7, 12]
+// console.log(list.length); // ? 5
+// ==========================================================================
 
 // 29. Задача
 // Не выполняя код, дать ответ:
@@ -373,35 +459,58 @@
 // copyArr.push(1, 2);
 // othArr.shift();
 
-// console.log(arr); // ?
-// console.log(newArr); // ?
-// console.log(antArr); // ?
+// console.log(arr); // ? arr [2, 1, 2]
+// console.log(copyArr); // ? copyArr [2, 1, 2]
+// console.log(othArr); // ? othArr [2, 1, 2]
+// ==========================================================================
 
 // 30. Задача
 // Дан массив. Написать программу, которая скопирует массив targetList в другую переменную. При изменении скопированного массива (при добавлении, удалении) исходный массив не должен изменяться.
 
 // const targetList = [4, 5, true, 3, 'text', 1, null];
+// const newArr = [];
+
+
+// Такое копирование называется неглубоким
+// for (let i = 0; i < targetList.length; i++) {
+//   newArr.push(targetList[i])
+//   // newArr[i] = targetList[i]
+// }
+
+
+// // newArr.push(12)
+// console.log(newArr);
+// console.log(targetList);
+
+// console.log([] === []); // false
+// console.log(newArr === targetList); // Сранить ссылки (ключи от дома)
+
+// ==========================================================================
 
 // 31. Задача
 // Даны 2 массива, перенести каждый третий элемент из массива basicList в массив everyThreeList. Программа должна работа для массива любой длины.
 
 // const basicList = [-11, 3, 23, -14, 5, 43, 3, 14, -1, 65, 5, -9, 10, 11, 17, 2, 1];
 // const everyThreeList = [];
+// ==========================================================================
 
 // 32. Задача
 // Дан массив чисел, вывести в консоль произведение всех нечётных положительных чисел.
 
 // const numberArray = [-199, 6, 22, -31, 7, -6, 1, 11, -3, 0, 5, -99];
+// ==========================================================================
 
 // 33. Задача
 // Дан массив чисел, вывести в консоль количество отрицательных чисел.
 
 // const numberList = [-199, 30, 10, 15, -1, -12, 43, 38, -7, 3, 5, -4, -99];
+// ==========================================================================
 
 // 34. Задача
 // Дан массив чисел, вывести в консоль количество массивов и null.
 
 // const list = [[-199, 30, 10, 15], -1, null, '43', null, [-7, 3, 5], 'null', -99, [], 4, null];
+// ==========================================================================
 
 // 35. Задача
 // Не выполняя код, дать ответ:
@@ -413,10 +522,11 @@
 
 // const copyArr1 = arr1;
 // console.log(copyArr1 === arr1); // ?
+// ==========================================================================
 
 // ★ Задачи повышенной сложности ★
 
-// ★ 36. Задача ★
+// ★ 36. Задача ★ VVV
 // Дан массив товаров и цен в корзине, посчитать сумму всей покупки и вывести результат в консоль.
 
 // const cartList = [
@@ -434,7 +544,7 @@
 // Массив должен состоять из типа number, не string;
 // Слово Хватит не зависит от регистра, можно написать, как с маленькой, так и сбольшой буквы;
 
-// ★ 38. Задача ★
+// ★ 38. Задача ★ VVV
 // Выполнить сортировку массива array. Четные элементы отправьте в массив arrayEven, а нечетные - в arrayOdd. А если встречается значение 0, то проигнорировать его (Переносить в arrayEven не нужно).
 
 // array = [0, 9, 2, 7, -2, 4, 34, -7, 0, -12, 28, 14, 0, 0, 15, 22, 0];
@@ -472,3 +582,105 @@
 //     [41, 42, 43, 44, 45],
 //     [51, 52, 53, 54, 55]
 // ];
+
+
+
+
+
+
+
+
+
+
+
+
+// Дополнительные задачи:
+
+
+
+// Дан массив, выполнить следующие задачи:
+// 1. Если количество элементов больше 3, то вывести '!!!' в консоль, иначе удалить последний элемент
+
+// const arr = ['lunatic', 'poring', 'spore'];
+// if (arr.length > 3) {
+//   console.log('!!!');
+// } else {
+//   arr.pop()
+// }
+// console.log(arr);
+
+
+// 2. ГРОМОЗДКАЯ задачка
+// Дан массив, состоящий из чисел
+// Если первый элемент делится на 3, то добавить в конец массива число 7
+// А Если последний элемент делится на 3, то добавить в начало масива число 9
+// Иначе удалить первый и последний элементы массива
+
+// const numberList = [6, 2, 1, 1, 1, 0, 3]
+// if (numberList[0] % 3 === 0) {
+//   numberList.push(7);
+// } else if (numberList[numberList.length - 1] % 3 === 0) {
+//   numberList.unshift(9);
+// } else {
+//   numberList.shift();
+//   numberList.pop();
+// }
+// console.log(numberList);
+
+// 3. Дан массив чисел. Вывести все числа в столбик
+
+// const arrayList = [3, 2, 1, 1, 1, 0, 5];
+// for (let i = 0; i < arrayList.length; i++) {
+//   // console.log(arrayList); // Вывести массив
+//   // console.log(arrayList[i]); // Вывести элемент
+//   // console.log(i); // Вывести индекс
+
+//   console.log(`index: ${i}; value: ${arrayList[i]}; array: [${arrayList}]`);
+// }
+
+// 4. Задача
+// Дан массив чисел. Вывести каждое второе число из массива
+// * (но выводить его если значение делится на 3)
+
+// const randomArray = [5, 3, 6, 8, 5, 6, 3, 18, 1, 12, 2]
+// for (let i = 0; i < randomArray.length; i += 2) {
+//   if (randomArray[i] % 3 === 0) {
+//     console.log(randomArray[i]);
+//   }
+//   // console.log(randomArray[i]);
+// }
+
+// const randomArray = [5, 3, 6, 8, 5, 6, 3, 18, 1, 12, 2]
+// for (let i = 0; i < randomArray.length; i++) {
+//   if (i % 2 === 0 && randomArray[i] % 3 === 0) {
+//     console.log(randomArray[i]);
+//   }
+//   // console.log(randomArray[i]);
+// }
+
+// const randomArray = [5, 3, 6, 8, 5, 6, 3, 18, 1, 12, 2]
+// for (let i = 0; i < randomArray.length; i++) {
+//   if (i % 2 === 0) {
+//     if (randomArray[i] % 3 === 0) {
+//       // console.log(randomArray[i]);
+//     }
+//     console.log(randomArray[i]);
+//   }
+// }
+
+
+
+
+
+
+// let countNum = 0
+// for (let i = 0; i < arr.length; i++) {
+//   if (typeof arr[i] === 'number') {
+//     countNum++;;
+//   }
+// }
+// console.log(countNum);
+
+
+
+// console.log(sumArr);

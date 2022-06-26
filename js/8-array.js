@@ -79,6 +79,7 @@ console.log(Array.isArray([])); // true
 const newArr = Array.from('text user');
 console.log(newArr);
 
+
 console.log('##########################');
 // * === Обратиться сразу ко всем элементам массива === * //
 // * Перебор (перебрать массив) * //
