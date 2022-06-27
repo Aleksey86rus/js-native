@@ -385,6 +385,7 @@
 //   if (numberArray[i] < 0) {
 //     sumNegativeArr += numberArray[i]
 //     countNegativeNumbers++;
+//     // debugger
 //   }
 // }
 // console.log(sumNegativeArr / countNegativeNumbers);
@@ -492,24 +493,64 @@
 
 // const basicList = [-11, 3, 23, -14, 5, 43, 3, 14, -1, 65, 5, -9, 10, 11, 17, 2, 1];
 // const everyThreeList = [];
+
+// for (let i = 0; i < basicList.length; i++)
+//   if (i % 3 === 0) {
+//     everyThreeList[i] = basicList[i];
+//     console.log(everyThreeList[i]);
+//     // debugger
+//   }
+
 // ==========================================================================
 
 // 32. Задача
 // Дан массив чисел, вывести в консоль произведение всех нечётных положительных чисел.
 
 // const numberArray = [-199, 6, 22, -31, 7, -6, 1, 11, -3, 0, 5, -99];
+// let compositionOddPositionNumbers = 1; //? Почему нужно присвоить единицу, чтобы получить произведение нечетных положительных чисел?
+// for (let i = 0; i < numberArray.length; i++) {
+//   if (i % 2 === 0) { continue }
+//   if (numberArray[i] >= 0) {
+//     compositionOddPositionNumbers *= numberArray[i]
+//   }
+// }
+// console.log(compositionOddPositionNumbers);
+
 // ==========================================================================
 
 // 33. Задача
 // Дан массив чисел, вывести в консоль количество отрицательных чисел.
 
 // const numberList = [-199, 30, 10, 15, -1, -12, 43, 38, -7, 3, 5, -4, -99];
+// let countNegativeNumbers = 0;
+// for (let i = 0; i < numberList.length; i++) {
+//   if (numberList[i] < 0) {
+//     countNegativeNumbers++
+//     // debugger
+//   }
+// }
+// console.log(countNegativeNumbers);
+
+
 // ==========================================================================
 
 // 34. Задача
 // Дан массив чисел, вывести в консоль количество массивов и null.
 
 // const list = [[-199, 30, 10, 15], -1, null, '43', null, [-7, 3, 5], 'null', -99, [], 4, null];
+// let countArray = 0;
+// let countNull = 0;
+
+// for (let i = 0; i < list.length; i++) {
+//   if (Array.isArray(list[i])) {
+//     countArray++;
+//   } else if (list[i] === null) {
+//     countNull++;
+//   }
+// }
+// console.log(countNull)
+// console.log(countArray)
+
 // ==========================================================================
 
 // 35. Задача
