@@ -49,7 +49,7 @@
 // * 4. Бесконечные циклы
 
 // 1) for(;;) {}
-// 2) while(true) {}
+// + 2) while(true) {}
 
 // let counter = 10;
 // while (true) {

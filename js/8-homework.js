@@ -491,15 +491,30 @@
 // 31. Задача
 // Даны 2 массива, перенести каждый третий элемент из массива basicList в массив everyThreeList. Программа должна работа для массива любой длины.
 
+
+// i                0   1  2     3  4  5   6  7   8
 // const basicList = [-11, 3, 23, -14, 5, 43, 3, 14, -1, 65, 5, -9, 10, 11, 17, 2, 1];
 // const everyThreeList = [];
 
-// for (let i = 0; i < basicList.length; i++)
-//   if (i % 3 === 0) {
-//     everyThreeList[i] = basicList[i];
-//     console.log(everyThreeList[i]);
+// for (let i = 0; i < basicList.length; i++) {
+//   if ((i + 1) % 3 === 0) {
+//     // everyThreeList[i] = basicList[i];
+//     everyThreeList.push(basicList[i])
+
+//     // console.log(everyThreeList[i]);
 //     // debugger
 //   }
+// }
+
+
+
+
+
+// [-11, 3, 23, -14, 5, 43, 3, 14, -1, 65, 5, -9, 10, 11, 17, 2, 1]
+// [-11 empty empty -14]
+
+// let i = 11;
+// if (i > 10) { console.log('!!!') }
 
 // ==========================================================================
 
@@ -507,11 +522,13 @@
 // Дан массив чисел, вывести в консоль произведение всех нечётных положительных чисел.
 
 // const numberArray = [-199, 6, 22, -31, 7, -6, 1, 11, -3, 0, 5, -99];
-// let compositionOddPositionNumbers = 1; //? Почему нужно присвоить единицу, чтобы получить произведение нечетных положительных чисел?
+// let compositionOddPositionNumbers = 1; //? Почему нужно присвоить единицу, чтобы получить произведение нечетных положительных чисел? (Потому что иначе умножим на 0)
+
 // for (let i = 0; i < numberArray.length; i++) {
-//   if (i % 2 === 0) { continue }
-//   if (numberArray[i] >= 0) {
+//   // if (i % 2 === 0) { continue }
+//   if (i % 2 !== 0 && numberArray[i] > 0) {
 //     compositionOddPositionNumbers *= numberArray[i]
+//     // compositionOddPositionNumbers = compositionOddPositionNumbers * numberArray[i]
 //   }
 // }
 // console.log(compositionOddPositionNumbers);
@@ -535,17 +552,17 @@
 // ==========================================================================
 
 // 34. Задача
-// Дан массив чисел, вывести в консоль количество массивов и null.
+// Дан массив чисел, вывести в консоль общее количество массивов и null.
 
 // const list = [[-199, 30, 10, 15], -1, null, '43', null, [-7, 3, 5], 'null', -99, [], 4, null];
-// let countArray = 0;
-// let countNull = 0;
+// let count = 0;
+
 
 // for (let i = 0; i < list.length; i++) {
 //   if (Array.isArray(list[i])) {
-//     countArray++;
+//     count++;
 //   } else if (list[i] === null) {
-//     countNull++;
+//     count++;
 //   }
 // }
 // console.log(countNull)
@@ -561,8 +578,8 @@
 // const arr2 = [3, 4, 5];
 // console.log(arr1 === arr2); // ? false  Так как константы имеют разные ссылки на массив, несмотря на то, что элементы в массивах совершенно одинааовые.
 
-// const copyArr1 = arr1;
-// console.log(copyArr1 === arr1); // ? Переменная не определена.
+// const copyArr1 = arr1; // Скопировали ключ (ссылка)
+// console.log(copyArr1 === arr1); // ? true - ключи(ссылки) одинаковые
 // ==========================================================================
 
 // ★ Задачи повышенной сложности ★
@@ -578,13 +595,12 @@
 //   ['beet', 200],
 //   ['сabbage', 300]
 // ];
+
 // let sum = 0;
 // for (let i = 0; i < cartList.length; i++) {
-//   if (Array.isArray([])) {
-//     // console.log(cartList[i]);
-//     sum += cartList[i][1]
-//     // debugger
-//   }
+//   sum += cartList[i][1]
+//   // console.log(cartList[i]);
+//   // debugger
 // }
 // console.log(sum);
 
@@ -592,7 +608,7 @@
 
 
 // ★ 37. Задача ★
-// Создать пустой массив. Пользователя запрашивают вводить числа до тех пор, пока он не введёт слово Хватит. Как только пользователь ввёл слово, вывести массив чисел.
+// Создать пустой массив. Пользователя запрашивают вводить числа до тех пор, пока он не введёт слово 'Хватит'. Как только пользователь ввёл слово, вывести массив чисел.
 
 // Массив должен состоять из типа number, не string;
 // Слово Хватит не зависит от регистра, можно написать, как с маленькой, так и сбольшой буквы;
@@ -620,9 +636,10 @@
 
 // for (let i = 0; i < array.length; i++) {
 //   if (array[i] % 2 === 0) {
-//     if (array[i] > 0)
+//     if (array[i] !== 0) {
 //       arrayEven.push(array[i])
-//   } else if (array[i] % 3 === 0 || array[i] < 0) {
+//     }
+//   } else {
 //     arrayOdd.push(array[i])
 //   }
 // }
