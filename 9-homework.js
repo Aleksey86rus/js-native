@@ -183,7 +183,13 @@
 // ??? 16. Задача
 // Написать функцию, которая складывает 2 или 3 числа, возвращает результат.Учесть, что пользователь может подать на вход не число. Вывести в этом случе: error.
 // function sumThreenumbers(let1, let2, let3 = 0) {
-//   return (let1 + let2 + let3)
+//   if (typeof let1 === 'number' &&
+//     typeof let2 === 'number' &&
+//     typeof let3 === 'number') {
+//     return let1 + let2 + let3
+//   } else {
+//     return 'error'
+//   }
 // }
 
 // console.log(sumThreenumbers(1, 2, 3));
@@ -195,23 +201,46 @@
 
 // 18. Задача
 // Написать функцию, которая склеивает переданные 2 строки через пробел.
-// function glueTogetherTwoStrings(string) {
-//   return string
+// function glueTogetherTwoStrings(string1, string2) {
+//   // string1 = a; string2 = b
+//   return string1 + ' ' + string2
 // }
 
+
 // console.log(glueTogetherTwoStrings('Java ' + 'Script'));
+
+
+
+// let a = 'Java';
+// let b = 'Script';
+// console.log(glueTogetherTwoStrings(a, b));
+
+// let test = 'tree';
+// let word = 'sentence';
+// console.log(glueTogetherTwoStrings(test, word));
+
+// console.log(word, a, b);
+
 // ----------------------------------------------------------------------------
 
 // 19. Задача
 // Написать функию, которая вычисляет площадь окружности. На вход одно число - радиус окружности.
-// function calculateAreaCircle(circle) {
-//   return Math.PI * circle ** 2
+// function calcSquareCircle(radius) {
+//   return Math.PI * radius ** 2
 // }
-// console.log(calculateAreaCircle(20));
+// console.log(calcSquareCircle(20));
 // ----------------------------------------------------------------------------
 
 // 20. Задача
 // Написать функцию, которая выводит столбик(от 1 до 10 включительно) из таблицы умножения на то число, которое подали на вход в функцию.
+
+function multiplyNumber(number) {
+  for (let i = 1; i <= 10; i++) {
+    // console.log(i + ` x ` + number + ' = ' + `${i * number}`);
+    // console.log(`${i} x ${number} = ${i * number}`);
+  }
+}
+multiplyNumber(5)
 // ----------------------------------------------------------------------------
 
 // 21. Задача
