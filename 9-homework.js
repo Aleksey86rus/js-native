@@ -234,21 +234,39 @@
 // 20. Задача
 // Написать функцию, которая выводит столбик(от 1 до 10 включительно) из таблицы умножения на то число, которое подали на вход в функцию.
 
-function multiplyNumber(number) {
-  for (let i = 1; i <= 10; i++) {
-    // console.log(i + ` x ` + number + ' = ' + `${i * number}`);
-    // console.log(`${i} x ${number} = ${i * number}`);
-  }
-}
-multiplyNumber(5)
+// function multiplyNumber(number) {
+//   for (let i = 1; i <= 10; i++) {
+//     console.log(`${i} x ${number} = ${i * number}`);
+//   }
+// }
+// multiplyNumber(7);
+
 // ----------------------------------------------------------------------------
 
 // 21. Задача
-// Напишите функцию, которая принимает 2 параметра: длину и ширину прямоугольника и вычисляет его площадь.Если в функцию передали 1 параметр, то функция вычисляет площадь квадрата.
+// Напишите функцию, которая принимает 2 параметра: длину и ширину прямоугольника и вычисляет его площадь. Если в функцию передали 1 параметр, то функция вычисляет площадь квадрата.
+
+// let squareRectangle;
+// let squareArea;
+// function calcSquareRectangle(length, width) {
+//   if (squareRectangle = length * width) {
+//     return 'Площадь прямоугольника = ' + squareRectangle;
+//   } else if (squareArea = length * length) {
+//     return 'Площадь квадрата = ' + squareArea;
+//   }
+// }
+// // console.log(calcSquareRectangle(10, 20));
+// console.log(calcSquareRectangle(10));
+
 // ----------------------------------------------------------------------------
 
 // 22. Задача
-// Написать функцию, которой передаём, имя, фамилия и возраст.Функция выводит в консоль, например: Ты Иван Петров с возрастом 17 лет..
+// Написать функцию, которой передаём, имя, фамилия и возраст. Функция выводит в консоль, например: Ты Иван Петров с возрастом 17 лет..
+
+// function nameSurnameAge(name, surname, age) {
+//   console.log(`Ты ${name} ${surname} с возрастом ${age} лет ..`);
+// }
+// nameSurnameAge('Martin', 'Scorsese', 80);
 // ----------------------------------------------------------------------------
 
 // 23. Задача
@@ -258,15 +276,56 @@ multiplyNumber(5)
 // Функции возвращает строку: Ваш пол женский если ввели F.
 // Если ничего не передано или передана любая другая строка, то вывести: Ваш пол не опеределен
 // Функция должна работать с любым регистром.
+
+// function checkGenderPerson(gender) {
+//   if (gender === 'm'.toLocaleUpperCase() || gender === 'm'.toLocaleLowerCase()) {
+//     return 'Ваш пол мужской'
+//   } else if (gender === 'f'.toLocaleUpperCase() || gender === 'f'.toLocaleLowerCase()) {
+//     return 'Ваш пол женский'
+//   } else {
+//     return 'Ваш пол не определен'
+//   }
+// }
+
+// console.log(checkGenderPerson('M'));
+// console.log(checkGenderPerson('F'));
+// console.log(checkGenderPerson(''));
+// console.log(checkGenderPerson('male'));
+// console.log(checkGenderPerson('Male', 'Feminine'));
+
 // Функции с массивами
 // ----------------------------------------------------------------------------
 
 // 24. Задача
 // Написать функцию, на вход которой подаётся массив, функция возвращает среднее арифметическое чисел.
+
+// const arr = [10, 10, 10];
+// function returnArifmeticMeanNumbers(myArray) {
+//   let arifmeticMeanNumbers = 0;
+//   for (let i = 0; i < myArray.length; i++) {
+//     arifmeticMeanNumbers += arr[i] / 3
+//   }
+//   return arifmeticMeanNumbers
+// }
+// console.log(returnArifmeticMeanNumbers(arr));
+
+
 // ----------------------------------------------------------------------------
 
 // 25. Задача
-// Написать функцию, которая принимает массив.Функция возвращает одно число – количество чётных чисел.
+// Написать функцию, которая принимает массив. Функция возвращает одно число – количество чётных чисел.
+
+const myArray = [10, 25, 33, 40, 60, 8, 12, 9, 45, 6];
+function countEvenNumbers(arr) {
+  let countEvenNumbers = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      countEvenNumbers++
+    }
+  }
+  console.log(countEvenNumbers);
+}
+countEvenNumbers(myArray);
 // ----------------------------------------------------------------------------
 
 // 26. Задача
