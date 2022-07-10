@@ -620,10 +620,10 @@
 //   if (userNumber === 10) {
 //     break;
 //   }
-//   // userArr.push(userNumber);
-//   console.log(userNumber);
+//   userArr.push(userNumber);
 // }
-// // console.log(userArr);
+// console.log(userArr);
+// console.log(typeof userNumber);
 
 // let counter = 10;
 // while (true) {
@@ -633,6 +633,23 @@
 //     break;
 //   }
 // }
+
+// let a = String(10);
+// let b = 'stop';
+
+// console.log(typeof a === typeof b);
+
+
+// const userArr = [];
+// while (true) {
+//   const userNumber = prompt('Write your number'); // string | null
+//   if (String(userNumber).toLowerCase() === 'x') {
+//     break;
+//   }
+//   userArr.push(userNumber);
+// }
+// console.log(userArr);
+
 
 // ==========================================================================
 

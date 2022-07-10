@@ -246,17 +246,23 @@
 // 21. Задача
 // Напишите функцию, которая принимает 2 параметра: длину и ширину прямоугольника и вычисляет его площадь. Если в функцию передали 1 параметр, то функция вычисляет площадь квадрата.
 
-// let squareRectangle;
-// let squareArea;
+
 // function calcSquareRectangle(length, width) {
-//   if (squareRectangle = length * width) {
+//   let square = null;
+//   if (square = length * width) {
 //     return 'Площадь прямоугольника = ' + squareRectangle;
-//   } else if (squareArea = length * length) {
-//     return 'Площадь квадрата = ' + squareArea;
+//   } else {
+//     return 'Площадь квадрата = ' + length ** 2;
 //   }
 // }
-// // console.log(calcSquareRectangle(10, 20));
+
+// function calcSquareRectangle(length, width = length) {
+//   return length * width
+// }
+
+// console.log(calcSquareRectangle(10, 20));
 // console.log(calcSquareRectangle(10));
+
 
 // ----------------------------------------------------------------------------
 
@@ -264,7 +270,7 @@
 // Написать функцию, которой передаём, имя, фамилия и возраст. Функция выводит в консоль, например: Ты Иван Петров с возрастом 17 лет..
 
 // function nameSurnameAge(name, surname, age) {
-//   console.log(`Ты ${name} ${surname} с возрастом ${age} лет ..`);
+//   console.log(`Ты ${name} ${surname} с возрастом ${age} лет.`);
 // }
 // nameSurnameAge('Martin', 'Scorsese', 80);
 // ----------------------------------------------------------------------------
@@ -278,9 +284,9 @@
 // Функция должна работать с любым регистром.
 
 // function checkGenderPerson(gender) {
-//   if (gender === 'm'.toLocaleUpperCase() || gender === 'm'.toLocaleLowerCase()) {
+//   if (gender.toLowerCase() === 'm') {
 //     return 'Ваш пол мужской'
-//   } else if (gender === 'f'.toLocaleUpperCase() || gender === 'f'.toLocaleLowerCase()) {
+//   } else if (gender.toLowerCase() === 'f') {
 //     return 'Ваш пол женский'
 //   } else {
 //     return 'Ваш пол не определен'
@@ -288,6 +294,8 @@
 // }
 
 // console.log(checkGenderPerson('M'));
+// console.log(checkGenderPerson('m'));
+// console.log(checkGenderPerson('f'));
 // console.log(checkGenderPerson('F'));
 // console.log(checkGenderPerson(''));
 // console.log(checkGenderPerson('male'));
@@ -299,15 +307,36 @@
 // 24. Задача
 // Написать функцию, на вход которой подаётся массив, функция возвращает среднее арифметическое чисел.
 
-// const arr = [10, 10, 10];
-// function returnArifmeticMeanNumbers(myArray) {
-//   let arifmeticMeanNumbers = 0;
-//   for (let i = 0; i < myArray.length; i++) {
-//     arifmeticMeanNumbers += arr[i] / 3
+
+// function calcArifmeticMean(myArray) {
+//   let sum = 0;
+//   // for (let i = 0; i < myArray.length; i++) {
+//   //   arifmeticMeanNumbers += arr[i]
+//   // }
+
+//   for (const el of myArray) {
+//     // element = myArray[i] // Под капотом
+//     // debugger
+//     sum += el
 //   }
-//   return arifmeticMeanNumbers
+//   return sum / myArray.length
 // }
-// console.log(returnArifmeticMeanNumbers(arr));
+
+// for of
+// arr[i] === element
+
+
+
+
+
+// (10 + 10 + 10) / 3
+// 10 / 3 + 10 / 3 + 10 / 3
+// 10 / 0 + 10 / 1 + 10 / 2
+
+
+
+// const arr = [10, 10, 10, 10, 10];
+// console.log(calcArifmeticMean(arr));
 
 
 // ----------------------------------------------------------------------------
@@ -315,49 +344,155 @@
 // 25. Задача
 // Написать функцию, которая принимает массив. Функция возвращает одно число – количество чётных чисел.
 
-const myArray = [10, 25, 33, 40, 60, 8, 12, 9, 45, 6];
-function countEvenNumbers(arr) {
-  let countEvenNumbers = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      countEvenNumbers++
-    }
-  }
-  console.log(countEvenNumbers);
-}
-countEvenNumbers(myArray);
+// const myArray = [10, 25, 33, 40, 60, 8, 12, 9, 45, 6];
+// function countEvenNumbers(arr) {
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       count++
+//     }
+//   }
+//   // console.log(count);
+//   return count
+// }
+// countEvenNumbers(myArray);
+
 // ----------------------------------------------------------------------------
 
 // 26. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция заменяет все чётные числа на строку even.
+
+// const myArray = [10, 20, 55, 87, 88, 22, 15, 98, 99, 75, 63, 44];
+// function changeEvenToString(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       arr[i] = 'even'
+//     }
+//   }
+//   return arr
+// }
+// console.log(changeEvenToString(myArray));
+
 // ----------------------------------------------------------------------------
 
 // 27. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция заменяет все отрицательные числа на положительные.
+
+// const myArray = [10, -20, 55, 87, -88, 22, 15, -98, 99, 75, -63, 44];
+
+// function changeNegToPosNumbers(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < 0) {
+//       arr[i] = -arr[i]
+//     }
+//   }
+//   return arr
+// }
+
+// console.log(changeNegToPosNumbers(myArray));
 // ----------------------------------------------------------------------------
 
 // 28. Задача
 // Написать функцию, на вход которой подаётся массив из чисел, функция возвращает новый массив из чисел, которые делятся на 7.
+
+// const myArray = [10, 28, 21, 87, -88, 22, 14, 98, 42, 75, -63, 35];
+
+// function shareToSeven(arr) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 7 === 0) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
+// console.log(myArray);
+// console.log(shareToSeven(myArray));
 // ----------------------------------------------------------------------------
 
 // 29. Задача
 // Написать функцию, на вход которой подаётся массив из строк, функция возвращает новый массив из строк, чья длина больше 3 символов.
+
+// const myArray = ['hotel', 'to', 'pen', 'tv', 'city', 'windows', '', 'on'];
+
+// function returnsMoreThreeSimbol(arr) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length > 3) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr
+// }
+// console.log(myArray);
+// console.log(returnsMoreThreeSimbol(myArray));
 // ----------------------------------------------------------------------------
 
 // 30. Задача
 // Написать функцию, на вход которой подаётся массив из чисел, функция изменяет текущий массив, заменяя каждый второй элемент массива на строку = x2 =.
+
+// const myArray = [10, 28, 21, 87, -88, 22, 14, 98, 42, 75, -63, 35];
+
+// function changeEveryTwoElements(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if ((i + 1) % 2 === 0) {
+//       arr[i] = '= x2 ='
+//     }
+//   }
+//   return myArray
+// }
+// console.log(changeEveryTwoElements(myArray));
 // ----------------------------------------------------------------------------
 
 // 31. Задача
 // Написать функцию, на вход которой подаётся массив из строк, функция изменяет текущий массив, заменяя каждый третий элемент массива на строку число - количество символов в элементе.
+
+// const myArray = ['day', 'car', 'note', 'cherry', 'juice', 'board', 'street', 'cake'];
+
+// function changeArray(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     // if ((i + 1) % 3 === 0) {
+//     //   arr[i] = `${(arr[i].length)}`
+//     // }
+
+//     (i + 1) % 3 === 0 && (arr[i] = `${(arr[i].length)}`)
+
+//   }
+// }
+// changeArray(myArray);
+// console.log(myArray);
+
 // ----------------------------------------------------------------------------
 
 // 32. Задача
 // Написать функцию, на вход которой подаётся массив, функция удаляет первый и последний элементы из массива.
+
+// const myArray = [10, 28, 21, 87, 22, 14, 98, 42, 75, 35];
+
+// function delFirstLastElements(arr) {
+//   arr.shift();
+//   arr.pop()
+//   return arr
+// }
+// console.log(delFirstLastElements(myArray));
 // ----------------------------------------------------------------------------
 
 // 33. Задача
 // Написать функцию, на вход которой подаётся 2 массива, функция добавляет к первому массиву все значения из второго.
+
+// const firstArray = [10, 28, 21, 87, 22, 14, 98, 42, 75, 35];
+// const secondArray = [58, -12, 87, 22, 94, 108, -75, 'happy'];
+
+// function addToFirstArrayValues(arr1, arr2) {
+//   for (let i = 0; i < arr2.length; i++) {
+//     if (arr2[i] === arr2[i]) {
+//       arr1.push(arr2[i])
+//     }
+//   }
+//   return arr1
+// }
+// console.log(addToFirstArrayValues(firstArray, secondArray));
 // ----------------------------------------------------------------------------
 
 // 34. Задача
@@ -369,6 +504,7 @@ countEvenNumbers(myArray);
 // }
 
 // console.log(test(3, 4, 5, 7));
+// Программа сложит первый и второй параметры. Трей и четвертый, будут проигнорированы.
 // ----------------------------------------------------------------------------
 
 // 35. Задача
@@ -380,6 +516,7 @@ countEvenNumbers(myArray);
 // }
 
 // console.log(test(3));
+// NaN. Т.к параметра два а аргумент - один. y = undefined. undefined приводится к NaN. Соответственно в  console.log, мы увидим NaN.
 // ----------------------------------------------------------------------------
 
 // 36. Задача
@@ -390,20 +527,22 @@ countEvenNumbers(myArray);
 //   console.log(x + y);
 // }
 
-// console.log(test(3, 7));
+// console.log(test(3, 7)); // 10
+
 // ----------------------------------------------------------------------------
 
 // 37. Задача
 // Не выполняя код, дать ответ:
 // Что выведется в консоль ? Ответ записать в комментарий.
 
-// console.log(test(3, 7));
-// console.log(test(true, 1));
-// console.log(test('1', 0));
+// console.log(test(3, 7)); // 10
+// console.log(test(true, 1)); // 2
+// console.log(test('1', 0)); // '10'
 
 // function test(x, y) {
 //   return x + y;
 // }
+
 // ----------------------------------------------------------------------------
 
 // 38. Задача
@@ -414,10 +553,10 @@ countEvenNumbers(myArray);
 //   return x * y;
 // }
 
-// console.log(test('3', '7'));
-// console.log(test(false, 1));
-// console.log(test('1', 0));
-// console.log(test('1', 'true'));
+// console.log(test('3', '7')); // 21
+// console.log(test(false, 1)); // 0
+// console.log(test('1', 0)); // 0
+// console.log(test('1', 'true')); // NaN (Мы умножаем число на строку)
 // ----------------------------------------------------------------------------
 
 // 39. Задача
@@ -428,22 +567,22 @@ countEvenNumbers(myArray);
 //   return x * y;
 // }
 
-// console.log(test(4));
-// console.log(test(null, 5));
-// console.log(test(undefined, 5));
-// console.log(test(undefined, undefined));
+// console.log(test(4)); // 4 x 1 = 4
+// console.log(test(null, 5)); // 0 x 5 = 0
+// console.log(test(undefined, 5)); // 1 x 5 = 1
+// console.log(test(undefined, undefined)); // 1 x 1 = 1
 // ----------------------------------------------------------------------------
 
 // 40. Задача
 // Не выполняя код, дать ответ:
 // Что выведется в консоль ? Ответ записать в комментарий.
 
-// console.log(test(3, 2, 1));
-// console.log(test(null, null, 2));
-// console.log(test(undefined, undefined, 5));
-// console.log(test(undefined, undefined, undefined));
-// console.log(test(3, 2, undefined));
-// console.log(test(3, 2));
+// console.log(test(3, 2, 1)); // 3 x 2 x 1 = 6
+// console.log(test(null, null, 2)); // 0 x 0 x 2 = 0
+// console.log(test(undefined, undefined, 5)); // NaN
+// console.log(test(undefined, undefined, undefined)); // NaN
+// console.log(test(3, 2, undefined));  // 3 x 2 x 1 = 6
+// console.log(test(3, 2)); // 3 x 2 x 1 = 6
 
 // function test(x, y, z = 1) {
 //   return x * y * z;
@@ -454,11 +593,11 @@ countEvenNumbers(myArray);
 // Не выполняя код, дать ответ:
 // Что выведется в консоль ? Ответ записать в комментарий.
 
-// console.log(sum(3, sum(4, 5)));
-// console.log(sum(sum(3, -1), 7));
-// console.log(sum(sum(0, -5), sum(3, 7)));
-// console.log(sum(sum(3, sum(12, 5)), sum(sum(4, 8), 13)));
-// console.log(sum(sum(sum(5, 3), sum(7, -15)), sum(sum(10, 10), sum(-15, -5))));
+// console.log(sum(3, sum(4, 5))); // 3 + (4 + 5) = 12
+// console.log(sum(sum(3, -1), 7)); // (3 + -1) + 7 = 9
+// console.log(sum(sum(0, -5), sum(3, 7))); // -5 + 10 = 5
+// console.log(sum(sum(3, sum(12, 5)), sum(sum(4, 8), 13))); // (3 + 17) + (12 + 13) = 45
+// console.log(sum(sum(sum(5, 3), sum(7, -15)), sum(sum(10, 10), sum(-15, -5)))); // (8 + -8) + (20 + -20) = 0
 
 // function sum(x, y) {
 //   return x + y;
@@ -466,7 +605,20 @@ countEvenNumbers(myArray);
 // ----------------------------------------------------------------------------
 
 // 42. Задача
-// Написать функцию, на вход которой подаётся массив чисел.Функция возвращает одно число - наибольшее из них.
+// Написать функцию, на вход которой подаётся массив чисел. Функция возвращает одно число - наибольшее из них.
+
+// const myArray = [10, 28, 21, 87, 22, 14, 98, 42, 75, 9];
+
+// function returnsLargNumber(arr) {
+//   let maxNumber = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > maxNumber) {
+//       maxNumber = arr[i]
+//     }
+//   }
+//   return maxNumber
+// }
+// console.log(returnsLargNumber(myArray));
 // ----------------------------------------------------------------------------
 
 
@@ -481,25 +633,25 @@ countEvenNumbers(myArray);
 //   let multi1 = 10;
 //   return multi1 * x;
 // }
-// console.log(multi1);
+// // console.log(multi1); // 50
 
 // console.log(anotherTest(5));
 // function anotherTest(x) {
 //   var multi2 = 10;
 //   return multi2 * x;
 // }
-// console.log(multi2);
+// // console.log(multi2); // 50
 
 // console.log(otherTest(5));
 // function otherTest(x) {
 //   const multi3 = 10;
 //   return multi3 * x;
 // }
-// console.log(multi3);
+// console.log(multi3); // 50
 // ----------------------------------------------------------------------------
 
 // ★ 44. Задача ★
-// Написать функцию, которая вычисляет факториал числа.На вход подаётся целое число.Функция возвращает - 1, если:
+// Написать функцию, которая вычисляет факториал числа. На вход подаётся целое число. Функция возвращает - 1, если:
 
 // На вход подали не число;
 // На вход подали отрицательное число;
@@ -514,10 +666,21 @@ countEvenNumbers(myArray);
 
 //★★ 45. Задача ★★
 // Написать функцию, которая возвращает массив с частью последовательности: 1 2 2 3 3 3 4 4 4 4 5 5 ... (число повторяется столько раз, чему оно равно)
-// На вход в функцию подаётся одно неотрицательное число(целое число n) - столько элементов последовательности должна быть в возвращаемом массиве.
+// На вход в функцию подаётся одно неотрицательное число(целое число n) - столько элементов последовательности должно быть в возвращаемом массиве.
 
 // Например n = 7, то программа выведет массив с числами:
 // 1 2 2 3 3 3 4(т.е. 7 элементов из последовательности)
+
+// const myArray = [5];
+
+// function returnArray(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (  )
+//   }
+//   return arr
+// }
+// console.log(returnArray(myArray));
+
 // ----------------------------------------------------------------------------
 
 //★★★ 46. Задача ★★★

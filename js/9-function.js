@@ -126,3 +126,10 @@ console.log(testArray);
 
 
 
+// * Рефакторинг
+
+// Только с простыми if
+// if -> тернарный оператор (if-else) / логическое И (if без else)
+// if -> return <boolean expression>
+
+// for -> for of (если arr[i] только для чтения (не мутируем массив))

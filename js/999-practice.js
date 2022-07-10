@@ -67,7 +67,7 @@
 //   // debugger
 //   let star = '';
 //   for (let i = 0; i < steps; i++) {
-//     star = star + ' *'
+//     star = star + '*'
 //     console.log(star);
 //   }
 // }
@@ -89,12 +89,24 @@
 // ? 6. Написать функцию, которая проверяет, является ли переданный параметр примитивом
 
 // function checkIsPrimitive(check) {
-//   if (typeof check === typeof []) {
-//     return false
-//   } else {
-//     return true
-//   }
+//   return typeof check === 'object' && check !== null
 // }
+
+// Печать (рефаторинг isChecked)
+
+// number, string, boolean, undefined, null
+// symbol, bigInt (крайне-редкие)
+// object
+
+// console.log(typeof '108'); // 'string'
+// console.log(typeof 88); // 'number'
+// console.log(typeof []); // 'number'
+// let test = '';
+// if (typeof test === 'number')
+// if (typeof test === 'object')
+// if (test !== null)
+
+
 // console.log(checkIsPrimitive('abc'));
 // console.log(checkIsPrimitive(10));
 // console.log(checkIsPrimitive(true));
@@ -116,26 +128,27 @@
 // function deleteFirstLastElements(arr) {
 //   arr.shift(0);
 //   arr.pop(6);
-//   return arr
 // }
-// console.log(deleteFirstLastElements(myArray));
+// deleteFirstLastElements(myArray);
+// console.log(myArray);
 
 // ?? 8. Написать функцию, которая удаляет первый и последний элементы из массива
 // Функция НЕ мутирует исходный массив, а возвращает новый тот же самый массив, но уже с удалёнными элементами
 
-// const array = [-10, 25, 32, 55, -78, 42, 11, -15, 77]
+
 // function deleteFirstLastElements(arr) {
 //   // debugger
 //   const myNewArray = [];
 //   for (let i = 0; i < arr.length; i++) {
 //     myNewArray.push(arr[i])
 //   }
-//   myNewArray.shift(0);
-//   myNewArray.pop(8);
+//   myNewArray.shift();
+//   myNewArray.pop();
 //   return myNewArray
 //   // console.log(myNewArray === array);
 // }
 
+// const array = [-10, 25, 32, 55, -78, 42, 11, -15, 77]
 // console.log(deleteFirstLastElements(array));
 // console.log(array);
 
