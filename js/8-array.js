@@ -10,6 +10,8 @@
 
 // ! bigint, symbol
 
+// [array, function, object, NodeList, HTMLCollection, Map, Set, Arguments]
+
 // * ===== Array (Массив) ===== * //
 
 const array = []; // Пустой массив
