@@ -154,5 +154,150 @@
 
 
 
+// ! 9
+// Написать функцию, которая принимает на вход массив чисел
+// Функция возвращает true, если количество элементов больше 5
+// Иначе возвращает null
+
+// const myArray = [1, 25, 35]
+// function checkMoreFiveElements(arr) {
+//   return arr.length > 5 ? true : null
+// }
+// const resultFunction = checkMoreFiveElements(myArray)
+// console.log(resultFunction);
 
 
+// 10.
+// Написать функцию, на вход которой идёт массив чисел
+// Если последний элемент массива чётный, то функция мутирует массив и удаляет его
+// Иначе функция просто возвращает первый элемент
+
+
+
+
+// function deliteLastElement(arr) {
+//   // return arr[arr.length - 1] % 2 === 0 ? arr.pop() : arr[0]
+
+//   // Такой if невозможно выполнить тернарным оператором
+//   if (arr[arr.length - 1] % 2 === 0) {
+//     // return arr.pop() // Возвращать удалённый элемент нам не нужно!
+//     arr.pop()
+//   } else {
+//     return arr[0]
+//   }
+// }
+
+
+
+// const myArray = [2, 55, 88, 10, 77, 36, 15, 22, 23]
+// console.log(deliteLastElement(myArray));
+// console.log(myArray);
+
+// Как получить самый первый элемент в массиве
+// console.log(myArray[0]);
+// // Как получить последний элемент?
+// console.log(myArray[myArray.length - 1]);
+// // Как получить предпоследний элемент?
+// console.log(myArray[myArray.length - 2]);
+
+
+// 11
+// Написать функцию, на вхо которой подаётся массив
+// Функция муирует массив, изменяя каждый третий элемент на '===x3==='
+// Нулевой менять не надо!
+
+//                0   1  2    3    4  5   6   7
+// const newArray = [3, 25, 63, 101, 55, 87, 99, 11]
+
+
+// function changeEveryThirdElement(arr2) {
+//   for (let i = 0; i < arr2.length; i++) {
+//     if ((i + 1) % 3 === 0) {
+//       arr2[i] = '===x3==='
+//     }
+//   }
+// }
+
+// console.log(changeEveryThirdElement(newArray));
+// console.log(newArray);
+
+
+// ДЗ:
+// 12.
+// Написать функцию, на вход которой подаётся массив
+// Функция возвращает наибольшее число из массива
+
+// const myArray = [2, 12, 9, 22, 65, 87, 98, 23, 105];
+
+// function checkMaxNumber(arr) {
+//   debugger
+//   let maxNumber = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > maxNumber) {
+//       maxNumber = arr[i]
+//     }
+//   }
+//   return maxNumber
+// }
+
+// console.log(checkMaxNumber(myArray));
+
+//===============================================================//
+
+
+// 12.5
+// Написать функцию, на вход которой подаётся массив и символ '+' или '-'
+// Функция возвращает наибольшее число из массива, если вторым параметром был передан + иначе функция вернёт наименьшее значение
+
+// const myArray = [2, 77, '+', 12, 43, 22, 65, 87, 98, 23, 105, 1];
+
+// function maxNumberArray(arr) {
+//   let maxNumber = arr[0];
+//   let minNumber = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > maxNumber) {
+//       maxNumber = arr[i]
+//     } if (arr[i] < minNumber) {
+//       minNumber = arr[i]
+//     }
+//   }
+//   return (arr[2] === '+') ? maxNumber : minNumber
+// }
+
+// console.log(maxNumberArray(myArray));
+
+
+// 13.
+// Написать функцию, на вход которой подаётся массив с числами и строками
+// Функция возвращает сумму всех чисел
+
+// ================ for ======================= //
+// const myArray = [77, 'fly', 12, 'board', 22, 'airlines', 98, 'airbus', 105, 45];
+
+// function sumAllNumbers(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === 'number') {
+//       sum += arr[i]
+//     }
+//   }
+//   return sum
+// }
+// console.log(sumAllNumbers(myArray));
+// console.log(typeof myArray[0]);
+
+
+// ================ for of ===================== //
+
+// const myArray = [77, 'say', 12, 22, 65, 98, 105, 45];
+
+// function sumAllNumbers(arr) {
+//   let sum = 0;
+//   for (const el of arr) {
+//     if (typeof el === 'number') {
+//       sum += el
+//     }
+//   }
+//   return sum
+// }
+// console.log(sumAllNumbers(myArray));

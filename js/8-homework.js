@@ -201,6 +201,7 @@
 
 // let maxNumber = numberArray[0];
 // // let maxNumber = 0;
+// // debugger
 // for (let i = 1; i < numberArray.length; i++) {
 //   if (numberArray[i] > maxNumber) {
 //     maxNumber = numberArray[i];
