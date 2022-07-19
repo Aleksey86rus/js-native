@@ -278,11 +278,10 @@
 // 22. Задача
 // Написать функцию, которой передаём, имя, фамилия и возраст. Функция выводит в консоль, например: Ты Иван Петров с возрастом 17 лет..
 
-// function outputNameLastnameAge(name, lastname, age) {
+// function showUserInfo(name, lastname, age) {
 //   console.log(`Ты ${name} ${lastname} с возрастом ${age} лет.`);
 // }
-
-// outputNameLastnameAge('Elon', 'Musk', '55');
+// showUserInfo('Elon', 'Musk', 55);
 
 // ----------------------------------------------------------------------------
 
@@ -294,14 +293,20 @@
 // Если ничего не передано или передана любая другая строка, то вывести: Ваш пол не опеределен
 // Функция должна работать с любым регистром.
 
-// function genderPerson(gender) {
-//   if (gender.toLowerCase() === 'm') {
-//     return 'Ваш пол мужской'
-//   } if (gender.toLowerCase() === 'f') {
-//     return 'Ваш пол женский'
-//   } else {
-//     return 'Ваш пол не определен'
-//   }
+function getGenderPerson(gender) {
+  if (gender.toLowerCase() === 'm') {
+    return 'Ваш пол мужской'
+  }
+  if (gender.toLowerCase() === 'f') {
+    return 'Ваш пол женский'
+  }
+  return 'Ваш пол не определен'
+}
+
+
+// ! TODO:
+// function checkGenderPerson(params) {
+//   switch
 // }
 
 // console.log(genderPerson('M'));
@@ -353,13 +358,12 @@
 // function quantityEvenNumbers(newArr) {
 //   let count = 0;
 //   for (const el of newArr) {
-//     if (el % 2 === 0) {
-//       count++
-//     }
+//     el % 2 === 0 && count++
 //   }
 //   return count
 // }
-// quantityEvenNumbers(myArray);
+// console.log(quantityEvenNumbers(myArray));
+
 // ----------------------------------------------------------------------------
 
 // 26. Задача
@@ -438,13 +442,13 @@
 // console.log(numbersShareOnSeven(myArray));
 
 
-// ==================== && ======================== //
+// ============= for of === && ======================== //
 // const myArray = [2, 4, 76, 98, 65, 55, 9, 21, 45, 70, 49];
 
 // function numbersShareOnSeven(arr) {
 //   const newArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     (arr[i] % 7 === 0) && newArr.push(arr[i])
+//   for (const el of arr) {
+//     (el % 7 === 0) && newArr.push(el)
 //   }
 //   return newArr
 // }
@@ -471,13 +475,13 @@
 // console.log(checkStringMoreThreeSimbol(myArray));
 
 
-
+// TODO: for of
 // const myArray = ['airport', 'hall', 'on', 'transfer', 'in', 'landing', 'souvenir',];
 
 // function checkStringMoreThreeSimbol(arr) {
 //   const newArr = [];
 //   for (let i = 0; i < arr.length; i++) {
-//     (arr[i].length > 3) && newArr.push(arr[i].length)
+//     arr[i].length > 3 && newArr.push(arr[i].length)
 //   }
 //   return newArr
 // }
@@ -493,7 +497,7 @@
 
 // function changeEveryTwoElement(arr) {
 //   for (let i = 0; i < arr.length; i++) {
-//     if ((i + 3) % 2 === 0) {
+//     if ((i + 1) % 2 === 0) {
 //       arr[i] = '= x2 ='
 //     }
 //   }
@@ -507,7 +511,7 @@
 
 // function changeEveryTwoElement(arr) {
 //   for (let i = 0; i < arr.length; i++) {
-//     (i + 3) % 2 === 0 && (arr[i] = '= x2 =')
+//     (i + 1) % 2 === 0 && (arr[i] = '= x2 =')
 //   }
 // }
 // changeEveryTwoElement(myArray);
@@ -519,8 +523,7 @@
 // Написать функцию, на вход которой подаётся массив из строк, функция изменяет текущий массив, заменяя каждый третий элемент массива на строку число - количество символов в элементе.
 
 //                   0               1                2              3        4
-// const myArray = ['Vladivostok', 'Novosibirsk', 'Nizhnevartovsk', 'London', 'Pekin',
-//   'Sidney', 'Amsterdam',]
+// const cityList = ['Vladivostok', 'Novosibirsk', 'Nizhnevartovsk', 'London', 'Pekin', 'Sidney', 'Amsterdam']
 
 // function changeEveryThirdElementToString(arr) {
 //   for (let i = 0; i < arr.length; i++) {
@@ -529,20 +532,19 @@
 //     }
 //   }
 // }
-// changeEveryThirdElementToString(myArray)
-// console.log(myArray);
+// changeEveryThirdElementToString(cityList)
+// console.log(cityList);
 
 
-// const myArray = ['Vladivostok', 'Novosibirsk', 'Nizhnevartovsk', 'London', 'Pekin',
-//   'Sidney', 'Amsterdam',]
+// const cityList = ['Vladivostok', 'Novosibirsk', 'Nizhnevartovsk', 'London', 'Pekin', 'Sidney', 'Amsterdam']
 
-// function changeEveryThirdElementToString(arr) {
+// function changeEveryThirdElementToLength(arr) {
 //   for (let i = 0; i < arr.length; i++) {
-//     (i + 1) % 3 === 0 && (arr[i] = String(arr[i].length))
+//     (i + 1) % 3 === 0 && (arr[i] = `${arr[i].length}`)
 //   }
 // }
-// changeEveryThirdElementToString(myArray)
-// console.log(myArray);
+// changeEveryThirdElementToLength(cityList)
+// console.log(cityList);
 
 // ----------------------------------------------------------------------------
 
@@ -551,11 +553,11 @@
 
 // const myArray = [23, 45, 74, 99, 73, 91, 44, 90, 65, 20];
 
-// function deleteFirstAndSecondElement(arr) {
+// function deleteFirstAndLastElement(arr) {
 //   arr.pop();
 //   arr.shift()
 // }
-// deleteFirstAndSecondElement(myArray)
+// deleteFirstAndLastElement(myArray)
 // console.log(myArray);
 
 
@@ -567,13 +569,13 @@
 // const myArray1 = [23, 45, 74, 99, 73, 91, 44];
 // const myArray2 = [48, 99, 85, 22, 'mercedes'];
 
-// function addsElementToSecondArray(arr1, arr2) {
+// function addElementsToFirstArray(arr1, arr2) {
 //   for (const el of arr2) {
 //     arr1.push(el)
 //   }
 // }
 
-// addsElementToSecondArray(myArray1, myArray2)
+// addElementsToFirstArray(myArray1, myArray2)
 // console.log(myArray1);
 // ----------------------------------------------------------------------------
 
@@ -772,7 +774,7 @@
 // 0! = 1(Искл)
 // ----------------------------------------------------------------------------
 
-//★★ 45. Задача ★★
+// ★★ 45. Задача ★★
 // Написать функцию, которая возвращает массив с частью последовательности: 1 2 2 3 3 3 4 4 4 4 5 5 ... (число повторяется столько раз, чему оно равно)
 // На вход в функцию подаётся одно неотрицательное число(целое число n) - столько элементов последовательности должно быть в возвращаемом массиве.
 
@@ -791,7 +793,7 @@
 
 // ----------------------------------------------------------------------------
 
-//★★★ 46. Задача ★★★
+// ★★★ 46. Задача ★★★
 // Написать функцию, которая принимает на вход одно число.Функция выводит таблицу рамером NxN, заполненную числами от 1 до n ** 2 вкл.по спирали, выходящей из левого верхнего угла и закрученной по часовой стрелке:
 
 // Например: spiral(5)

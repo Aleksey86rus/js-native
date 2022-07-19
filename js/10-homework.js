@@ -2,35 +2,67 @@
 //Задачи по теме 10. Object
 //Дан объект user, выполнить задачи 1-6:
 
-// const user = {
-//     name: "Peter",
-//     age: 33,
-//     job: "Developer",
+const user = {
+  name: "Peter",
+  age: 33,
+  job: "Developer",
 
-//     "my address": {
-//         city: "Moscow",
-//         country: "Russia",
-//         abroad: ["Vienna", "Paris", "London", "Miami"]
-//     },
-//     item: ["bag", "book", "pencil"]
-// };
+  "my address": {
+    city: "Moscow",
+    country: "Russia",
+    abroad: ["Vienna", "Paris", "London", "Miami"]
+  },
+  item: ["bag", "book", "pencil"],
+  more: null,
+  key: 'Aha-ha-ha'
+};
 
 // =========================================================================
 
-// 1. Задача
+// 1. Задача (READ)
 // Вывести в консоль свойство name;
+
+// const user = {
+//   name: 'Peter'
+// }
+// console.log(user.name);
 // =========================================================================
 
-// 2. Задача
+// 2. Задача (UPDATE)
 // Изменить возраст на 4 года меньше;
+
+// user.age -= 4;
+// console.log(user.age);
+
 // =========================================================================
 
 // 3. Задача
-// Вывести в консоль все свойства объекта "my address";
+// Вывести в консоль c помощью цикла  все свойства объекта "my address";
+// const myAddress = user['my address'];
+// for (const key in myAddress) {
+//   console.log(`${key}: ${myAddress[key]}`);
+// }
+
+// console.log(user['my address']);
+
 // =========================================================================
 
 // 4. Задача
 // Вывести в консоль все свойства объекта user, кроме тех свойства, тип которых равен object;
+
+// for (const key in user) {
+//   if (typeof user[key] !== 'object' || user[key] === null) {
+//     console.log(`${key}: ${user[key]}`);
+//   }
+// }
+
+
+
+//user[key] === null
+// -10 до 0 && от 1 до 10
+
+
+
 // =========================================================================
 
 // 5. Задача

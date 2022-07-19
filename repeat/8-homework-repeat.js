@@ -3,8 +3,8 @@
 // 1. Задача
 // Создать массив любой длины, состоящий из чисел. Вывести в консоль количество элементов в массиве.
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(array);
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(array);
 
 // =======================================================================
 
@@ -382,17 +382,63 @@ console.log(array);
 // ★ 38. Задача ★ VVV
 // Выполнить сортировку массива array. Четные элементы отправьте в массив arrayEven, а нечетные - в arrayOdd. А если встречается значение 0, то проигнорировать его (Переносить в arrayEven не нужно).
 
-// array = [0, 9, 2, 7, -2, 4, 34, -7, 0, -12, 28, 14, 0, 0, 15, 22, 0];
+array = [9, 2, 7, -2, 4, 34, -7, -12, 28, 14, 0, 15, 22,];
+arrayEven = [];
+arrayOdd = [];
+
+// for (let i = 0; i < array.length; i++) {
+//   if (array[i] % 2 === 0 && array[i] !== 0) {
+//     arrayEven.push(array[i])
+//   } else if (array[i] % 2 !== 0 && array[i] !== 0) {
+//     arrayOdd.push(array[i])
+//   }
+// }
+
+// for (const el of array) {
+//   if (el !== 0) {
+//     if (el % 2 === 0) {
+//       arrayEven.push(el)
+//     } else {
+//       arrayOdd.push(el)
+//     }
+//   }
+// }
+
+
+// for (const el of array) {
+//   if (el !== 0) {
+//     el % 2 === 0 ? arrayEven.push(el) : arrayOdd.push(el)
+//   }
+// }
+
+// for (const el of array) {
+//   el !== 0 && (el % 2 === 0 ? arrayEven.push(el) : arrayOdd.push(el))
+// }
+
+
+// ! Похвастаться
+// for (const el of array) el !== 0 && (el % 2 === 0 ? arrayEven.push(el) : arrayOdd.push(el))
+
+// console.log(arrayEven);
+// console.log(arrayOdd);
+
+
+// array = [9, 2, 7, -2, 4, 34, -7, -12, 28, 14, 0, 15, 22,];
 // arrayEven = [];
 // arrayOdd = [];
 
-
-
+// for (let i = 0; i < array.length; i++) {
+//   (array[i] % 2 === 0 && array[i] !== 0) ? arrayEven.push(array[i]) : arrayOdd.push(array[i])
+// }
+// console.log(arrayEven);
+// console.log(arrayOdd);
 
 // ==========================================================================
 
 
 // ★ 39. Задача ★
+// ! Гуглить: методы сортировки массива
+
 // Дан массив чисел, написать программу, которая отсортирует исходный массив в порядке возрастания. Без использования метода sort();
 
 // array = [25, 32, 17, 99, 15];
