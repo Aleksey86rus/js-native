@@ -67,8 +67,7 @@ user.name = 'Gale'
 user['likes cat'] = false
 
 // Если обращаемся к тому свйоству, которого нет и присваиваем значение, то мы создаём новое свойство
-
-// * === Create (созадние нового свойства)
+// * === Create (создание нового свойства)
 user.isAdmin = true
 user['likes catssss'] = true
 
@@ -105,13 +104,69 @@ for (const key in user) {
 }
 
 
+// =========================== EXAMPS ===================================== //
+// Дан объект user, добавить объекту свойство с ключом, который находится в переменной prop со значением Manager.
+
+// const prop = 'job';
+
+// const user = {
+//   name: "Lucas",
+//   age: 29,
+// };
+
+// console.log(user.name); // READ
+// // const name1 = user.name;
 
 
+// user.name = 'Helen'
+
+// user.address = 'Moscow' // CREATE
+// delete user.address // DELETE
+// user.age = 28 // UPDATE
+
+// user[prop] = 'Manager'
+
+// console.log(user);
+// CRUD - Create  Update
 
 
+// -------------------------------------------------------------------- //
+
+// Вывести в консоль в столбик все города из заграничного массива;
+
+// const userTest = {
+//   name: "Peter",
+//   age: 33,
+//   job: "Developer",
+
+//   "my address": {
+//     city: "Moscow",
+//     country: "Russia",
+//     abroad: ["Vienna", "Paris", "London", "Miami"]
+//   },
+//   item: ["bag", "book", "pencil"],
+//   more: null,
+//   key: 'Aha-ha-ha'
+// };
+
+// const users = [
+//   { id: 1000, name: 'Alex', age: 121 },
+//   { id: 1001, name: 'Aleksey', age: 135 }
+// ]
 
 
+// const cityAbroad = user['my address'].abroad
+// for (const key in cityAbroad) {
+//   console.log(`${cityAbroad[key]}`);
+// }
 
+// for (const key in userTest) {
+//   // const key = 'name' // Неявно
 
+//   // console.log(key); // key
+//   // console.log(userTest[key]); // value
+
+//   console.log(`${key}: ${userTest[key]}`); // properties
+// }
 
 
