@@ -259,28 +259,125 @@
 // 13. Задача
 // Написать функцию, на вход которой подаётся объект. Функция возвращает число - количество свйоств в объекте.
 
+// const aleksey = {
+//   gender: 'male',
+//   age: 42,
+//   citizenship: 'Russian',
+//   'place of residence': 'Nizhnevartosk',
+// }
+
+// function countPropertysToObject(description) {
+//   let count = 0;
+//   for (const key in description) {
+//     // if (description.hasOwnProperty(key)) count++
+//     count++
+//   }
+//   return count
+// }
+
+// console.log(countPropertysToObject(aleksey));
+// // countPropertysToObject(aleksey);
+
 
 
 // ========================================================================= //
 
 // 14. Задача
-// Написать функцию, на вход которой подаётся объект.Функция возвращает массив, состоящий из ключей переданного объекта
+// Написать функцию, на вход которой подаётся объект. Функция возвращает массив, состоящий из ключей переданного объекта
+
+// const countries = {
+//   England: 'London',
+//   Australia: 'Sindey',
+//   Russia: 'Moscow',
+//   USA: 'Washington',
+//   Spain: 'Barselona',
+//   Italy: 'Rome'
+// }
+
+// function backArray(arrKeys) {
+//   const myArr = [];
+//   for (const key in arrKeys) {
+//     myArr.push(key)
+//   }
+//   return myArr
+// }
+
+// console.log(backArray(countries));
 // ========================================================================= //
 
 // 15. Задача
-// Написать функцию, на вход которой подаётся объект.Функция возвращает количество объектов внутри переданного объекта.
+// Написать функцию, на вход которой подаётся объект. Функция возвращает количество объектов внутри переданного объекта.
+
+// const countries = {
+//   England: 'London',
+//   Australia: 'Sindey',
+//   Russia: 'Moscow',
+//   USA: 'Washington',
+//   Spain: 'Barselona',
+//   Italy: 'Rome'
+// }
+
+
+// function countObjInsideObj(quantity) {
+//   return Object.keys(quantity).length
+// }
+
+
+// console.log(countObjInsideObj(countries));
 // ========================================================================= //
 
 // 16. Задача
-// Написать функцию, на вход которой подаётся объект.Функция возвращает количество массивов внутри переданного объекта.
+// Написать функцию, на вход которой подаётся объект. Функция возвращает количество массивов внутри переданного объекта.
+
+// const countries = {
+//   England: 'London',
+//   Australia: 'Sindey',
+//   'More countries': ['Moscow', 'Washington', 'Barselona', 'Rome'],
+//   car: ['uaz', 'volvo', 'ferrari', 'vaz', 'opel',],
+// }
+
+// function backCountArray(arr) {
+//   let count = 0;
+//   for (const key in arr) {
+//     if (Array.isArray(arr[key])) {
+//       count++
+//     }
+//   }
+//   return count
+// }
+
+// console.log(backCountArray(countries));
+
+
 // ========================================================================= //
 
 // 17. Задача
-// Написать функцию, на вход которой подаётся объект.Функция возвращает массив, состоящий из значений переданного объекта.
+// Написать функцию, на вход которой подаётся объект. Функция возвращает массив, состоящий из значений переданного объекта.
+
+// const countries = {
+//   England: 'London',
+//   Australia: 'Sindey',
+//   Russia: 'Moscow',
+//   USA: 'Washington',
+//   Spain: 'Barselona',
+//   Italy: 'Rome'
+// }
+
+
+// function backArray(array) {
+//   const myArr = [];
+//   for (const key in array) {
+//     myArr.push(array[key])
+//   }
+//   return myArr
+// }
+
+// console.log(backArray(countries));
+
 // ========================================================================= //
 
 // 18. Задача
-// Написать функци, на вход которой подаётся массив.Функция возвращает объект с ключами типа данных и количеством, которые находятся в массиве.
+// Написать функцию, на вход которой подаётся массив. Функция возвращает объект с ключами типа данных и количеством, которые находятся в массиве.
 
 // Например в массиве testArray:
 // const testArray = ['headline', 7, 5, null, ['array'], true, null, -3, 4 'false', 7, 8, 'link', 1, false, 0, -3 'button', undefined, { name: 'Pavel' }];
@@ -294,6 +391,120 @@
 //           boolean: 2,
 //             object: 2
 // };
+
+
+// const testArray = ['headline', 7, 5, null, ['array'], true, null, null, -3, 4, 'false', 7, 8, 'link', 1, false, 0, -3, 'button', undefined, { name: 'Pavel' }];
+
+// function backObject(obj) {
+//   let stringCount = 0;
+//   let numberCount = 0;
+//   let nullCount = 0;
+//   let undefinedCount = 0;
+//   let booleanCount = 0;
+//   let objectCount = 0;
+//   for (let i = 0; i < obj.length; i++) {
+//     if (typeof obj[i] === 'string') {
+//       stringCount++
+//     } if (typeof obj[i] === 'number') {
+//       numberCount++
+//     } if (obj[i] === null) {
+//       nullCount++
+//     } if (typeof obj[i] === 'undefined') {
+//       undefinedCount++
+//     } if (typeof obj[i] === 'boolean') {
+//       booleanCount++
+//     } if (typeof obj[i] === 'object' && obj[i] !== null) {
+//       objectCount++
+//     }
+//   }
+//   return (`String: ${stringCount},
+//   Number: ${numberCount},
+//   null: ${nullCount},
+//   undefined: ${undefinedCount},
+//   boolean: ${booleanCount},
+//   object: ${objectCount}`);
+// }
+
+// console.log(backObject(testArray));
+
+//------------------------------------------------ //
+
+// const testArray = ['headline', 7, 5, null, ['array'], true, null, -3, 4, 'false', 7, 8, 'link', 1, false, 0, -3, 'button', undefined, { name: 'Pavel' }];
+
+// function backObject(obj) {
+//   let stringCount = 0;
+//   let numberCount = 0;
+//   let nullCount = 0;
+//   let undefinedCount = 0;
+//   let booleanCount = 0;
+//   let objectCount = 0;
+
+//   for (const el of obj) {
+//     if (typeof el === 'string') {
+//       stringCount++
+//     } if (typeof el === 'number') {
+//       numberCount++
+//     } if (el === null) {
+//       nullCount++
+//     } if (typeof el === 'undefined') {
+//       undefinedCount++
+//     } if (typeof el === 'boolean') {
+//       booleanCount++
+//     } if (typeof el === 'object' && el !== null) {
+//       objectCount++
+//     }
+//   }
+
+//   return (`String: ${stringCount},
+//   Number: ${numberCount},
+//   null: ${nullCount},
+//   undefined: ${undefinedCount},
+//   boolean: ${booleanCount},
+//   object: ${objectCount}`);
+// }
+
+// console.log(backObject(testArray));
+
+
+//------------------------------------------------ //
+
+// const testArray = ['headline', 7, 5, null, ['array'], true, null, -3, 4, 'false', 7, 8, 'link', 1, false, 0, -3, 'button', undefined, { name: 'Pavel' }];
+
+// function backObject(obj) {
+//   let stringCount = 0;
+//   let numberCount = 0;
+//   let nullCount = 0;
+//   let undefinedCount = 0;
+//   let booleanCount = 0;
+//   let objectCount = 0;
+
+//   for (const el of obj) {
+//     if (typeof el === 'string') {
+//       stringCount++
+//     } if (typeof el === 'number') {
+//       numberCount++
+//     } if (el === null) {
+//       nullCount++
+//     } if (typeof el === 'undefined') {
+//       undefinedCount++
+//     } if (typeof el === 'boolean') {
+//       booleanCount++
+//     } if (typeof el === 'object' && el !== null) {
+//       objectCount++
+//     }
+//   }
+
+//   return (`String: ${stringCount},
+//   Number: ${numberCount},
+//     null: ${nullCount},
+//       undefined: ${undefinedCount},
+//         boolean: ${booleanCount},
+//           object: ${objectCount}`);
+// }
+
+// console.log(backObject(testArray));
+
+
 // ========================================================================= //
 
 // 19. Задача
@@ -302,14 +513,14 @@
 
 // const user1 = { isAdmin: false };
 // const user2 = { isAdmin: false };
-// console.log(user1 === user2); // ?
+// console.log(user1 === user2); // ? false. Так как разные ссылки.
 
 // const copyUser1 = user1;
-// console.log(copyUser1 === user1); // ?
+// console.log(copyUser1 === user1); // ? true. Так как copyUser и user имеют одинаковые ссылки.
 // ========================================================================= //
 
 // 20. Задача
-// Написать функци, на вход которой подаётся объект.Функция возвращает объект с ключами типа данных и количеством, которые находятся в объекте.
+// Написать функцию, на вход которой подаётся объект. Функция возвращает объект с ключами типа данных и количеством, которые находятся в объекте.
 
 // Например в объекте person;
 // const person = {
@@ -332,6 +543,60 @@
 //           boolean: 1,
 //             object: 1
 // };
+
+// ========================================================================= //
+
+const person = {
+  name: "Bob",
+  age: 25,
+  job: "Developer",
+  "like language": "Java Script",
+  test: undefined,
+  nuller: null,
+  isHuman: true,
+  item: ['bag', 'pen'],
+};
+
+
+
+function backObjectWithKeys(obj) {
+  let stringKeysCount = 0;
+  let numberKeysCount = 0;
+  let nullKeysCount = 0;
+  let undefinedKeysCount = 0;
+  let booleanKeysCount = 0;
+  let objectKeysCount = 0;
+  for (const key in obj) {
+    if (typeof obj[key] === 'string') {
+      stringKeysCount++
+    } if (typeof obj[key] === 'number') {
+      numberKeysCount++
+    } if (obj[key] === null) {
+      nullKeysCount++
+    } if (obj[key] === undefined) {
+      undefinedKeysCount++
+    } if (typeof obj[key] === 'boolean') {
+      booleanKeysCount++
+    } if (typeof obj[key] === 'object' && obj[key] !== null) {
+      objectKeysCount++
+    }
+  }
+  return (`String: ${stringKeysCount}, 
+  number: ${numberKeysCount}, 
+  null: ${nullKeysCount}, 
+  undefined: ${undefinedKeysCount}, 
+  boolean: ${booleanKeysCount}, 
+  object: ${objectKeysCount}`)
+}
+
+console.log(backObjectWithKeys(person));
+
+
+
+
+
+
+// ========================================================================= //
 
 // 21. Задача
 // Дан объект bob, удалить у него свойства со знаечниями undefind и null.

@@ -301,3 +301,82 @@
 //   return sum
 // }
 // console.log(sumAllNumbers(myArray));
+
+
+
+// ==================== object =============== //
+
+// const user = {
+//   name: 'leon',
+//   height: 180,
+//   age: 22,
+//   nationality: 'Spanish',
+//   isAdmin: true,
+//   'likes bird': true
+// }
+// console.log(user);
+
+// // Для обращения к свойствам:===============================
+// console.log(user.name); // leon
+
+// // Добавление свойства:====================================
+// user.job = 'Manager';
+// // Удаление свойства:
+// delete user.height;
+
+// // Обращение к ключу с составным названием:================
+// user['likes bird'] = false
+// // Удалние к ключу с составным названием:==================
+// delete user['likes bird']
+
+
+// для обращение через переменную:=========================
+// let color = 'red';
+// user[color] = true
+
+
+// let examp = prompt('Write your name')
+// console.log(user[examp]);
+
+// Вычисляемые свойства:===================================
+// let fruit = prompt('Введите apple')
+// let bag = {
+//   [fruit]: 5,
+// }
+
+// console.log(bag.apple);
+
+// Проверка существования свойства, опреатор in:============
+// console.log(user.abdc === undefined); // true означает "свойства abcd -- нет"
+
+// Также существует специальный оператор "in" для проверки существования свойства в объекте.
+// console.log('name' in user); // true, user.name -- существует.
+// console.log('blabla' in user); // false, user.blabla -- не существует.
+
+
+// Цикл for in:============================================
+
+// for (key in user) {
+//   // console.log(key);
+//   console.log(user[key]);
+// }
+
+
+
+const menu = {
+  john: 200,
+  Ann: 200,
+  title: 'My menu',
+};
+
+
+function multiplyNumberic(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === 'number') {
+      obj[key] *= 2
+    }
+  }
+}
+
+multiplyNumberic(menu);
+console.log(menu);
