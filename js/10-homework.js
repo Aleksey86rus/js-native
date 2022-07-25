@@ -546,54 +546,50 @@
 
 // ========================================================================= //
 
-const person = {
-  name: "Bob",
-  age: 25,
-  job: "Developer",
-  "like language": "Java Script",
-  test: undefined,
-  nuller: null,
-  isHuman: true,
-  item: ['bag', 'pen'],
-};
+// const person = {
+//   name: "Bob",
+//   age: 25,
+//   job: "Developer",
+//   "like language": "Java Script",
+//   test: undefined,
+//   nuller: null,
+//   isHuman: true,
+//   item: ['bag', 'pen'],
+// };
 
 
 
-function backObjectWithKeys(obj) {
-  let stringKeysCount = 0;
-  let numberKeysCount = 0;
-  let nullKeysCount = 0;
-  let undefinedKeysCount = 0;
-  let booleanKeysCount = 0;
-  let objectKeysCount = 0;
-  for (const key in obj) {
-    if (typeof obj[key] === 'string') {
-      stringKeysCount++
-    } if (typeof obj[key] === 'number') {
-      numberKeysCount++
-    } if (obj[key] === null) {
-      nullKeysCount++
-    } if (obj[key] === undefined) {
-      undefinedKeysCount++
-    } if (typeof obj[key] === 'boolean') {
-      booleanKeysCount++
-    } if (typeof obj[key] === 'object' && obj[key] !== null) {
-      objectKeysCount++
-    }
-  }
-  return (`String: ${stringKeysCount}, 
-  number: ${numberKeysCount}, 
-  null: ${nullKeysCount}, 
-  undefined: ${undefinedKeysCount}, 
-  boolean: ${booleanKeysCount}, 
-  object: ${objectKeysCount}`)
-}
+// function backObjectWithKeys(obj) {
+//   let stringKeysCount = 0;
+//   let numberKeysCount = 0;
+//   let nullKeysCount = 0;
+//   let undefinedKeysCount = 0;
+//   let booleanKeysCount = 0;
+//   let objectKeysCount = 0;
+//   for (const key in obj) {
+//     if (typeof obj[key] === 'string') {
+//       stringKeysCount++
+//     } if (typeof obj[key] === 'number') {
+//       numberKeysCount++
+//     } if (obj[key] === null) {
+//       nullKeysCount++
+//     } if (obj[key] === undefined) {
+//       undefinedKeysCount++
+//     } if (typeof obj[key] === 'boolean') {
+//       booleanKeysCount++
+//     } if (typeof obj[key] === 'object' && obj[key] !== null) {
+//       objectKeysCount++
+//     }
+//   }
+//   return (`String: ${stringKeysCount},
+//   number: ${numberKeysCount},
+//   null: ${nullKeysCount},
+//   undefined: ${undefinedKeysCount},
+//   boolean: ${booleanKeysCount},
+//   object: ${objectKeysCount}`)
+// }
 
-console.log(backObjectWithKeys(person));
-
-
-
-
+// console.log(backObjectWithKeys(person));
 
 
 // ========================================================================= //
@@ -605,12 +601,19 @@ console.log(backObjectWithKeys(person));
 //   name: "Bob",
 //   age: 25,
 //   job: "Developer",
-//   "like language": "Java Script"
-//     test: undefined,
+//   "like language": "Java Script",
+//   test: undefined,
 //   nuller: null,
 //   isHuman: true,
 //   item: ['bag', 'pen']
 // };
+
+// delete bob.test,
+// delete bob.nuller;
+
+// console.log(bob);
+
+// ========================================================================= //
 
 // 22. Задача
 // Не выполняя код, дать ответ:
@@ -622,11 +625,12 @@ console.log(backObjectWithKeys(person));
 //   isAdmin: false
 // };
 
-// const copyUser = user;
-// copyUser.name = "Lawlet";
+// const copyUser = user; // Присваиваем copyUser объект - user. User и copyUser, теперь имеют одинаковые ссылки.
+// copyUser.name = "Lawlet"; // Меняем значение у ключа name на "Lawlet".
 
-// console.log(copyUser.name); // ?
-// console.log(user.name); // ?
+// console.log(copyUser.name); // ? Так как ссылки одинаковые, то мы увидим "Lawlet".
+// console.log(user.name); // ? Так же увидим "Lawlet".
+// ========================================================================= //
 
 // 23. Задача
 // Не выполняя код, дать ответ:
@@ -644,6 +648,7 @@ console.log(backObjectWithKeys(person));
 //   obj.name = newName;
 //   return obj;
 // }
+// ========================================================================= //
 
 // 24. Задача
 // Создать объект player со следующими полями:
@@ -658,8 +663,49 @@ console.log(backObjectWithKeys(person));
 // Добавить в массив friendList имя: Alph и Rich.
 // Вывести все свойства в консоль в виде: <ключ>: <значение>;.
 
+// const propText = 'isBetaTester'
+// const player = {
+//   name: 'Vita',
+//   money: 1000,
+//   level: 1,
+// }
+
+// player.friendList = [];
+// player['likes fly'] = false;
+// player.propText = 'isBetaTester';
+// player['isBetaTester'] = true;
+// player.friendList.push('Alph', 'Rich');
+
+
+// for (const key in player) {
+//   console.log(`${key}: ${player[key]}`);
+// }
+
+// ========================================================================= //
+
 // 25. Задача
 // Написать функцию, на вход которой подаётся объект. Функция возвращает новый объект, состоящий только из текстовых свойств переданного объекта.
+
+// const user = {
+//   name: "Roger",
+//   job: "Workman",
+//   age: 33,
+// };
+
+
+// function newObject(obj) {
+//   let myObj = {};
+//   for (const key in obj) {
+//     if (typeof obj[key] === 'string') {
+//       myObj =
+//     }
+//   }
+//   // return myObj
+// }
+
+// console.log(newObject(user));
+
+// ========================================================================= //
 
 // 26. Задача
 // Создать объект и заполнить выдуманными данными, используя где нужно, вложенный массив или объект:
@@ -672,6 +718,28 @@ console.log(backObjectWithKeys(person));
 // Владелец (имя, фамилия, дата рождения, пол);
 // Вывести каждое свойство по отдельности через console.log()
 
+
+// const car = {
+//   'Serial number': 2548968,
+//   'Car brand': 'Lamborghini',
+//   'Year of release': 1963,
+//   factory: ['Italy: Sant-agata bolognese'],
+//   Owner: { name: 'Stefano', surname: 'Domenicali', 'date of birth': '11.05.1965', gender: 'male' }
+// }
+
+// // for (const key in car) {
+// //   console.log(`${key}: ${car[key]}`);
+// // }
+
+// console.log(car['Serial number']);
+// console.log(car['Car brand']);
+// console.log(car['Year of release']);
+// console.log(car.factory);
+// console.log(car.Owner);
+
+
+// ========================================================================= //
+
 // 27. Задача
 // Создать объект и заполнить выдуманными данными, используя где нужно, вложенный массив или объект:
 // Объект магазин:
@@ -683,6 +751,9 @@ console.log(backObjectWithKeys(person));
 // Список партнёров (названия компаний, сайт партнёра);
 // Вывести каждое свойство по отдельности через console.log()
 
+
+// ========================================================================= //
+
 // 28. Задача
 // Создать объект и заполнить выдуманными данными, используя где нужно, вложенный массив или объект:
 // Объект магазин:
@@ -692,16 +763,20 @@ console.log(backObjectWithKeys(person));
 // Активный ли ученик;
 // Адрес (название улицы и город (название города и название страны, где город));
 // Список технологий, который знает ученик (id технологии и название технологии);
+// ========================================================================= //
 
 // 29. Задача
 // Придумайте на подобии 26-28 задачи похожие объекты и опишите их и выведите каждое свойство в консоль
+// ========================================================================= //
 
 // 30. Задача
 // Написать функцию, которая проверяет, является ли переданный параметр примитивом
+// ========================================================================= //
 
 // ★ Задачи повышенной сложности ★
 // ★ 31. Задача ★
-// Написать функцию, на вход которой подаётся массив объектов с сотрудниками, каждый сотрудник имеет имя и возраст [{name: 'Иван', age: 23}, {name: 'Илья', age: 27}, ..., {name: 'Ольга', age: 22}]). Фукция возвращает массив, где каждый элемент представляет из себя строку "Имя: Иван, возвраст: 23".
+// Написать функцию, на вход которой подаётся массив объектов с сотрудниками, каждый сотрудник имеет имя и возраст [{name: 'Иван', age: 23}, {name: 'Илья', age: 27}, ..., {name: 'Ольга', age: 22}]). Функция возвращает массив, где каждый элемент представляет из себя строку "Имя: Иван, возвраст: 23".
+// ========================================================================= //
 
 // ★ 32. Задача ★
 // Напишите функцию isEmpty, которая проверяет есть ли у объекта свойства или нет.
