@@ -727,13 +727,13 @@
 //   Owner: { name: 'Stefano', surname: 'Domenicali', 'date of birth': '11.05.1965', gender: 'male' }
 // }
 
-// // for (const key in car) {
-// //   console.log(`${key}: ${car[key]}`);
-// // }
+// for (const key in car) {
+//   // console.log(`${key}: ${car[key]}`);
+// }
 
-// console.log(car['Serial number']);
-// console.log(car['Car brand']);
-// console.log(car['Year of release']);
+// console.log(['Serial number'], car['Serial number']);
+// console.log(['Car brand'], car['Car brand']);
+// console.log(['Year of release'], car['Year of release']);
 // console.log(car.factory);
 // console.log(car.Owner);
 
@@ -752,6 +752,30 @@
 // Вывести каждое свойство по отдельности через console.log()
 
 
+// const shop = {
+//   name: 'Elysian',
+//   food: ['Prosciutto di Parma', 'Focaccia', 'Fiorentna'],
+//   'household goods': ['Watering hose', 'Swing', 'Barbecue'],
+//   cosmetic: ['Cartier', 'Hermes', 'Chanel'],
+//   'food court': true,
+//   parking: true,
+//   'number of floors': 12,
+//   partners: { 'Traiding house': 'Elysian', 'Perfume boutique': 'Paris', embassy: 'Russia in Paris' }
+// }
+
+// // for (const key in shop) {
+// //   // console.log(`${key}: ${shop[key]}`);
+// // }
+// console.log(shop.name);
+// console.log(shop.food);
+// console.log(shop['household goods']);
+// console.log(shop.cosmetic);
+// console.log(shop['food court']);
+// console.log(shop.parking);
+// console.log(shop['number of floors']);
+// console.log(shop.partners);
+
+
 // ========================================================================= //
 
 // 28. Задача
@@ -763,6 +787,18 @@
 // Активный ли ученик;
 // Адрес (название улицы и город (название города и название страны, где город));
 // Список технологий, который знает ученик (id технологии и название технологии);
+
+
+// const myShop = {
+//   name: 'Aleksey',
+//   'id student': 5552245,
+//   age: 42,
+//   isActive: true,
+//   address: { street: 'friendship of peoples', city: { 'Nighnevartovsk': 'Russia' } }, technologies: [{ id: 6598874 }, { 'name of the technology': 'JavaScript' }]
+// }
+
+// console.log(myShop);
+
 // ========================================================================= //
 
 // 29. Задача
