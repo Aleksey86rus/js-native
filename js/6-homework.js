@@ -440,3 +440,21 @@
 
 /* ★★ 99. Задача ★★
 Запросить у пользователя 4 числа. Найти наибольшее число. Если числа одинаковые, то вывести любое число. */
+
+let Num1 = Number(prompt('Write your number 1'));
+let Num2 = Number(prompt('Write your number 2'));
+let Num3 = Number(prompt('Write your number 3'));
+let Num4 = Number(prompt('Write your number 4'));
+
+
+if (Num1 > Num2 && Num1 > Num3 && Num1 > Num4) {
+  console.log(Num1);
+} if (Num2 > Num1 && Num2 > Num3 && Num2 > Num4) {
+  console.log(Num2);
+} if (Num3 > Num1 && Num3 > Num2 && Num3 > Num4) {
+  console.log(Num3);
+} if (Num4 > Num1 && Num4 > Num2 && Num4 > Num3) {
+  console.log(Num4);
+} if (Num1 == Num2 && Num2 == Num3 && Num3 == Num4) {
+  console.log(+100);
+}

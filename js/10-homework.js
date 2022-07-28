@@ -763,9 +763,11 @@
 //   partners: { 'Traiding house': 'Elysian', 'Perfume boutique': 'Paris', embassy: 'Russia in Paris' }
 // }
 
-// // for (const key in shop) {
-// //   // console.log(`${key}: ${shop[key]}`);
-// // }
+// for (const key in shop) {
+//   // console.log(`${key}: ${shop[key]}`);
+// }
+// console.log(Object.keys(shop));
+
 // console.log(shop.name);
 // console.log(shop.food);
 // console.log(shop['household goods']);
@@ -803,15 +805,108 @@
 
 // 29. Задача
 // Придумайте на подобии 26-28 задачи похожие объекты и опишите их и выведите каждое свойство в консоль
+
+
+// const legendMusicGroup = {
+//   name: 'Pink Floyd',
+//   'year of education': 1965,
+//   'place of creation': 'London, England',
+//   genre: ['Progressive rock', 'Art rock', 'Psychedelic rock', 'Acid rock', 'Space rock'],
+//   albums: [
+//     { 'album title': 'The Piper at the Gates of Dawn', released: 1967 },
+//     { 'album title': 'A Saucerful of Secrets', released: 1968 },
+//     { 'album title': 'Music from the Film More', released: 1969 },
+//     { 'album title': 'Ummagumma', released: 1969 },
+//     { 'album title': 'Atom Heart Mother', released: 1970 },
+//     { 'album title': 'Meddie', released: 1971 },
+//     { 'album title': 'Obscured by Clouds', released: 1972 },
+//     { 'album title': 'The Dark Side of the Moon', released: 1973 },
+//     { 'album title': 'Wish You Were Here', released: 1975 },
+//     { 'album title': 'Animals', released: 1977 },
+//     { 'album title': 'The Wall', released: 1979 },
+//     { 'album title': 'The Final Cut', released: 1983 },
+//     { 'album title': 'A Momentary Lapse of Reason', released: 1987 },
+//     { 'album title': 'The Division Bell', released: 1994 },
+//     { 'album title': 'The Endless River', released: 2014 },
+//   ],
+
+//   // ================================================================
+
+//   // 1967: 'The Piper at the Gates of Dawn',
+//   // 1968: 'A Saucerful of Secrets',
+//   // 1969: 'Music from the Film More',
+//   // //? 1969: 'Ummagumma',
+//   // 1970: 'Atom Heart Mother',
+//   // 1971: 'Meddie',
+//   // 1972: 'Obscured by Clouds',
+//   // 1973: 'The Dark Side of the Moon',
+//   // 1975: 'Wish You Were Here',
+//   // 1977: 'Animals',
+//   // 1979: 'The Wall',
+//   // 1983: 'The Final Cut',
+//   // 1987: 'A Momentary Lapse of Reason',
+//   // 1994: 'The Division Bell',
+//   // 2014: 'The Endless River',
+
+//   // ===================================================================
+
+//   // 'album title': 'The Piper at the Gates of Dawn', released: 1967,
+//   // 'album title': 'A Saucerful of Secrets', released: 1968,
+//   // 'album title': 'Music from the Film More', released: 1969,
+//   // 'album title': 'Ummagumma', released: 1969,
+//   // 'album title': 'Atom Heart Mother', released: 1970,
+//   // 'album title': 'Meddie', released: 1971,
+//   // 'album title': 'Obscured by Clouds', released: 1972,
+//   // 'album title': 'The Dark Side of the Moon', released: 1973,
+//   // 'album title': 'Wish You Were Here', released: 1975,
+//   // 'album title': 'Animals', released: 1977,
+//   // 'album title': 'The Wall', released: 1979,
+//   // 'album title': 'The Final Cut', released: 1983,
+//   // 'album title': 'A Momentary Lapse of Reason', released: 1987,
+//   // 'album title': 'The Division Bell', released: 1994,
+//   // 'album title': 'The Endless River', released: 2014,
+//   'group composition': ['Syd Barret', 'Roger Waters', 'David Gilmore', 'Richard Wright', 'Nick Mason'],
+//   awards: ['1994 - Grammy', '1996 - Rock and Roll Hall of Fame', '1998, 2007 - Grammy Hall of Fame']
+// }
+
+// console.log(legendMusicGroup);
 // ========================================================================= //
 
 // 30. Задача
 // Написать функцию, которая проверяет, является ли переданный параметр примитивом
+
+
+// function isPrimitive(check) {
+//   return typeof check !== 'object' && check !== null
+// }
+
+// console.log(isPrimitive('summer'));
+// console.log(isPrimitive(123));
+// console.log(isPrimitive(true));
+// console.log(isPrimitive(undefined));
+// console.log(isPrimitive(null));
+// console.log(isPrimitive([]));
+// console.log(isPrimitive({}));
+
 // ========================================================================= //
 
 // ★ Задачи повышенной сложности ★
 // ★ 31. Задача ★
 // Написать функцию, на вход которой подаётся массив объектов с сотрудниками, каждый сотрудник имеет имя и возраст [{name: 'Иван', age: 23}, {name: 'Илья', age: 27}, ..., {name: 'Ольга', age: 22}]). Функция возвращает массив, где каждый элемент представляет из себя строку "Имя: Иван, возвраст: 23".
+
+
+// const personal = [{ name: 'Иван', age: 23 }, { name: 'Илья', age: 27 }, { name: 'Ольга', age: 22 }, { name: 'Михаил', age: 30 }, { name: 'Никита', age: 25 }, { name: 'Елена', age: 24 }, { name: 'Thomas', age: 32 }]
+
+
+// function checkArray(arr) {
+//   for (const key in arr) {
+//     return arr[key]
+//   }
+// }
+
+// console.log(checkArray(personal));
+
+
 // ========================================================================= //
 
 // ★ 32. Задача ★
