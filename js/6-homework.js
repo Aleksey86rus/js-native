@@ -441,20 +441,24 @@
 /* ★★ 99. Задача ★★
 Запросить у пользователя 4 числа. Найти наибольшее число. Если числа одинаковые, то вывести любое число. */
 
-let Num1 = Number(prompt('Write your number 1'));
-let Num2 = Number(prompt('Write your number 2'));
-let Num3 = Number(prompt('Write your number 3'));
-let Num4 = Number(prompt('Write your number 4'));
+// let num1 = Number(prompt('Write your number 1'));
+// let num2 = Number(prompt('Write your number 2'));
+// let num3 = Number(prompt('Write your number 3'));
+// let num4 = Number(prompt('Write your number 4'));
+
+// const array = [num1, num2, num3, num4]
+
+// // console.log(Math.max(num1, num2, num3, num4));
 
 
-if (Num1 > Num2 && Num1 > Num3 && Num1 > Num4) {
-  console.log(Num1);
-} if (Num2 > Num1 && Num2 > Num3 && Num2 > Num4) {
-  console.log(Num2);
-} if (Num3 > Num1 && Num3 > Num2 && Num3 > Num4) {
-  console.log(Num3);
-} if (Num4 > Num1 && Num4 > Num2 && Num4 > Num3) {
-  console.log(Num4);
-} if (Num1 == Num2 && Num2 == Num3 && Num3 == Num4) {
-  console.log(+100);
-}
+// if (num1 > num2 && num1 > num3 && num1 > num4) {
+//   console.log(num1);
+// } if (num2 > num1 && num2 > num3 && num2 > num4) {
+//   console.log(num2);
+// } if (num3 > num1 && num3 > num2 && num3 > num4) {
+//   console.log(num3);
+// } if (num4 > num1 && num4 > num2 && num4 > num3) {
+//   console.log(num4);
+// } else {
+//   console.log(100);
+// }

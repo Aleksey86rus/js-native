@@ -194,9 +194,8 @@
 // 9. Задача
 // Написать функцию, на вход которой подаётся объект и ключ, функция возвращает значение из этого объекта с переданным ключом. Если такого ключа нет, то функция возвращает undefined.
 
-// const user = {
-//   age: 10
-// }
+//?
+
 
 
 
@@ -214,16 +213,31 @@
 // };
 
 
-// function delPropObject(timeOfYear) {
-//   delete timeOfYear.winter
+// function delPropObject(timeOfYear, prop) {
+//   delete timeOfYear[prop]
 // }
 
-// delPropObject(season);
+// delPropObject(season, 'winter');
 // console.log(season);
+
+
+// const user = {
+//   age: 1,
+//   name: 'male',
+//   koliki: true
+// }
+
+// delPropObject(user, 'koliki')
+// console.log(user);
+
+
+// const delPropObject = 10;
+
+
 
 // ========================================================================= //
 
-// 11. Задача
+// FIXME: 11. Задача
 // Дан объект person, выполнить копирование объекта:
 
 // const person = {
@@ -233,12 +247,14 @@
 //   "like language": "Java Script"
 // };
 
-// const person2 = person
-// console.log(person2);
+// const person2 = person // КОпирование не объекта, а ссылки на объект
 
-// for (const key in person) {
-//   console.log(`${key}: ${person[key]}`);
-// }
+// person2.name = 'Gale'
+
+// console.log(person === person2); // true - Если ссылки одинаковы
+// console.log(person2);
+// console.log(person);
+
 
 // ========================================================================= //
 
@@ -246,10 +262,13 @@
 // Написать функцию, на вход которой подаётся 2 параметра. Функция вычисляет произведение двух чисел. Функция возвращает объект, в котором хранится 2 параметра и результат умножения.
 
 
-// let sum = 0;
+
 // function calcCompositionTwoNumb(num1, num2) {
-//   sum = num1 * num2
-//   return { num1, num2, sum }
+//   return {
+//     num1,
+//     num2,
+//     multi: num1 * num2
+//   }
 // }
 
 // console.log(calcCompositionTwoNumb(30, 10));
@@ -300,26 +319,36 @@
 //     myArr.push(key)
 //   }
 //   return myArr
+
+
+//   // return Object.keys(quantity).length
 // }
 
 // console.log(backArray(countries));
 // ========================================================================= //
 
-// 15. Задача
-// Написать функцию, на вход которой подаётся объект. Функция возвращает количество объектов внутри переданного объекта.
+// FIXME: 15. Задача
+// Написать функцию, на вход которой подаётся объект. Функция возвращает количество объектов(массивы, объекты, функции) внутри переданного объекта.
 
-// const countries = {
-//   England: 'London',
-//   Australia: 'Sindey',
-//   Russia: 'Moscow',
-//   USA: 'Washington',
-//   Spain: 'Barselona',
-//   Italy: 'Rome'
+// const testObject = {
+//   buyList: {
+//     'milk': false,
+//     'meat': true,
+//     'bread': true
+//   },
+//   countries: ['England', 'Australia', 'Russia'],
+//   greed: null,
+//   money: 1000000000,
+//   friends: [100, 100, 100],
+//   isHappy: true,
+//   foo: function () {
+//     console.log('I\'m foo!');
+//   }
 // }
 
 
 // function countObjInsideObj(quantity) {
-//   return Object.keys(quantity).length
+
 // }
 
 
@@ -336,10 +365,10 @@
 //   car: ['uaz', 'volvo', 'ferrari', 'vaz', 'opel',],
 // }
 
-// function backCountArray(arr) {
+// function backCountArray(obj) {
 //   let count = 0;
-//   for (const key in arr) {
-//     if (Array.isArray(arr[key])) {
+//   for (const key in obj) {
+//     if (Array.isArray(obj[key])) {
 //       count++
 //     }
 //   }
@@ -385,13 +414,15 @@
 // После вызова функции вернётся объект:
 // {
 //   string: 4,
-//     number: 9,
-//       null: 2,
-//         undefined: 1,
-//           boolean: 2,
-//             object: 2
+//   number: 9,
+//   null: 2,
+//   undefined: 1,
+//   boolean: 2,
+//   object: 2
 // };
 
+
+// FIXME:
 
 // const testArray = ['headline', 7, 5, null, ['array'], true, null, null, -3, 4, 'false', 7, 8, 'link', 1, false, 0, -3, 'button', undefined, { name: 'Pavel' }];
 
@@ -402,21 +433,25 @@
 //   let undefinedCount = 0;
 //   let booleanCount = 0;
 //   let objectCount = 0;
+
+//   // Переписать на for-of
 //   for (let i = 0; i < obj.length; i++) {
 //     if (typeof obj[i] === 'string') {
 //       stringCount++
-//     } if (typeof obj[i] === 'number') {
+//     } else if (tpyeof obj[i] === 'number') {
 //       numberCount++
-//     } if (obj[i] === null) {
-//       nullCount++
-//     } if (typeof obj[i] === 'undefined') {
-//       undefinedCount++
-//     } if (typeof obj[i] === 'boolean') {
+//     } else if (typeof obj[i] === 'boolean') {
 //       booleanCount++
-//     } if (typeof obj[i] === 'object' && obj[i] !== null) {
+//     } else if (obj[i] === null) {
+//       nullCount++
+//     } else if (obj[i] === undefined) {
+//       undefinedCount++
+//     } else {
 //       objectCount++
 //     }
 //   }
+
+//   // Не тот тип данных вернул
 //   return (`String: ${stringCount},
 //   Number: ${numberCount},
 //   null: ${nullCount},
@@ -465,44 +500,6 @@
 
 // console.log(backObject(testArray));
 
-
-//------------------------------------------------ //
-
-// const testArray = ['headline', 7, 5, null, ['array'], true, null, -3, 4, 'false', 7, 8, 'link', 1, false, 0, -3, 'button', undefined, { name: 'Pavel' }];
-
-// function backObject(obj) {
-//   let stringCount = 0;
-//   let numberCount = 0;
-//   let nullCount = 0;
-//   let undefinedCount = 0;
-//   let booleanCount = 0;
-//   let objectCount = 0;
-
-//   for (const el of obj) {
-//     if (typeof el === 'string') {
-//       stringCount++
-//     } if (typeof el === 'number') {
-//       numberCount++
-//     } if (el === null) {
-//       nullCount++
-//     } if (typeof el === 'undefined') {
-//       undefinedCount++
-//     } if (typeof el === 'boolean') {
-//       booleanCount++
-//     } if (typeof el === 'object' && el !== null) {
-//       objectCount++
-//     }
-//   }
-
-//   return (`String: ${stringCount},
-//   Number: ${numberCount},
-//     null: ${nullCount},
-//       undefined: ${undefinedCount},
-//         boolean: ${booleanCount},
-//           object: ${objectCount}`);
-// }
-
-// console.log(backObject(testArray));
 
 
 // ========================================================================= //
@@ -519,6 +516,7 @@
 // console.log(copyUser1 === user1); // ? true. Так как copyUser и user имеют одинаковые ссылки.
 // ========================================================================= //
 
+// FIXME:
 // 20. Задача
 // Написать функцию, на вход которой подаётся объект. Функция возвращает объект с ключами типа данных и количеством, которые находятся в объекте.
 
@@ -537,11 +535,11 @@
 // После вызова функции вернётся объект:
 // {
 //   string: 3,
-//     number: 1,
-//       null: 1,
-//         undefined: 1,
-//           boolean: 1,
-//             object: 1
+//   number: 1,
+//   null: 1,
+//   undefined: 1,
+//   boolean: 1,
+//   object: 1
 // };
 
 // ========================================================================= //
@@ -595,7 +593,7 @@
 // ========================================================================= //
 
 // 21. Задача
-// Дан объект bob, удалить у него свойства со знаечниями undefind и null.
+// Дан объект bob, удалить у него свойства со знаечниями undefined и null.
 
 // const bob = {
 //   name: "Bob",
@@ -642,9 +640,9 @@
 //   age: 33,
 // };
 
-// console.log(createCopy(user, "Ben")); // ?
+// console.log(rename(user, "Ben")); // ?
 
-// function createCopy(obj, newName) {
+// function rename(obj, newName) {
 //   obj.name = newName;
 //   return obj;
 // }
@@ -655,11 +653,14 @@
 // name = Vita;
 // money = 1000;
 // level = 1;
+
 // К созданному объекту добавить следующие поля:
 // friendList = пустой массив;
 // likes fly = false;
+
 // Создать переменную: propText и присвоить значение isBetaTester.
 // Добавить в объект ключ, название которого лежит в переменной propText, со значением true.
+
 // Добавить в массив friendList имя: Alph и Rich.
 // Вывести все свойства в консоль в виде: <ключ>: <значение>;.
 
@@ -672,8 +673,8 @@
 
 // player.friendList = [];
 // player['likes fly'] = false;
-// player.propText = 'isBetaTester';
-// player['isBetaTester'] = true;
+// // player.propText = 'isBetaTester';
+// player[propText] = true;
 // player.friendList.push('Alph', 'Rich');
 
 
@@ -694,13 +695,13 @@
 
 
 // function newObject(obj) {
-//   let myObj = {};
+//   const myObj = {};
 //   for (const key in obj) {
 //     if (typeof obj[key] === 'string') {
-//       myObj =
+//       myObj[key] = obj[key]
 //     }
 //   }
-//   // return myObj
+//   return myObj
 // }
 
 // console.log(newObject(user));
@@ -731,15 +732,19 @@
 //   // console.log(`${key}: ${car[key]}`);
 // }
 
-// console.log(['Serial number'], car['Serial number']);
-// console.log(['Car brand'], car['Car brand']);
-// console.log(['Year of release'], car['Year of release']);
+// console.log(car['Serial number']);
+// console.log(car['Car brand']);
+// console.log(car['Year of release']);
 // console.log(car.factory);
 // console.log(car.Owner);
 
+// console.log(car.Owner.name);
+// console.log(car.Owner.surname);
+// console.log(car.Owner.gender);
+
 
 // ========================================================================= //
-
+// TODO:
 // 27. Задача
 // Создать объект и заполнить выдуманными данными, используя где нужно, вложенный массив или объект:
 // Объект магазин:
@@ -752,16 +757,16 @@
 // Вывести каждое свойство по отдельности через console.log()
 
 
-// const shop = {
-//   name: 'Elysian',
-//   food: ['Prosciutto di Parma', 'Focaccia', 'Fiorentna'],
-//   'household goods': ['Watering hose', 'Swing', 'Barbecue'],
-//   cosmetic: ['Cartier', 'Hermes', 'Chanel'],
-//   'food court': true,
-//   parking: true,
-//   'number of floors': 12,
-//   partners: { 'Traiding house': 'Elysian', 'Perfume boutique': 'Paris', embassy: 'Russia in Paris' }
-// }
+const shop = {
+  name: 'Elysian',
+  food: ['Prosciutto di Parma', 'Focaccia', 'Fiorentna'],
+  'household goods': ['Watering hose', 'Swing', 'Barbecue'],
+  cosmetic: ['Cartier', 'Hermes', 'Chanel'],
+  'food court': true,
+  parking: true,
+  'number of floors': 12,
+  partners: { 'Traiding house': 'Elysian', 'Perfume boutique': 'Paris', embassy: 'Russia in Paris' }
+}
 
 // for (const key in shop) {
 //   // console.log(`${key}: ${shop[key]}`);
@@ -780,6 +785,7 @@
 
 // ========================================================================= //
 
+// FIXME:
 // 28. Задача
 // Создать объект и заполнить выдуманными данными, используя где нужно, вложенный массив или объект:
 // Объект магазин:
@@ -803,6 +809,8 @@
 
 // ========================================================================= //
 
+
+// FIXME:
 // 29. Задача
 // Придумайте на подобии 26-28 задачи похожие объекты и опишите их и выведите каждое свойство в консоль
 
@@ -829,6 +837,7 @@
 //     { 'album title': 'The Division Bell', released: 1994 },
 //     { 'album title': 'The Endless River', released: 2014 },
 //   ],
+// }
 
 //   // ================================================================
 
@@ -874,8 +883,8 @@
 
 // 30. Задача
 // Написать функцию, которая проверяет, является ли переданный параметр примитивом
-
-
+// FIXME:
+//! Проверить на функцию забыл
 // function isPrimitive(check) {
 //   return typeof check !== 'object' && check !== null
 // }
@@ -895,7 +904,17 @@
 // Написать функцию, на вход которой подаётся массив объектов с сотрудниками, каждый сотрудник имеет имя и возраст [{name: 'Иван', age: 23}, {name: 'Илья', age: 27}, ..., {name: 'Ольга', age: 22}]). Функция возвращает массив, где каждый элемент представляет из себя строку "Имя: Иван, возвраст: 23".
 
 
-// const personal = [{ name: 'Иван', age: 23 }, { name: 'Илья', age: 27 }, { name: 'Ольга', age: 22 }, { name: 'Михаил', age: 30 }, { name: 'Никита', age: 25 }, { name: 'Елена', age: 24 }, { name: 'Thomas', age: 32 }]
+// const personal = [
+//   { name: 'Иван', age: 23 },
+//   { name: 'Илья', age: 27 },
+//   { name: 'Ольга', age: 22 },
+//   { name: 'Михаил', age: 30 },
+//   { name: 'Никита', age: 25 },
+//   { name: 'Елена', age: 24 },
+//   { name: 'Thomas', age: 32 }
+// ]
+
+
 
 
 // function checkArray(arr) {
