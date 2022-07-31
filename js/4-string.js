@@ -34,6 +34,13 @@ console.log(userRandomText.toUpperCase());
 // console.log(String(24));
 
 
+console.log(String(24)); // '24'
+console.log(String(null)); // 'null'
+console.log(String(undefined)); // 'undefined'
+console.log(String(0)); // '0'
+console.log(String(true)); // 'true'
+console.log(String(false)); // 'false'
+
 
 // * 3 способа вывести в консоль
 
@@ -44,3 +51,5 @@ console.log('My name is', userName);
 
 // !  Шаблонные литералы
 console.log(`My name is ${userName}`);
+
+
