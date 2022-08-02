@@ -123,12 +123,19 @@
 // console.log(`${"First"}\n\t${\Second /}\n${ 'Third'}`);
 
 // console.log('/'');
-console.log('\'');
+// console.log('\'');
 
-console.log('"First"\n\t\\Second/\n\'Third\'');
+// console.log('"First"\n\t\\Second/\n\'Third\'');
 
 
 // 17 и 21 - 4 тема
 
 
+// =========== string-ext.js ======== //
 
+// userStr = 'My first day';
+// console.log(userStr.length);
+// console.log(userStr.toUpperCase());
+// console.log('   My Text   '.trim());
+
+// console.log('Extention'.indexOf('o'));
