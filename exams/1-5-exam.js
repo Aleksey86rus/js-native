@@ -133,9 +133,97 @@
 
 // =========== string-ext.js ======== //
 
-// userStr = 'My first day';
+1.// userStr = 'My first day';
 // console.log(userStr.length);
-// console.log(userStr.toUpperCase());
-// console.log('   My Text   '.trim());
+//===============================================//
 
-// console.log('Extention'.indexOf('o'));
+2.// console.log(userStr.toUpperCase());
+2.// console.log(userStr.toLowerCase());
+//===============================================//
+
+3.// console.log('   My Text   '.trim());
+//===============================================//
+
+4.// let userStr = 'Extention'
+// console.log(userStr.indexOf('o'));
+//===============================================//
+
+// let userStr1 = 'Hello';
+// let userStr2 = 'world';
+// let userStr3 = 'Planet';
+5.// console.log(userStr3.concat(userStr2));
+//===============================================//
+
+// let userStr = 'Hello';
+6.// console.log(userStr.split('', 3));
+//===============================================//
+
+// let userStr = ' Hello';
+7.// console.log(userStr.repeat(3));
+//===============================================//
+
+// let userStr = 'Hello';
+8.// console.log(userStr.charAt(1));
+//===============================================//
+
+// let userStr = 'Hello world';
+9.// console.log(userStr.includes('Hello'));
+//===============================================//
+
+// let userStr = 'Hello world';
+10.// console.log(userStr.indexOf('l'));
+//===============================================//
+
+// let userStr = 'Hello world';
+11.// console.log(userStr.startsWith('Hello'));
+//===============================================//
+
+// let userStr = 'Hello world';
+12.// console.log(userStr.endsWith('world'));
+//===============================================//
+
+// let userStr = 'Hello world';
+13.// console.log(userStr.search('world'));
+//===============================================//
+
+// let userStr = 'Hello world';
+14.// console.log(userStr.slice(5));
+15.// console.log(userStr.slice(5, 9));
+16.// console.log(userStr.slice(-6));
+17.// console.log(userStr.slice(-6, -2));
+//===============================================//
+
+// let userStr = 'Hello world';
+18.// console.log(userStr.substring(1, 5));
+//===============================================//
+
+// let userStr = 'Hello world';
+19.// console.log(userStr.substr(1, 3));
+//===============================================//
+
+// let userStr = 'Hello world';
+20.// console.log(userStr.replace('Hello', 'Allo'));
+//===============================================//
+
+// let userStr = 'Hello world';
+21.// console.log(userStr.padStart(20, '*'));
+//===============================================//
+
+// let userStr = 'Hello world';
+22.// console.log(userStr.padEnd(20, '*'));
+//===============================================//
+
+// let userStr = '  Hello world   ';
+23.// console.log(userStr.trim());
+//===============================================//
+
+// let userStr = '  Hello world   ';
+24.// console.log(userStr.trimEnd());
+//===============================================//
+
+//let userStr = '  Hello world   ';
+25.//console.log(userStr.trimStart());
+//===============================================//
+
+
+
