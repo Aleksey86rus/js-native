@@ -22,8 +22,8 @@
 
 // console.log(checkIndexLastElem(strUser));
 
-// function checkIndexLastElem(index) {
-//   return index.length - 1;
+// function checkIndexLastElem(string) {
+//   return string.length - 1;
 // }
 
 // =========================================================================== //
@@ -33,13 +33,31 @@
 
 // let strUser = 'Computer';
 
-// console.log(checkFirstSymbolPenultimateLast(strUser));
+// const symbols = checkFirstSymbolPenultimateLast(strUser);
+// console.log(symbols);
 
-// function checkFirstSymbolPenultimateLast(symbol) {
-//   return symbol[0],
-//     symbol[symbol.length - 1],
-//     symbol[symbol.length - 2]
+// function checkFirstSymbolPenultimateLast(str) {
+//   return {
+//     first: str[0],
+//     penult: str[str.length - 1],
+//     last: str[str.length - 2]
+//   }
 // }
+
+
+
+
+
+// function checkFirstSymbolPenultimateLast(str) {
+//   return [
+//     str[0],
+//     str[str.length - 1],
+//     str[str.length - 2]
+//   ]
+// }
+
+
+
 
 // =========================================================================== //
 
@@ -50,17 +68,13 @@
 // let strUser1 = 'Computing';
 // let strUser2 = 'machine';
 
-// let strUser1 = 'machine';
-// let strUser2 = 'Computing';
+// // let strUser1 = 'machine';
+// // let strUser2 = 'Computing';
 
 // console.log(chercResultString(strUser1, strUser2));
 
 // function chercResultString(str1, str2) {
-//   if (str1.length > str2.length) {
-//     return (`${str1} ${str2}`)
-//   } else {
-//     return (`${str2} ${str1}`)
-//   }
+//   return str1.length > str2.length ? `${str1} ${str2}` : `${str2} ${str1}`
 // }
 
 // =========================================================================== //
@@ -68,21 +82,18 @@
 // 5. Задача
 // Написать функцию, на вход которой подаётся строка, функция возвращает количество, встречающихся букв a незасивимо от того какой язык: русский или английский.
 
-// let userStr = 'Параллелограмм';
+// // let userStr = 'Параллелограмм';
 // let userStr = 'parallelogram';
+// let text = 'ааааа -рус aaaaa - en'
 
-// console.log(quantityLetters(userStr));
+// console.log(quantityLetters(text));
 
 // function quantityLetters(letters) {
 //   let count = 0;
 //   for (const symbol of letters) {
-//     if (symbol === 'a') {
-//       count++
-//     } else if (symbol === 'а') {
-//       count++
-//     }
+//     (symbol === 'a' || symbol === 'а') && count++
 //   }
-//   return count
+//   return count;
 // }
 
 // =========================================================================== //
@@ -90,32 +101,76 @@
 // 6. Задача
 // ??Написать функцию, на вход которой подаётся 2 параметра(1 параметр - строка, 2 параметр - символ). Функция возвращает число - количество встречающихся символов в строке.
 
-// let userStr = 'Street';
-// let userSymb = 'S';
+// function checkQuantitySymbol(str, symb) {
+//   let countSymbols = 0;
+//   for (const el of str) {
+//     if (el === symb) {
+//       countSymbols++
+//     }
+//   }
+//   return countSymbols
+// }
+
+// let userStr = 'streetsss';
+// let userSymb = 'z';
 
 // console.log(checkQuantitySymbol(userStr, userSymb));
 
-// function checkQuantitySymbol(str, symb) {
-//   let coutnSymbols = 0;
 
+// * Написать функцию, на вход которой подаётся 2 параметра(1 параметр - массив, 2 параметр - число). Функция возвращает другое число - количество встречающихся чисел (переданный втором параметром) в массиве
+
+
+// function getCountNumb(array, num) {
+//   let count = 0;
+//   for (const el of array) {
+//     if (el === num) {
+//       count++
+//     }
+//   }
+//   return count
 // }
+
+// console.log(getCountNumb([1, 2, 3, 4, 5, 11], 10)); // 0
+// console.log(getCountNumb([1, 2, 3, 4, 5, 11], 6)); // 0
+// console.log(getCountNumb([1, 2, 3, 4, 5, 11], 1)); // 1
+// console.log(getCountNumb([1, 2, 3, 4, 5, 1], 1)); // 2
+
+
+
+// * Написать функцю, на вход которой подаётся массив чисел
+// Функция возвращает количество чётных чисел
+
+// function getEvenCount(array) {
+//   let count = 0;
+//   for (const el of array) {
+//     if (el % 2 === 0) {
+//       count++
+//     }
+//   }
+//   return count
+// }
+
+// console.log(getEvenCount([2, 8, 7, 91, 25, 36]));
+
 
 // =========================================================================== //
 
 // 7. Задача
 // Написать функцию, на вход которой подаётся 2 строки. Функция проверяет содержится ли вторая строка в первой.
 
-// let userStr = 'Hello world';
+// let testStr = 'Hello world2';
+// let queryStr = 'world2';
 
-// checkSecondStr(userStr);
+// console.log(checkSecondStr(testStr, queryStr));
 
-// function checkSecondStr(str) {
-//   console.log(str.includes('world'));
+// function checkSecondStr(str, query) {
+//   // str = 'Hello world'; query = 'world'
+//   return str.includes(query)
 // }
 
 // =========================================================================== //
 
-// 8. Задача
+// FIXME: 8. Задача
 // Написать функцию, на вход которой подаётся 2 строки. Функция проверяет равны ли эти строки независимо от регистра.
 
 // let userStr1 = 'HELLO WORLD';
@@ -124,7 +179,7 @@
 // checkSecondStr(userStr1, userStr2);
 
 // function checkSecondStr(str1, str2) {
-//   console.log(str1.toLowerCase() === str2.toLowerCase());
+//   return str1.toLowerCase() === str2.toLowerCase();
 // }
 
 // =========================================================================== //
@@ -142,22 +197,25 @@
 // console.log(stringToLowerCase(userStr));
 
 // function stringToLowerCase(str) {
-//   return str.toLowerCase().trim()
+//   return str.trim().toLowerCase()
 // }
 
 // =========================================================================== //
 
-// 11. Задача
+// FIXME: 11. Задача
 // Написать функцию, на вход которой подаётся 2 строки. Функция проверяет начинается ли первая строка со второй строки или заканчивается ей ?
+
+
+
+// function checkStartString(str1, str2) {
+//   return str1.startsWith(str2) || str1.endsWith(str2)
+// }
+
 
 // let userStr1 = 'sunshaine';
 // let userStr2 = 'summer';
 
 // console.log(checkStartString(userStr1, userStr2));
-
-// function checkStartString(str1, str2) {
-//   return str1.startsWith('summer') || str1.endsWith('summer')
-// }
 // =========================================================================== //
 
 // 12. Задача
@@ -167,20 +225,23 @@
 
 // console.log(backArrayToSymbol(userStr));
 
-// function backArrayToSymbol(array) {
-//   // return array.split('')
-//   return Array.from(array)
+// function backArrayToSymbol(str) {
+//   // return str.split('')
+//   return Array.from(str)
 // }
 
 
 // =========================================================================== //
 
+// TODO: think about it
+// Методы строк не решают всех возможных задач, возможно стоит решать и без них, но это не всегда
+
 // 13. Задача
 // ?Написать функцию, на вход которой подаётся 2 параметра(1 параметр - строка, 2 параметр - символ). Функция возвращает строку, состоящая без символа.
 
-// console.log(backStringNotSymbol('Monday #'));
+// console.log(backStringNotSymbol('Monday #', "o"));
 
-// function backStringNotSymbol(day, symbol) {
+// function backStringNotSymbol(str, symbol) {
 //   return day.slice(0, 6)
 // }
 
@@ -189,47 +250,59 @@
 // 14. Задача
 // Написать функцию функцию, которая обрезает переданное слово со второго символа до предпоследнего включительно.
 
-// let userStr = 'breakfast';
-
-// sliceToTwoSymbol(userStr);
+// let userStr = '_breakfast';
+// console.log(sliceToTwoSymbol(userStr));
 
 // function sliceToTwoSymbol(string) {
-//   string = string.slice(3, 7)
-//   console.log(string);
+//   return string.slice(1, string.length - 1)
 // }
+
+
+
 
 // =========================================================================== //
 
 // 15. Задача
+// FIXME: подумать, куда пропала буква
 // Написать функцию cropString, на вход которой подаётся 3 параметра(1 параметр - строка, 2 - число(начало обрезки), 3 - число(конец обрезки)). Функция возвращает строку, состощая из символов, начиная от 2 параметра, заканчивая 3 вкл.
 
 // Например:
 // console.log(cropString("tester", 2, 4)); // "ste"
 
-// let cropString = 'Airbus';
+// let string = 'tester';
 
-// console.log(backstrBySimbol(cropString, 2, 3));
+// console.log(cropString(string, 2, 4));
 
-// function backstrBySimbol(str, num1, num2) {
-//   return cropString = str.slice(num1, num2)
+
+// function cropString(str, start, end) {
+//   return str.slice(start, end)
 // }
 
 // =========================================================================== //
 
-// 16. Задача
-// Написать функцию generateLink, на вход которой подаётся 3 параметра: ссылка, текст, класс для тега a. Функция возвращает строку вида:
+// FIXME: 16. Задача
+// Написать функцию generateLink, на вход которой подаётся 3 параметра: адрес, текст, класс для тега a. Функция возвращает строку вида:
 // <a href="ссылка" class="класс">текст</a>.
+
+// Например:
+// generateLink('https://vk.com', 'vk.com', 'start__link');
+// // <a href="https://vk.com" class="start__link">vk.com</a>.
 
 
 // console.log(generateLink('<a href="ссылка"', 'class="start__link">', 'Это просто ссылка</a>.'));
 
-// function generateLink(link, clas, text) {
-//   return (`${link} ${clas} ${text}`)
+
+// function generateLink(link, class, text) {
+//   return (`${link} ${class} ${text}`)
 // }
+
+
+// * Дополнительно
+// Если класс не передаём, то ссылка создаётся без атрибута class
 
 // =========================================================================== //
 
-// 17. Задача
+// FIXME: 17. Задача
 // Написать функцию, на вход которой подаётся строка из функции generateLink 16 задачи. Функция возвращает объект, состоящий из свойств:
 
 // link: адрес ссылки;
