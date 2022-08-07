@@ -131,6 +131,7 @@
 // 17 и 21 - 4 тема
 
 
+
 // =========== string-ext.js ======== //
 
 1.// userStr = 'My first day';
@@ -144,7 +145,8 @@
 3.// console.log('   My Text   '.trim());
 //===============================================//
 
-4.// let userStr = 'Extention'
+4.//
+// let userStr = 'Extention'
 // console.log(userStr.indexOf('o'));
 //===============================================//
 
@@ -162,16 +164,19 @@
 7.// console.log(userStr.repeat(3));
 //===============================================//
 
+8.//
 // let userStr = 'Hello';
-8.// console.log(userStr.charAt(1));
+// console.log(userStr.charAt(1).replace('', '.'));
 //===============================================//
 
+9.//
 // let userStr = 'Hello world';
-9.// console.log(userStr.includes('Hello'));
+// console.log(userStr.includes('Hello'));
 //===============================================//
 
+10.//
 // let userStr = 'Hello world';
-10.// console.log(userStr.indexOf('l'));
+// console.log(userStr.indexOf('l'));
 //===============================================//
 
 // let userStr = 'Hello world';
@@ -205,8 +210,9 @@
 20.// console.log(userStr.replace('Hello', 'Allo'));
 //===============================================//
 
+21.//
 // let userStr = 'Hello world';
-21.// console.log(userStr.padStart(20, '*'));
+// console.log(userStr.padStart(20, '*'));
 //===============================================//
 
 // let userStr = 'Hello world';
@@ -217,12 +223,13 @@
 23.// console.log(userStr.trim());
 //===============================================//
 
-// let userStr = '  Hello world   ';
+// let userStr = 'Hello world   ';
 24.// console.log(userStr.trimEnd());
 //===============================================//
 
-//let userStr = '  Hello world   ';
-25.//console.log(userStr.trimStart());
+25.//
+// let userStr = '  Hello world';
+// console.log(userStr.trimStart());
 //===============================================//
 
 

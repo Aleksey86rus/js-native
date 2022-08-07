@@ -5,7 +5,7 @@
 // for of;
 
 // let userStr = 'Lesson'
-// // for (let i = 0; i < userStr.length; i++) {
+// // for (let i = 0; i <a userStr.length; i++) {
 // //   console.log(userStr[i]);
 // // }
 
@@ -176,7 +176,7 @@
 // let userStr1 = 'HELLO WORLD';
 // let userStr2 = 'hello world';
 
-// checkSecondStr(userStr1, userStr2);
+// console.log(checkSecondStr(userStr1, userStr2));
 
 // function checkSecondStr(str1, str2) {
 //   return str1.toLowerCase() === str2.toLowerCase();
@@ -211,8 +211,7 @@
 //   return str1.startsWith(str2) || str1.endsWith(str2)
 // }
 
-
-// let userStr1 = 'sunshaine';
+// let userStr1 = 'summer sunshaine';
 // let userStr2 = 'summer';
 
 // console.log(checkStartString(userStr1, userStr2));
@@ -239,12 +238,11 @@
 // 13. Задача
 // ?Написать функцию, на вход которой подаётся 2 параметра(1 параметр - строка, 2 параметр - символ). Функция возвращает строку, состоящая без символа.
 
-// console.log(backStringNotSymbol('Monday #', "o"));
-
-// function backStringNotSymbol(str, symbol) {
-//   return day.slice(0, 6)
+// function getStringNotSymbol(str, symbol) {
+//   return
 // }
 
+// console.log(getStringNotSymbol('Monday #', "o"));
 // =========================================================================== //
 
 // 14. Задача
@@ -257,9 +255,6 @@
 //   return string.slice(1, string.length - 1)
 // }
 
-
-
-
 // =========================================================================== //
 
 // 15. Задача
@@ -271,13 +266,11 @@
 
 // let string = 'tester';
 
-// console.log(cropString(string, 2, 4));
-
-
 // function cropString(str, start, end) {
-//   return str.slice(start, end)
+//   return str.slice(start, end + 1)
 // }
 
+// console.log(cropString(string, 2, 4));
 // =========================================================================== //
 
 // FIXME: 16. Задача
@@ -289,11 +282,11 @@
 // // <a href="https://vk.com" class="start__link">vk.com</a>.
 
 
-// console.log(generateLink('<a href="ссылка"', 'class="start__link">', 'Это просто ссылка</a>.'));
+// console.log(generateLink('<a https://developer.mozilla.org/ru/', 'class="start__link">', 'Ресурсы для разработчиков от разработчиков.</a>'));
 
 
-// function generateLink(link, class, text) {
-//   return (`${link} ${class} ${text}`)
+// function generateLink(link, clas, text) {
+//   return (`${link} ${clas} ${text}`)
 // }
 
 
@@ -309,12 +302,12 @@
 // content: содержимое тега a;
 // className: имя класс;
 
-// console.log(BackObjConsisOfProp('<a href="ссылка"', 'class="start__link">', 'Это просто ссылка</a>.'));
+// console.log(BackObjConsisOfProp('https://developer.mozilla.org/ru/', 'class="start__link"', 'Ресурсы для разработчиков от разработчиков.'));
 // function BackObjConsisOfProp(link, clas, text) {
 //   return object = {
-//     link: link.slice(1),
-//     content: text.slice(0, 17),
-//     className: clas.slice(0, 18),
+//     link: link,
+//     content: text,
+//     className: clas
 //   }
 // }
 
@@ -325,10 +318,32 @@
 
 // Диск на котором лежит файл;
 // Расширение файла;
+
+
+// function cetObjTwoData(file, expan) {
+//   return {
+//     'file path': file,
+//     'file type': expan
+//   }
+// }
+
+// console.log(cetObjTwoData('E:\Frontend\js-native\js', 'js'));
+
 // =========================================================================== //
 
 // 19. Задача
 // Написать функцию, на вход которой подаётся строка в kebab -case, функция возращает эту же строку в lowerCamelCase cssToJs("background-color") == 'backgroundColor'; cssToJs("list-style-image") == 'listStyleImage'; cssToJs("-webkit-transition") == 'webkitTransition';
+
+
+// function cetStrLowerCamelCase(cssToJs) {
+
+//   return cssToJs.replace('-', '').split('')
+
+// }
+// console.log(cetStrLowerCamelCase('bacground-color'));
+
+
+// .toUpperCase()
 // =========================================================================== //
 
 // 20. Задача
@@ -337,6 +352,9 @@
 // Название блока;
 // Название элемента;
 // Название модифитора;
+
+
+
 // =========================================================================== //
 
 // 21. Задача
@@ -348,6 +366,17 @@
 
 // 22. Задача
 // Создать функцию, которая удаляет первый и последний символы строки, которая подаётся на вход в функцию.Функция возвращает новую строку.Если в строке меньше двух символов, то возвращать пустую строку.
+
+
+// function cetNewStr(string) {
+//   if (string.length < 2) {
+//     console.log('');
+//   } else {
+//     return string.slice(1, string.length - 1)
+//   }
+// }
+
+// console.log(cetNewStr('cinema'));
 // =========================================================================== //
 
 // 23. Задача
@@ -355,16 +384,38 @@
 
 // 'world'  => 'dlrow'
 // 'word'   => 'drow'
+
+
+// function reverseStr(str) {
+//   return str.split('').reverse().join('')
+// }
+
+// console.log(reverseStr('World'));
 // =========================================================================== //
 
 // 24. Задача
-// Написать функцию, которая удаляет все пробелы из строки.Функция возвращает новую строку.
+// Написать функцию, которая удаляет все пробелы из строки. Функция возвращает новую строку.
+
+// function newStr(string) {
+//   return string.replace(/\s/g, '')
+// }
+
+// console.log(newStr(' Сегодня, такой замечательный день!   '));
+
+// let str = 'Любо, братцы, любо!';
+// console.log(str.match(/любо/gi));
 // =========================================================================== //
 
 // 25. Задача
 // Написать функцию, на вход которой подаётся 2 строки: имя и фамилия.Функция возвращает одну строку - инициалы через точки.
 
 // Alexander Volkov-- > A.V.
+
+// function getOneStr(name, surname) {
+//   return name.slice(0, 1).padEnd(2, '.').concat(surname.slice(0, 1)).padEnd(4, '.')
+// }
+
+// console.log(getOneStr('Aleksandr', 'Volkov'));
 // =========================================================================== //
 
 // 26. Задача
@@ -373,6 +424,15 @@
 // Example:
 // "The greatest victory is that which requires no battle" -- >
 //   "ehT testaerg yrotciv si taht hcihw seriuqer on elttab"
+
+function fripsAllSymbol(str) {
+  return str.split(' ')
+
+}
+// str.split(' ');
+console.log(fripsAllSymbol('The greatest victory is that which requires no battle'));
+
+
 // =========================================================================== //
 
 // 27. Задача
