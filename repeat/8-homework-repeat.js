@@ -305,30 +305,74 @@
 // 21. Задача
 // Перенести значения, кратные 3 из массива numberArray в массив newArr;
 
+// const numberArray = [1, -2, 3, 4, -5, 6, 7, -8, 9, 10, 11, -12, 24];
+// const newArr = [];
 
+// // for (const el of numberArray) {
+// //   if (el % 3 === 0) {
+// //     newArr.push(el)
+// //   }
+// // }
+// console.log(newArr);
 
+// for (const el of numberArray) {
+//   if (el === el) {
+//     newArr.push(el)
+//   }
+// }
+// console.log(numberArray === newArr);
 
 // ==========================================================================
 
 // 22. Задача
 // Написать программу, которая посчитает количество строк и чисел в массиве varArray. Результат вывести в консоль с подписью, где число строк, а где чисел.
 
+// const numberArray = [1, -2, 3, 4, 'js', 6, 7, -8, 'html', 10, 11, 'css', 24];
+// let countStr = 0;
+// let countNum = 0;
 
-
+// for (const el of numberArray) {
+//   if (typeof el === 'string') {
+//     countStr++;
+//   } else if (typeof el === 'number') {
+//     countNum++;
+//   }
+// }
+// console.log(`Количество строк в массиве: ${countStr}`);
+// console.log(`Количество чисел в массиве: ${countNum}`);
 // ==========================================================================
 
 // 23. Задача
 // Написать программу, которая посчитает количество массивов внутри массива testArray.
 
-
+// const testArray = [1, -2, 3, 4, 'js', [6, 7, -8], 'html', 10, 11, [], 'css', 24];
+// let countArray = 0;
+// for (const el of testArray) {
+//   if (typeof el === 'object') {
+//     countArray++;
+//   }
+// }
+// console.log(countArray);
 // ==========================================================================
 
 // 24. Задача
 
 // Дан массив чисел. Вывести в консоль среднее арифметическое отрицательных элементов массива numberArray.
 
+// const numberArray = [1, -2, 3, 4, -5, 6, 7, -8, 9, 10, 11, -12, 24];
+// let sumNegativeNum = 0;
+// let countNegativeNum = 0;
+// let arithmeticMeanNum = 0;
 
-
+// for (const el of numberArray) {
+//   if (el < 0) {
+//     sumNegativeNum += el;
+//     countNegativeNum++;
+//     arithmeticMeanNum = (sumNegativeNum / countNegativeNum)
+//     // debugger
+//   }
+// }
+// console.log(arithmeticMeanNum);
 
 // ==========================================================================
 

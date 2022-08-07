@@ -238,11 +238,40 @@
 // 13. Задача
 // ?Написать функцию, на вход которой подаётся 2 параметра(1 параметр - строка, 2 параметр - символ). Функция возвращает строку, состоящая без символа.
 
+
+
 // function getStringNotSymbol(str, symbol) {
-//   return
+//   let newStr = ''
+//   for (const sym of str) {
+//     if (sym !== symbol) {
+//       newStr += sym
+//     }
+//   }
+//   return newStr
 // }
 
-// console.log(getStringNotSymbol('Monday #', "o"));
+// console.log(getStringNotSymbol('4375893469854708693945', "4"));
+
+
+// Написать функцию, на вход которой подаётся массив чисел и одно число
+// Функция возвращает новый массив со всеми числами, кроме того, который был передан вторым
+
+// [4, 6, 54, 5, 5, 8, 6, 8, 7, 6, 4], 5
+// [4, 6, 54, 8, 6, 8, 7, 6, 4]
+
+// function getNewArray(array, num) {
+//   const newArr = [];
+//   for (const el of array) {
+//     if (el !== num) {
+//       newArr.push(el) // [[4, 6, 54, 5, 5, 8, 6, 8, 7, 6, 4]]
+//     }
+//   }
+//   return newArr
+// }
+
+// console.log(getNewArray([4, 6, 54, 5, 5, 8, 6, 8, 7, 6, 4], 5));
+
+
 // =========================================================================== //
 
 // 14. Задача
@@ -271,6 +300,10 @@
 // }
 
 // console.log(cropString(string, 2, 4));
+
+
+
+
 // =========================================================================== //
 
 // FIXME: 16. Задача
@@ -279,15 +312,33 @@
 
 // Например:
 // generateLink('https://vk.com', 'vk.com', 'start__link');
-// // <a href="https://vk.com" class="start__link">vk.com</a>.
+// <a href="https://vk.com" class="start__link">vk.com</a>.
 
 
 // console.log(generateLink('<a https://developer.mozilla.org/ru/', 'class="start__link">', 'Ресурсы для разработчиков от разработчиков.</a>'));
 
 
-// function generateLink(link, clas, text) {
-//   return (`${link} ${clas} ${text}`)
+// function generateLink(link, className = 'link', text = link, bemBlock = 'start') {
+//   return `<a href="https://${link}" class="${bemBlock}__${className}">${text}</a>`
 // }
+
+// function name(foo) {
+//   // foo = generateLink
+//   const test = 10;
+
+//   document.body.innerHTML += foo('youtube.com') + test;
+// }
+
+// name(generateLink);
+
+
+
+// console.log(generateLink('vk.com', 'link', 'ВКонтакте', 'start'));
+// console.log(generateLink('yandex.ru', 'ref', 'Яндекс', 'begin'));
+// console.log(generateLink('yandex.ru', 'social-link'));
+
+
+
 
 
 // * Дополнительно
@@ -314,22 +365,36 @@
 // =========================================================================== //
 
 // 18. Задача
-// Написать функцию, на вход которой подаётся путь к файлу, например: C: \Program Files\project\test.js.Функция возвращает объект с двумя данными:
+// Написать функцию, на вход которой подаётся путь к файлу, например: C:\Program Files\project\test.js. Функция возвращает объект с двумя данными:
 
 // Диск на котором лежит файл;
 // Расширение файла;
 
 
-// function cetObjTwoData(file, expan) {
+// function cetObjTwoData(pathToFile) {
+//   const indexDisk = pathToFile.indexOf(':')
+//   const disk = pathToFile.slice(0, indexDisk)
+
+//   const indexPointExt = pathToFile.lastIndexOf('.')
+//   const ext = pathToFile.slice(indexPointExt + 1)
+
+
 //   return {
-//     'file path': file,
-//     'file type': expan
+//     disk,
+//     ext
 //   }
 // }
 
-// console.log(cetObjTwoData('E:\Frontend\js-native\js', 'js'));
 
-// =========================================================================== //
+// const result = {
+//   disk: 'E',
+//   ext: 'js'
+// }
+
+// console.log(cetObjTwoData('E:\Front.end\js-native\js\11-home.work.js'));
+// console.log(cetObjTwoData('C:\Program Files\project\test.txt'));
+
+//=========================================================================== //
 
 // 19. Задача
 // Написать функцию, на вход которой подаётся строка в kebab -case, функция возращает эту же строку в lowerCamelCase cssToJs("background-color") == 'backgroundColor'; cssToJs("list-style-image") == 'listStyleImage'; cssToJs("-webkit-transition") == 'webkitTransition';
@@ -425,12 +490,12 @@
 // "The greatest victory is that which requires no battle" -- >
 //   "ehT testaerg yrotciv si taht hcihw seriuqer on elttab"
 
-function fripsAllSymbol(str) {
-  return str.split(' ')
+// function fripsAllSymbol(str) {
+//   return str.split(' ')
 
-}
-// str.split(' ');
-console.log(fripsAllSymbol('The greatest victory is that which requires no battle'));
+// }
+// // str.split(' ');
+// console.log(fripsAllSymbol('The greatest victory is that which requires no battle'));
 
 
 // =========================================================================== //

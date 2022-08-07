@@ -100,11 +100,53 @@ console.log('snikers'.split('').reverse().join(''));
 console.log('🙂'.split(''));
 console.log(Array.from('🙂'));
 
+//1. Task-18 ================================================================//
+
+// function cetObjTwoData(pathToFile) {
+//   return {
+//     disk: pathToFile.slice(0, pathToFile.indexOf(':')),
+//     ext: pathToFile.slice(pathToFile.lastIndexOf('.') + 1)
+//   }
+// }
 
 
+// const cetObjTwoData = (pathToFile) => ({
+//   disk: pathToFile.slice(0, pathToFile.indexOf(':')),
+//   ext: pathToFile.slice(pathToFile.lastIndexOf('.') + 1)
+// })
 
 
+// const result = {
+//   disk: 'E',
+//   ext: 'js'
+// }
 
+// console.log(cetObjTwoData('E:\Front.end\js-native\js\11-home.work.js'));
+// console.log(cetObjTwoData('C:\Program Files\project\test.txt'));
+
+//2. Task-18 =================================================================//
+// function cetObjTwoData(pathToFile) {
+//   const indexDisk = pathToFile.indexOf(':')
+//   const disk = pathToFile.slice(0, indexDisk)
+
+//   const indexPointExt = pathToFile.lastIndexOf('.')
+//   const ext = pathToFile.slice(indexPointExt + 1)
+
+
+//   return {
+//     disk,
+//     ext
+//   }
+// }
+
+
+// const result = {
+//   disk: 'E',
+//   ext: 'js'
+// }
+
+// console.log(cetObjTwoData('E:\Front.end\js-native\js\11-home.work.js'));
+// console.log(cetObjTwoData('C:\Program Files\project\test.txt'));
 
 
 
