@@ -146,8 +146,8 @@
 //===============================================//
 
 4.//
-// let userStr = 'Extention'
-// console.log(userStr.indexOf('o'));
+let userStr = 'Extention'
+console.log(userStr.indexOf('o'));
 //===============================================//
 
 // let userStr1 = 'Hello';
@@ -156,8 +156,9 @@
 5.// console.log(userStr3.concat(userStr2));
 //===============================================//
 
+6.//
 // let userStr = 'Hello';
-6.// console.log(userStr.split('', 3));
+// console.log(userStr.split('', 3));
 //===============================================//
 
 // let userStr = ' Hello';
@@ -232,5 +233,8 @@
 // console.log(userStr.trimStart());
 //===============================================//
 
-
+26.//
+// let userStr = 'Hello world';
+// console.log(userStr.substring(1));
+//===============================================//
 

@@ -353,14 +353,17 @@
 // content: содержимое тега a;
 // className: имя класс;
 
-// console.log(BackObjConsisOfProp('https://developer.mozilla.org/ru/', 'class="start__link"', 'Ресурсы для разработчиков от разработчиков.'));
-// function BackObjConsisOfProp(link, clas, text) {
+// function BackObjConsisOfProp(link, clasName, text) {
 //   return object = {
 //     link: link,
 //     content: text,
-//     className: clas
+//     class: clasName
 //   }
 // }
+
+// console.log(BackObjConsisOfProp('https://developer.mozilla.org/ru/', 'start__link', 'Ресурсы для разработчиков от разработчиков.'));
+
+
 
 // =========================================================================== //
 
@@ -400,24 +403,65 @@
 // Написать функцию, на вход которой подаётся строка в kebab -case, функция возращает эту же строку в lowerCamelCase cssToJs("background-color") == 'backgroundColor'; cssToJs("list-style-image") == 'listStyleImage'; cssToJs("-webkit-transition") == 'webkitTransition';
 
 
-// function cetStrLowerCamelCase(cssToJs) {
 
-//   return cssToJs.replace('-', '').split('')
+// function cetStrLowerCamelCase(cssToJs) {
+//   // let background = cssToJs.split('-');
+//   let background = cssToJs.split('-');
+
+
+//   for (let i = 0; i < background.length; i++) {
+//     background[i] = background[i][0].toUpperCase() + background[i].substr(1);
+//   }
+//   return background.join('')
 
 // }
+
+
+// for (const el of cssToJs) {
+//   if (el !== dash) {
+//     background += el
+//   }
+// }
+// return background[0];
+
+
+// return cssToJs.replace('-', '*').split('');
+
+// console.log(cetStrLowerCamelCase('bacground-color'));
+// console.log(cetStrLowerCamelCase('list-style-image'));
 // console.log(cetStrLowerCamelCase('bacground-color'));
 
+// cssToJs.replace('-', '').split('');
 
-// .toUpperCase()
+// cssToJs.split('-');
+//return cssToJs.replace('bacground-color', '\'bacground-Color\'').replace('-', '')
+
 // =========================================================================== //
 
 // 20. Задача
-// Написать функцию, на вход которой подаётся строка, содержащая класс по БЭМ, вида: class = "about__btn about__btn_disabled" В функцию подаётся строкал только вида, описанного сверху Вывести в консоль:
+// Написать функцию, на вход которой подаётся строка, содержащая класс по БЭМ, вида: class = "about__btn about__btn_disabled" В функцию подаётся строка только вида, описанного сверху. Вывести в консоль:
 
 // Название блока;
 // Название элемента;
 // Название модифитора;
 
+
+// function GetBemClass(block, element, modifier) {
+
+//   console.log(
+//     `Название блока: ${block}
+//   Название элемента: ${element}
+//   Название модификатора:${modifier}`);
+
+//   // console.log({
+//   //   'Название блока': block,
+//   //   'Название элемента': element,
+//   //   'Название модификатора': modifier,
+//   // });
+
+// }
+
+// console.log(GetBemClass('div class=\"about\"', 'about__btn', '_disabled'));
 
 
 // =========================================================================== //
@@ -427,6 +471,31 @@
 
 // Сколько % в строке символов "a" и "c";
 // Программа должна работать с любым(в пределах разумного) количеством символов "a" и "с";
+
+// let stringTask = 'aaaccaaaccaacacaacc';
+// let stringLength = 0;
+// let countLetterA = 0;
+// let countLetterC = 0;
+// let percentLetterA = 0;
+// let percentLetterC = 0;
+
+// function getObj(str) {
+//   stringLength = stringTask.length
+//   for (const el of str) {
+//     if (el === 'a') {
+//       countLetterA++
+//     } else if (el === 'c') {
+//       countLetterC++
+//     }
+//     percentLetterA = (countLetterA / stringLength) * 100;
+//     percentLetterC = (countLetterC / stringLength) * 100
+//   }
+//   return {
+//     'Количество символов \'а\'': String(Math.floor(percentLetterA) + ' %'),
+//     'Количество символов \'с\'': String(Math.floor(percentLetterC) + ' %')
+//   };
+// }
+// console.log(getObj(stringTask));
 // =========================================================================== //
 
 // 22. Задача
@@ -501,13 +570,40 @@
 // =========================================================================== //
 
 // 27. Задача
-// Написать функцию, которая преобразует массив строк в массив чисел, где каждое число - количество символов в строке.Функция возвращает новый массив.
+// Написать функцию, которая преобразует массив строк в массив чисел, где каждое число - количество символов в строке. Функция возвращает новый массив.
 
 // Example: ['a', 'as', 'red', 'test']-- > [1, 2, 3, 4]
+
+// myArr = ['a', 'as', 'red', 'test'];
+// // console.log(myArr);
+// let arr0 = 0;
+// let arr1 = 0;
+// let arr2 = 0;
+// let arr3 = 0;
+// let sumArr = 0;
+// function newArray(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//   }
+//   sumArr = [
+//     arr0 = arr[0].split('').length,
+//     arr1 = arr[1].split('').length,
+//     arr2 = arr[2].split('').length,
+//     arr3 = arr[3].split('').length,
+//   ];
+
+//   return [`${arr}`, `${sumArr}`]
+
+// }
+// console.log(newArray(myArr));
+
+
 // =========================================================================== //
 
 // 28. Задача
 // Написать функцию, на вход которой подаётся массив с словами.Функция мутирует массив, переворачия все слова в массиве наоборот.
+
+
+
 // =========================================================================== //
 
 // 29. Задача
