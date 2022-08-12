@@ -402,39 +402,112 @@
 // 19. Задача
 // Написать функцию, на вход которой подаётся строка в kebab -case, функция возращает эту же строку в lowerCamelCase cssToJs("background-color") == 'backgroundColor'; cssToJs("list-style-image") == 'listStyleImage'; cssToJs("-webkit-transition") == 'webkitTransition';
 
-
-
 // function cetStrLowerCamelCase(cssToJs) {
-//   // let background = cssToJs.split('-');
-//   let background = cssToJs.split('-');
 
+//   let background = cssToJs.split('-');
 
 //   for (let i = 0; i < background.length; i++) {
 //     background[i] = background[i][0].toUpperCase() + background[i].substr(1);
 //   }
 //   return background.join('')
-
 // }
-
-
-// for (const el of cssToJs) {
-//   if (el !== dash) {
-//     background += el
-//   }
-// }
-// return background[0];
-
-
-// return cssToJs.replace('-', '*').split('');
 
 // console.log(cetStrLowerCamelCase('bacground-color'));
 // console.log(cetStrLowerCamelCase('list-style-image'));
 // console.log(cetStrLowerCamelCase('bacground-color'));
 
-// cssToJs.replace('-', '').split('');
 
-// cssToJs.split('-');
-//return cssToJs.replace('bacground-color', '\'bacground-Color\'').replace('-', '')
+// function getStrLowerCamelCase(cssProperty) {
+//   if (cssProperty[0] === '-') {
+//     cssProperty = cssProperty.slice(1)
+//   }
+
+//   const wordList = cssProperty.split('-')
+
+//   for (let i = 1; i < wordList.length; i++) {
+//     wordList[i] = `${wordList[i][0].toUpperCase()}${wordList[i].slice(1)}`
+//   }
+
+//   return wordList.join('');
+// }
+
+
+// function getStrLowerCamelCase(cssProperty) {
+//   let result = ''
+//   let nextSymbolUpper = false
+
+
+//   // let startIndex = 0
+//   // if (cssProperty[0] === '-') {
+//   //   startIndex = 1
+//   // }
+//   // for (let i = startIndex; i < cssProperty.length; i++) {
+
+//   if (cssProperty[0] === '-') {
+//     cssProperty = cssProperty.slice(1)
+//   }
+//   for (const symbol of cssProperty) {
+//     if (symbol === '-') {
+//       nextSymbolUpper = true
+//     } else {
+//       if (nextSymbolUpper) {
+//         result += symbol.toUpperCase()
+//         nextSymbolUpper = false
+//       } else {
+//         result += symbol
+//       }
+//     }
+//   }
+//   return result
+// }
+
+// console.log(getStrLowerCamelCase('background-color'));
+// console.log(getStrLowerCamelCase('list-style-image'));
+// console.log(getStrLowerCamelCase("-webkit-transition"));
+
+
+// console.log('ggfdgfdg-fdg-fd-gfd-gfd-g-fdg-df'.split('fd'));
+// console.log('atatatatat - tatat - yattfdas- - tat'.split('- '));
+
+// // ['atatatatat ', 'tatat ', 'yattfdas', '', 'tat'],
+
+// // const nameString = 'Alex, Pavel, Nick, Paul, David'
+// // console.log(nameString.split(', '));
+
+
+// const foodString = 'carot: unknown, potato: unknown, cabage'
+// console.log(foodString.split(': unknown, '));
+
+
+
+// // Написать функцию, на вход которой подаётся строка вида priceString
+// // Функция возвращает массив чисел
+
+
+// const priceString = '300 price: 500 price: 700 price: 1000';
+
+
+// function getArrNumbers(array) {
+//   const newPriceList = array.split(' price: ')
+
+//   for (let i = 0; i < newPriceList.length; i++) {
+//     newPriceList[i] = Number(newPriceList[i])
+//   }
+
+//   return newPriceList
+// }
+
+// console.log(getArrNumbers(priceString));
+
+
+// console.log(priceString.split(' price: '));
+
+
+
+
+
+
+
 
 // =========================================================================== //
 
@@ -575,25 +648,18 @@
 // Example: ['a', 'as', 'red', 'test']-- > [1, 2, 3, 4]
 
 // myArr = ['a', 'as', 'red', 'test'];
-// // console.log(myArr);
-// let arr0 = 0;
-// let arr1 = 0;
-// let arr2 = 0;
-// let arr3 = 0;
-// let sumArr = 0;
-// function newArray(arr) {
-//   for (let i = 0; i < arr.length; i++) {
+
+
+// function newArray(arrString) {
+//   const arrLength = []
+
+//   for (const el of arrString) {
+//     arrLength.push(el.length)
 //   }
-//   sumArr = [
-//     arr0 = arr[0].split('').length,
-//     arr1 = arr[1].split('').length,
-//     arr2 = arr[2].split('').length,
-//     arr3 = arr[3].split('').length,
-//   ];
 
-//   return [`${arr}`, `${sumArr}`]
-
+//   return arrLength
 // }
+
 // console.log(newArray(myArr));
 
 
@@ -603,6 +669,21 @@
 // Написать функцию, на вход которой подаётся массив с словами.Функция мутирует массив, переворачия все слова в массиве наоборот.
 
 
+// const myArr = ['table', 'book', 'pen', 'lamp'];
+// const myArr2 = [];
+
+
+// function getMutatesArray(arr) {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     myArr2.push(arr[i])
+
+//   }
+//   return myArr2
+//   // return myArr2.join(arr[4]).split('').reverse(arr).join(arr).split(',')
+// }
+// console.log(getMutatesArray(myArr));
+// // console.log(myArr === myArr2);
 
 // =========================================================================== //
 
