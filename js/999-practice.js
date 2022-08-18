@@ -363,20 +363,138 @@
 
 
 
-const menu = {
-  john: 200,
-  Ann: 200,
-  title: 'My menu',
-};
+// const menu = {
+//   john: 200,
+//   Ann: 200,
+//   title: 'My menu',
+// };
 
 
-function multiplyNumberic(obj) {
-  for (const key in obj) {
-    if (typeof obj[key] === 'number') {
-      obj[key] *= 2
-    }
-  }
-}
+// function multiplyNumberic(obj) {
+//   for (const key in obj) {
+//     if (typeof obj[key] === 'number') {
+//       obj[key] *= 2
+//     }
+//   }
+// }
 
-multiplyNumberic(menu);
-console.log(menu);
+// multiplyNumberic(menu);
+// console.log(menu);
+
+
+// 1. Написать функцию, которая добавляет в конец массива переданный элемент
+
+// 1. Написать функцию ()
+// function pushEndArrayEl(arr, el) {
+//   arr.push(el)
+// }
+
+// Проверка
+// const list = [564, 654, 645, 634, 5]
+// pushEndArrayEl(list, 10);
+// console.log(list);
+
+
+// 2. Написать функцию, которая измнеяет строчку, добавляя к ней восклицательный знак
+
+// function addExclToEnd(str) {
+//   // console.log(str + '!');
+//   return str + '!'
+// }
+
+// const res = addExclToEnd('cake');
+// console.log(res);
+// document.body.innerHTML += res
+
+// console.log(addExclToEnd('fdsfsd'));
+
+
+
+
+// 3. Написать функцию, которая проверят является ли переданный параметр массивом
+
+
+// function checkArray(param) {
+//   return Array.isArray(param)
+// }
+
+
+// // Либо сразу до написания функции, либо после того, как написал полностью всю функцию с решениями
+// console.log(checkArray('string')); // false
+// console.log(checkArray(543));     // false
+// console.log(checkArray(true));    // false
+// console.log(checkArray([4, 4]));  // true
+// console.log(checkArray([]));      // true
+// console.log(checkArray({}));      // false
+// console.log(checkArray(null));    // false
+// console.log(checkArray());        // false
+
+
+
+
+
+
+
+
+
+
+
+
+// 4. Написать функцию, которая принимает 2 или 3 параметра и создаёт массив с этими параметрами
+
+// 5. Написать функцию, которая проверят являются ли все переданные параметры массивами
+
+// 10. Написать функцию, которая возвращает новый массив из тех параметров, которые передали на вход
+
+
+
+
+
+// Выводы:
+// ! 1
+// 1. Мутировать
+// 2. Возвращать
+// 3. Вызвать другую функцию, которая делает 1, 2, 3
+
+
+// ! 2
+// Что значит функция проверяет? Функция должна вернуть true/false
+// Что значит функция изменяет строчку? Функция должна вернуть новую строчку (строка имутабельна)
+
+// Что значит изменить массив? (Мутировать)
+// Что значит изменить объект? (Мутировать)
+
+// Что значит создать объект? (Вернуть новый объект)
+// Что значит создать массив? (Вернуть новый массив)
+
+
+// ! 3 Разобрать методы/функции, которые мы знаем
+// 1) Что на вход (какой тип, сколько, в каком порядке)
+// 2) Что на выход (возвращает (какой тип))
+// 3) Суть - что делает функция
+
+
+
+
+
+// function sayHello(firstName, lastName) {
+
+//   return `${firstName} ${lastName}`
+// }
+
+// let res = sayHello('Aleksey', 'Bulanov');
+// let res2 = sayHello('Aleks', 'Bulanov');
+// console.log(res);
+// console.log(res2);
+
+
+// function myObj(obj) {
+//   return obj
+// }
+
+// console.log(myObj([1, 2, 3, 4, 5]));
+
+
+
+
+// =================================================================== //

@@ -146,8 +146,8 @@
 //===============================================//
 
 4.//
-let userStr = 'Extention'
-console.log(userStr.indexOf('o'));
+// let userStr = 'Extention'
+// console.log(userStr.indexOf('o'));
 //===============================================//
 
 // let userStr1 = 'Hello';
@@ -197,6 +197,13 @@ console.log(userStr.indexOf('o'));
 15.// console.log(userStr.slice(5, 9));
 16.// console.log(userStr.slice(-6));
 17.// console.log(userStr.slice(-6, -2));
+
+
+//             0123456789
+let userStr = 'Today i lern JavaScript';
+
+console.log(userStr.slice(8, 12));
+
 //===============================================//
 
 // let userStr = 'Hello world';

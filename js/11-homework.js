@@ -402,7 +402,7 @@
 // 19. Задача
 // Написать функцию, на вход которой подаётся строка в kebab -case, функция возращает эту же строку в lowerCamelCase cssToJs("background-color") == 'backgroundColor'; cssToJs("list-style-image") == 'listStyleImage'; cssToJs("-webkit-transition") == 'webkitTransition';
 
-// function cetStrLowerCamelCase(cssToJs) {
+// function getStrLowerCamelCase(cssToJs) {
 
 //   let background = cssToJs.split('-');
 
@@ -412,9 +412,9 @@
 //   return background.join('')
 // }
 
-// console.log(cetStrLowerCamelCase('bacground-color'));
-// console.log(cetStrLowerCamelCase('list-style-image'));
-// console.log(cetStrLowerCamelCase('bacground-color'));
+// console.log(getStrLowerCamelCase('bacground-color'));
+// console.log(getStrLowerCamelCase('list-style-image'));
+// console.log(getStrLowerCamelCase('bacground-color'));
 
 
 // function getStrLowerCamelCase(cssProperty) {
@@ -505,13 +505,9 @@
 
 
 
-
-
-
-
 // =========================================================================== //
 
-// 20. Задача
+// TODO: 20. Задача
 // Написать функцию, на вход которой подаётся строка, содержащая класс по БЭМ, вида: class = "about__btn about__btn_disabled" В функцию подаётся строка только вида, описанного сверху. Вывести в консоль:
 
 // Название блока;
@@ -604,13 +600,17 @@
 // Написать функцию, которая удаляет все пробелы из строки. Функция возвращает новую строку.
 
 // function newStr(string) {
-//   return string.replace(/\s/g, '')
+//   const newString = [];
+//   for (const el of string) {
+//     if (el !== ' ') {
+//       newString.push(el)
+//     }
+//   }
+//   return newString.join('')
 // }
-
 // console.log(newStr(' Сегодня, такой замечательный день!   '));
 
-// let str = 'Любо, братцы, любо!';
-// console.log(str.match(/любо/gi));
+
 // =========================================================================== //
 
 // 25. Задача
@@ -634,7 +634,6 @@
 
 // function fripsAllSymbol(str) {
 //   return str.split(' ')
-
 // }
 // // str.split(' ');
 // console.log(fripsAllSymbol('The greatest victory is that which requires no battle'));
@@ -679,11 +678,11 @@
 //     myArr2.push(arr[i])
 
 //   }
-//   return myArr2
-//   // return myArr2.join(arr[4]).split('').reverse(arr).join(arr).split(',')
+//   return myArr2.reverse()
+//   return myArr2.join(arr[4]).split('').reverse(arr).join(arr).split(',')
 // }
 // console.log(getMutatesArray(myArr));
-// // console.log(myArr === myArr2);
+// console.log(myArr === myArr2);
 
 // =========================================================================== //
 
@@ -693,6 +692,9 @@
 // Количество заглавных букв;
 // Количество строчных букв;
 // Количество чисел;
+
+
+
 // =========================================================================== //
 
 // 30. Задача

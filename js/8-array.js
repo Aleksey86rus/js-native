@@ -40,11 +40,13 @@ console.log(userNameList[userNameList.length - 1]); // Последний эле
 console.log(userNameList[userNameList.length - 2]); // Предпоследний элемент
 
 console.log('##########################');
-// * === Методы массива === * //
+
+
+// ***** === Методы массива === ***** //
 
 const taskArray = [7, 12, 32, 44, 50];
 
-// * 1) .push() - добавляет элемент(ы) в конец массива, изменяя сам массив 
+// * 1) .push(...items) - добавляет элемент(ы) в конец массива, изменяя сам массив 
 // (функция возвращает длину обновлённого массива)
 
 taskArray.push(10); // [7, 12, 32, 44, 50, 10]
@@ -52,7 +54,7 @@ taskArray.push(55, 76); // [7, 12, 32, 44, 50, 10, 55, 76]
 
 console.log(taskArray);
 
-// * 2) .unshift() - добавляет элемент(ы) в начало
+// * 2) .unshift(...items) - добавляет элемент(ы) в начало
 // (функция возвращает длину обновлённого массива)
 
 taskArray.unshift(0); // [0, 7, 12, 32, 44, 50, 10, 55, 76]
@@ -71,6 +73,7 @@ taskArray.shift();  //[7, 12, 32, 44, 50, 10, 55]
 console.log(taskArray);
 
 // * 5) Array.isArray() - проверка на массив
+// Возвращает true/false
 console.log(typeof taskArray); // object
 console.log(Array.isArray(taskArray)); // true
 console.log(Array.isArray({})); // false
@@ -78,6 +81,8 @@ console.log(Array.isArray([])); // true
 
 
 // ? 6) Array.from() - преобразует массиво-подобную структуру данных к Array
+// Строка, объект (argumnets)
+// Возвращает массив
 const newArr = Array.from('text user');
 console.log(newArr);
 
