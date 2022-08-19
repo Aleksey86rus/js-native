@@ -81,7 +81,7 @@ console.log(Array.isArray([])); // true
 
 
 // ? 6) Array.from() - преобразует массиво-подобную структуру данных к Array
-// Строка, объект (argumnets)
+// Строка, объект (Arguments, NodeList, HTMLCollection, Map, Set)
 // Возвращает массив
 const newArr = Array.from('text user');
 console.log(newArr);

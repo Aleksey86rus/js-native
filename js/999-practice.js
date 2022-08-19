@@ -433,18 +433,50 @@
 
 
 
+// 4. let index = <string>.indexOf(value, index = 0) // Вовзращает индекс первого встречного value, начиная с index (по умолчани поиск с начала строки index = 0)
+// ! Возвращает -1, если ничего не нашёл
+// Реализовать функция, как indexOf
+
+function indexOf1(string, subStr, index = 0) {
+  for (let i = index; i < string.length; i++) {
+    if (string[i] === subStr) {
+      return i
+    }
+  }
+  return -1
+}
+
+// indexOf1('string', 'r');
+console.log(indexOf1('string', 'r'));
+console.log(indexOf1('string', 't'));
+console.log(indexOf1('string', 'i', 5));
+
+
+// 5. let hasIndex = <string>.includes(value, index = 0) // Вовзращает true если value найден в строке, иначе false
+// index по умолчанию равен 0
+
+// 6. let newString = <string>.trim() // Удаляет все пробелы слева и справа от строки
+
+// 7. let newString = <string>.slice(start, end = <string>.length); // Возвращает строку, копируя в неё все символы с позиции start до позиции end !!!НЕ ВКЛ!!!
 
 
 
+// Если устал от задач выше:
+// 8. Написать функцию, которая принимает 2 или 3 параметра и создаёт массив с этими параметрами
 
-
-
-
-// 4. Написать функцию, которая принимает 2 или 3 параметра и создаёт массив с этими параметрами
-
-// 5. Написать функцию, которая проверят являются ли все переданные параметры массивами
+// 9. Написать функцию, которая проверят являются ли все переданные параметры массивами
 
 // 10. Написать функцию, которая возвращает новый массив из тех параметров, которые передали на вход
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -470,31 +502,25 @@
 
 // ! 3 Разобрать методы/функции, которые мы знаем
 // 1) Что на вход (какой тип, сколько, в каком порядке)
-// 2) Что на выход (возвращает (какой тип))
+// 2) Что на выход (какой тип, что возвращает)
 // 3) Суть - что делает функция
 
 
-
-
-
-// function sayHello(firstName, lastName) {
-
-//   return `${firstName} ${lastName}`
-// }
-
-// let res = sayHello('Aleksey', 'Bulanov');
-// let res2 = sayHello('Aleks', 'Bulanov');
-// console.log(res);
-// console.log(res2);
-
-
-// function myObj(obj) {
-//   return obj
-// }
-
-// console.log(myObj([1, 2, 3, 4, 5]));
-
+// const array = [653, 32, 'dfs', 'gfdy', 546, true]
+// // length - длина - количество элементов в массиве
+// console.log(array.push(null, 'ttt'));
+// console.log(array.pop());
 
 
 
 // =================================================================== //
+// arguments //
+
+// function myFunc(x) {
+//   // console.log(arguments);
+//   return arguments;
+// }
+
+// let myVar = myFunc(10, 'string', [1, 2, 3]);
+
+// console.log(myVar);
