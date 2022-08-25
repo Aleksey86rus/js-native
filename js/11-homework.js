@@ -687,23 +687,53 @@
 // =========================================================================== //
 
 // 29. Задача
-// Написать функцию, на вход которой подаётся строка.Функция возвращает объект, в котором есть 3 свойства:
+// Написать функцию, на вход которой подаётся строка. Функция возвращает объект, в котором есть 3 свойства:
 
 // Количество заглавных букв;
 // Количество строчных букв;
 // Количество чисел;
 
-
+// function getObj(str) {
+//   let countCapitalLetter = 0;
+//   let countLowercaseLetter = 0;
+//   let countNumbers = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === str[i].toUpperCase()) {
+//       countCapitalLetter++
+//     }
+//     if (str[i] === str[i].toLowerCase()) {
+//       countLowercaseLetter++
+//     }
+//     if (str[i] === str[i]) {
+//       countNumbers++
+//     }
+//   }
+//   return { countCapitalLetter, countLowercaseLetter, countNumbers }
+// }
+// console.log(getObj('Start'));
 
 // =========================================================================== //
 
 // 30. Задача
-// Написать функцию, на вход которой подаётся строка.Функция возвращает строку, удаляя оттуда все цифры
+// Написать функцию, на вход которой подаётся строка. Функция возвращает строку, удаляя оттуда все цифры
 
 // Examples:
 // '! !' -> '! !'
 // '123456789' -> ''
 // 'This looks5 grea8t!' -> 'This looks great!'
+
+
+// function getStr(string, numbers) {
+//   let newStr = '';
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] !== numbers) {
+//       newStr += string[i]
+//     }
+//   }
+//   console.log(newStr.replace(1, ''));
+// }
+
+// console.log(getStr('1Su5mm7er9', '9'));
 // =========================================================================== //
 
 // 31. Задача

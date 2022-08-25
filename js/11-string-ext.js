@@ -68,7 +68,6 @@ const firstWord = strUser.slice(0, strUser.indexOf(' '))
 console.log(firstWord);
 
 
-
 // * === Array/String (Методы массивов для строк) === * //
 
 // * let array = <string>.split(value)  // Преобразует строку в массив по разделителю value

@@ -200,9 +200,9 @@
 
 
 //             0123456789
-let userStr = 'Today i lern JavaScript';
+// let userStr = 'Today i lern JavaScript';
 
-console.log(userStr.slice(8, 12));
+// console.log(userStr.slice(8, 12));
 
 //===============================================//
 
