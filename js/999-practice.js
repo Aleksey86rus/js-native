@@ -742,6 +742,13 @@ const testTrimWord = '    RI   NG    '
 //   return value
 // }
 
+
+// СС - система счисления
+// 0 1 2 3 4 5 6 7 8 9 a(10) b(11) c d e f(15) -16чная
+// 10 - 16 в 16-ричной
+
+
+
 // console.log(parseInt('100'));
 // console.log(parseInt('001'));
 // console.log(parseInt('100$'));
@@ -751,18 +758,27 @@ const testTrimWord = '    RI   NG    '
 // console.log(parseInt('сто'));
 // console.log(parseInt(100));
 // console.log(parseInt(50, 30));
-// console.log(parseInt('b', 20)); //?
-// console.log(parseInt(' aa', 30)); //?
+// console.log(parseInt('11', 10)); //?
+// console.log(parseInt('aa', 30)); //?
 // console.log(parseInt(10 * 20));
 // console.log(parseInt(100, '100'));
 // console.log(parseInt('   20'));
 // console.log(parseInt('122Allo'));
 // console.log(Number.parseInt('120'));
+// console.log(Number.parseInt());
+// console.log(parseInt(true)); // NaN
+// console.log(parseInt(null)); // NaN
+
+// console.log(parseInt([0])); // '0' - 0
+// console.log(parseInt('0, 1')); //  -> 0
+// console.log(parseInt('7  1')); //  -> 7
+// console.log(parseInt([0, 1])); // '0, 1' -> 0
+
 
 //!Выводы:
-// а) Принимает как числа так и строки.
+// а) Принимает как числа так и строки. (остальное преобразуется в NaN)
 // b) Игнорирует пробелы.
-// c) Работает с маематическими операторами.
+// c) Работает с математическими операторами.
 // d) Работает со строкой в которой присутствуют числа. (Выводит только числа. Оставшийся текст игнорируется).
 // i) Возвращает NaN если перед числом содержится - любой символ.
 // f) Не принимает исключительно строки! Вернет NaN.
@@ -786,6 +802,8 @@ const testTrimWord = '    RI   NG    '
 // console.log(parseFloat('abc' + 10));
 // console.log(parseFloat(10, 'abc'));
 // console.log(parseFloat(10.23));
+// console.log(parseFloat('10. 23'));
+// console.log(parseFloat('10.23'));
 
 //!Выводы:
 // a) Преобразовывает строку в число.
@@ -802,8 +820,8 @@ const testTrimWord = '    RI   NG    '
 // =================================== //
 // function getValue(par = prompt('write your number')) {
 //   return par
-
 // }
+
 // console.log(getValue('abc'));
 // console.log(getValue(55));
 // console.log(getValue(true));
@@ -818,17 +836,18 @@ const testTrimWord = '    RI   NG    '
 // const myArr = [1, 2, 3, 4, 5];
 // myArr.push(6, 7, 8);
 // myArr.push('string');
-// myArr.push(null);
+// const res = myArr.push(null);
+// console.log(res); // 10
 // console.log(myArr);
 // console.log(myArr.length);
 
-// ================================ // 
+// ================================ //
 
 // pop()
 
 // const myArray = [1, 2, 3, 4, 5, 6];
-// let deleteNumber = myArray.pop()
-// myArray.pop();
+// const deleteNumber = myArray.pop() // delete 6
+// myArray.pop(); // delete 5
 // console.log(deleteNumber);
 
 // ================================ //
@@ -862,25 +881,58 @@ const testTrimWord = '    RI   NG    '
 // console.log(isArr(null));
 // console.log(isArr(false));
 
-// ================================= // 
+// ================================= //
 // slice()
 
-let user = 'any string';
-let user2 = '';
-for (let i = 0; i < user.length; i++) {
-  user2 += user.toUpperCase()
-}
-console.log(user2[0] + user.slice(1));
+// let user = 'any string';
+// let user2 = '';
+// for (let i = 0; i < user.length; i++) {
+//   user2 += user.toUpperCase()
+// }
+// console.log(user2[0] + user.slice(1));
 // ! Выводы ?
 
 
 
+const text = 'More more text |another| page. Heading!'
+// Обрезать текст с 5 символа до конца
+// Обрезать текст с 0 символа до 3 вкл
+
+// console.log(text.slice(5, text.length));//! Не надо так
+// console.log(text.slice(5)); // ! Правильный
+// console.log(text.slice(0, 4));
+
+// * Унивесрсально вырезать слово another
+// 1 вариант - цикл (без slice)
+
+let newText = '';
+let isStick = false
+for (let i = 0; i < text.length; i++) {
+
+  if (isStick && text[i] !== '|') {
+    newText += text[i]
+  }
+
+  if (text[i] === '|') {
+    isStick = !isStick
+  }
+}
+console.log(newText);
+
+// ***** 2 вариант - slice 
+const firstStickIndex = text.indexOf('|')
+const lastStickIndex = text.lastIndexOf('|')
+console.log(text.slice(firstStickIndex + 1, lastStickIndex));
 
 
+const text2 = 'More more text = page. Heading!'
+// * Обрезать всё, что до = (пробелы лишние убрать)
+const beforeIndex = text2.indexOf('=');
+console.log(text2.slice(0, beforeIndex).trim());
 
+// * Обрезать всё, что после = (пробелы лишние убрать)
 
+const afterIndex = text2.lastIndexOf('=');
+console.log(text2.slice(afterIndex + 1).trim());
 
-
-
-
-
+// ! Внимательно смотри, где создавать переменные: внутри цикла или вне его
