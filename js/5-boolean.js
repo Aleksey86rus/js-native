@@ -24,7 +24,10 @@ console.log(hasCompare);
 // console.log(10 === "10"); // false
 // console.log(10 === 10); // true
 
-// // ! Исключение
+// // ! Исключение (Не приводит к типу number)
+// null
+// undefined
+console.log(null == 0); // false
 // console.log(null == undefined); // true
 
 

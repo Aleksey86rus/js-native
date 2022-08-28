@@ -936,3 +936,8 @@ const afterIndex = text2.lastIndexOf('=');
 console.log(text2.slice(afterIndex + 1).trim());
 
 // ! Внимательно смотри, где создавать переменные: внутри цикла или вне его
+
+
+
+
+

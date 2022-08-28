@@ -679,7 +679,7 @@
 
 //   }
 //   return myArr2.reverse()
-//   return myArr2.join(arr[4]).split('').reverse(arr).join(arr).split(',')
+//   // return myArr2.join(arr[4]).split('').reverse(arr).join(arr).split(',')
 // }
 // console.log(getMutatesArray(myArr));
 // console.log(myArr === myArr2);
