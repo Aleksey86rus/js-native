@@ -13,11 +13,17 @@
 // }
 
 // ? Сделать с помощью цикла
-// function name(str) {
+function deleteStrLastLetter(str) {
+  let newStr = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== str[str.length - 1]) {
+      newStr += str[i]
+    }
+  }
+  return newStr
+}
+console.log(deleteStrLastLetter('params'));
 
-// }
-
-// console.log(deleteStrLastLetter('params'));
 
 
 // const text = 'text, text'
