@@ -208,17 +208,6 @@
 // }
 // console.log(getEvenNumbers([2, 4, 9, 8, 12, 15, 64, 88]));
 
-const myArr = [2, 4, 9, 8, 12, 15, 64, 88];
-// const newArr = myArr;
-const newArray = [];
-newArray.push(myArr) // [[2, 4, 9, 8, 12, 15, 64, 88]]
-console.log(newArray);
-
-
-// console.log(myArr === newArr);
-console.log(myArr === newArray);
-
-
 
 // =========================================================================== //
 
@@ -228,6 +217,16 @@ console.log(myArr === newArray);
 // let testStr = 'Hello world2';
 // let queryStr = 'world2';
 
+// // function checkSecondStrInFirst(str1, str2) {
+// //   return str1.includes(str2);
+// // }
+
+// checkSecondStrInFirst = (str1, str2) => {
+//   return str1.includes(str2);
+// }
+
+// console.log(checkSecondStrInFirst(testStr, queryStr));
+
 // =========================================================================== //
 
 // FIXME: 8. Задача
@@ -236,10 +235,35 @@ console.log(myArr === newArray);
 // let userStr1 = 'HELLO WORLD';
 // let userStr2 = 'hello world';
 
+// // function checkSecondStr(str1, str2) {
+// //   return str1.toLowerCase() === str2.toLowerCase();
+// // }
+
+// checkSecondStr = (str1, str2) => {
+//   return str1.toLowerCase() === str2.toLowerCase();
+// }
+
+// console.log(checkSecondStr(userStr1, userStr2));
+
 // =========================================================================== //
 
 // 9. Задача
 // ? Написать функцию, на вход которой подаётся 3 строки, которая проверяет есть вторая или третья строка в первой. Функция может работать как с двумя переменными, так и стремя.
+
+
+// let userStr1 = 'One two three';
+// let userStr2 = 'two';
+// let userStr3 = 'three';
+
+// // function checkStrInFirstString(str1, str2, str3) {
+// //   return str1.includes(str2) && str1.includes(str3);
+// // }
+
+// // checkStrInFirstString = (str1, str2, str3) => {
+// //   return str1.includes(str2) && str1.includes(str3);
+// // }
+
+// console.log(checkStrInFirstString(userStr1, userStr2, userStr3));
 
 // =========================================================================== //
 
@@ -248,17 +272,36 @@ console.log(myArr === newArray);
 
 // let userStr = '   I\'m learning JavaScript   ';
 
+// function geStringToLowerCase(str) {
+//   return str.toLowerCase().trim()
+// }
+// console.log(geStringToLowerCase(userStr));
 
 // =========================================================================== //
 
 // FIXME: 11. Задача
 // Написать функцию, на вход которой подаётся 2 строки. Функция проверяет начинается ли первая строка со второй строки или заканчивается ей ?
 
+// let userStr1 = 'one two one';
+// let userStr2 = 'one';
+
+// function checkString(str1, str2) {
+//   return str1.startsWith(str2) || str1.endsWith(str2);
+// }
+
+// console.log(checkString(userStr1, userStr2));
+
 // =========================================================================== //
 
 // 12. Задача
 // Написать функцию, на вход которой подаётся строка. Функция возвращает массив, состоящий из символов этой строки. Решить задачу двумя способами.
 
+// function getArraySimbols(string) {
+//   // return string.split('');
+//   return Array.from(string)
+// }
+
+// console.log(getArraySimbols('params'));
 
 // =========================================================================== //
 
@@ -267,6 +310,8 @@ console.log(myArr === newArray);
 
 // 13. Задача
 // ?Написать функцию, на вход которой подаётся 2 параметра(1 параметр - строка, 2 параметр - символ). Функция возвращает строку, состоящая без символа.
+
+
 
 
 // Написать функцию, на вход которой подаётся массив чисел и одно число
