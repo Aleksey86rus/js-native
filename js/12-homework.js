@@ -310,15 +310,15 @@ console.log('``````````````');
 // const newRandArr = createRandomArray(5, 0, 1);
 // console.log(newRandArr); // Создаёт массив из 5 элементов, заполненных только 0 и 1: [0, 1, 1, 0, 1]
 
-function createArray(length = 10, min = 0, max = 5) {
-  const createRandomArray = [];
+// function createArray(length = 10, min = 0, max = 5) {
+//   const createRandomArray = [];
 
-  for (let i = 0; i < length; i++) {
-    createRandomArray[i] = Math.floor(Math.random() * (max + 1 - min) + min)
-  }
-  console.log(createRandomArray);
+//   for (let i = 0; i < length; i++) {
+//     createRandomArray[i] = Math.floor(Math.random() * (max + 1 - min) + min)
+//   }
+//   console.log(createRandomArray);
 
-}
+// }
 // createArray(5, 1, 5);
 // createArray(5);
 
