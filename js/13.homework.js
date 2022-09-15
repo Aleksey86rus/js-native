@@ -169,9 +169,9 @@
 //   return x * y * z;
 // }
 
-
-const text = (x, y, z = 1) => x * y * z;
-console.log(text(10, 10, 10));
+// const test = (x, y, z = 1) => x * y * z;
+// console.log(test(10, 10));
+// console.log(test(10, 10, 10));
 
 // ================================================================================================ //
 
@@ -181,39 +181,176 @@ console.log(text(10, 10, 10));
 // function test(x, y, z = 0) {
 //   console.log(x + y + z);
 // }
+
+// const test = (x, y, z = 0) => x + y + z;
+// console.log(test(20, 20));
+// console.log(test(20, 20, 20));
+
 // ================================================================================================ //
 
 // 12. Задача(AF || FE || FD)
-// Написать функцию, на вход которой подаёт неизвестное количество строк.Функция вовзаращает число - количество всех символов из всех переданных строк.
+// Написать функцию, на вход которой подаёт неизвестное количество строк. Функция вовзаращает число - количество всех символов из всех переданных строк.
+
+
+// 1. AF
+// let countSymbols = 0;
+// const countAllSymbolsInStr = (...params) => countSymbols = params.join('').length
+
+// console.log(countAllSymbolsInStr('abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc', 'abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc', 'abc', 'abc'));
+
+
+// 2. FE
+// let countSymbols = 0;
+// const countAllSymbolsInStr = function (...params) {
+//   return countSymbols = params.join('').length
+// }
+
+// console.log(countAllSymbolsInStr('abc'));
+// console.log(countAllSymbolsInStr(' abc '));
+// console.log(countAllSymbolsInStr('abc', 'abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc', 'abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc', 'abc', 'abc'));
+
+
+// 3. FD
+// let countSymbols = 0;
+// function countAllSymbolsInStr(...params) {
+//   return countSymbols = params.join().length
+// }
+
+// console.log(countAllSymbolsInStr('abc'));
+// console.log(countAllSymbolsInStr(' abc '));
+// console.log(countAllSymbolsInStr('abc', 'abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc', 'abc'));
+// console.log(countAllSymbolsInStr('abc', 'abc', 'abc', 'abc'));
+
 // ================================================================================================ //
 
 // 13. Задача(AF || FE || FD)
 // Написать функцию, на вход которой подаёт любое количество чисел.Функция возвращает сумму всех чисел.
+
+// AF
+// let sumNumbers = 0;
+// const manyDifferentNumbers = (...params) => {
+//   for (const el of params) {
+//     sumNumbers += el
+//   }
+//   return sumNumbers
+// }
+
+// console.log(manyDifferentNumbers(2, 6, 8, 9, 4, 12, 55, 47, 10));
+
+// FE
+// let sumNumbers = 0;
+// const manyDifferentNumbers = function (...params) {
+//   for (const el of params) {
+//     sumNumbers += el
+//   }
+//   return sumNumbers
+// }
+
+// console.log(manyDifferentNumbers(2, 6, 8, 9, 4, 12, 55, 47, 10));
+
+
+// FD
+// let sumNumbers = 0;
+// function manyDifferentNumbers(...params) {
+//   for (const el of params) {
+//     sumNumbers += el
+//   }
+//   return sumNumbers
+// }
+// console.log(manyDifferentNumbers(2, 6, 8, 9, 4, 12, 55, 47, 10));
+
+
 // ================================================================================================ //
 
 // 14. Задача(AF || FE || FD)
-// Написать функцию, на вход которой подаётся массив чисел.Функция возвращает одно число - наименьшее из них.
+// Написать функцию, на вход которой подаётся массив чисел. Функция возвращает одно число - наименьшее из них.
+
+// AF
+// const userArray = [21, 55, 9, 47, 88, 12, 4, 36];
+// const getMinNumber = numbers => {
+//   let minNumber = userArray[0];
+//   for (const el of numbers) {
+//     if (el < minNumber) {
+//       minNumber = el
+//     }
+//   }
+//   return minNumber
+// }
+// console.log(getMinNumber(userArray));
+
+
+
+// const userArray = [21, 55, 9, 47, 88, 12, 4, 36, 2];
+// const getMinNumber = numbers => {
+//   let minNumber = userArray[0];
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] < minNumber) {
+//       minNumber = numbers[i]
+//     }
+//   }
+//   return minNumber
+// }
+// console.log(getMinNumber(userArray)); //? Как вызвать данную функцию?
+// // let result = getMinNumber();
+// console.log(result);
+
+
+// FE
+// const myArray = [25, 47, -5, 10, 12, 8];
+// let minNumber = myArray[0];
+
+// const getMinNumber = function (number) {
+//   for (const el of number) {
+//     if (el < minNumber) {
+//       minNumber = el
+//     }
+//   }
+//   return minNumber
+// }
+
+// console.log(getMinNumber(myArray));
+
+// FD
+// const array = [55, 12, 90, 14, 35];
+// let minNumber = array[0];
+// function getMinNumber(number) {
+//   for (const el of number) {
+//     if (el < minNumber) {
+//       minNumber = el
+//     }
+//   }
+//   return minNumber
+// }
+
+// console.log(getMinNumber(array));
+
 // ================================================================================================ //
 
 // 15. Задача
 // Что вернёт фунция tester ?
 
 // const tester = (...numbers) => typeof numbers;
-// let result = tester(3, 7, 4, 1); // ?
+// let result = tester(3, 7, 4, 1); // ? object
 // ================================================================================================ //
 
 // 16. Задача
 // Что вернёт фунция tester ?
 
 // const tester = numbers => typeof numbers;
-// let result = tester([3, 7, 4, 1]); // ?
+// let result = tester([3, 7, 4, 1]); // ? object
 // ================================================================================================ //
 
 // 17. Задача
 // Что вернёт фунция tester ?
 
 // const tester = numbers => Array.isArray(numbers);
-// let result = tester([3, 7, 4, 1]); // ?
+// let result = tester([3, 7, 4, 1]); // ? true
 // ================================================================================================ //
 
 // 18. Задача(FD)
@@ -221,6 +358,14 @@ console.log(text(10, 10, 10));
 
 // const tester = numbers => Array.isArray(numbers);
 // let result = tester([3, 7, 4, 1]);
+
+
+// function tester(number) {
+//   let result = Array.isArray(number);
+//   return result
+// }
+
+// console.log(tester([3, 7, 4, 1]));
 // ================================================================================================ //
 
 // 19. Задача(AF)
@@ -233,10 +378,30 @@ console.log(text(10, 10, 10));
 //     return false;
 //   }
 // }
+
+// AF
+// const isLongString = string => string.length > 10 ? true : false
+// console.log(isLongString('hahahahaha'));
+// console.log(isLongString('hahahahahaha'));
 // ================================================================================================ //
 
 // 20. Задача(AF)
-// Написать функцию, на вход которой подаётся 2 параметра.Функция вычисляет произведение двух чисел.Функция возвращает объект, в котором хранится 2 параметра и результат умножения.
+// Написать функцию, на вход которой подаётся 2 параметра. Функция вычисляет произведение двух чисел.Функция возвращает объект, в котором хранится 2 параметра и результат умножения.
+
+// const getObject = (num1, num2) => {
+//   let theProductOfTwoNumbers = num1 * num2;
+//   const userObject = {
+//     'число-1': num1,
+//     'число-2': num2,
+//     'Произведение двух чисел': theProductOfTwoNumbers
+//   }
+//   return userObject
+// }
+
+// console.log(getObject(10, 20));
+// console.log(getObject(20, 30));
+// console.log(getObject(30, 40));
+
 // ================================================================================================ //
 
 // ★ Задачи повышенной сложности ★
