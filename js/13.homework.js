@@ -4,15 +4,20 @@
 
 // FD.
 // function getDataType(params) {
-//   return typeof params
+//   if (params === null) {
+//     return 'null'
+//   } else if (typeof params === 'function') {
+//     return 'object'
+//   } else {
+//     return typeof params
+//   }
 // }
 // console.log(getDataType('text'));
 // console.log(getDataType(20));
 // console.log(getDataType(true));
 // console.log(getDataType({}));
 // console.log(getDataType(undefined));
-// console.log(getDataType(Symbol));
-// console.log(getDataType(BigInt));
+// console.log(getDataType(Number));
 // console.log(getDataType(null));
 
 
@@ -63,13 +68,20 @@
 
 // console.log(checkIsNull(null));
 
+// function checkNull(params) {
+//   return params === null;
+// }
+
+
+
 // ================================================================================================ //
 
 // 3. Задача(AF)
 // Написать функцию, которая проверяет переданное число на чётность.
 
-// const checkNumberIsEven = params => params % 2 === 0
-
+// const checkNumberIsEven = function (params) {
+//   return params % 2 === 0
+// }
 // console.log(checkNumberIsEven(10));
 // console.log(checkNumberIsEven(11));
 // ================================================================================================ //
@@ -78,15 +90,20 @@
 // Написать функцию, которая склеивает переданные строки через пробел. Функция работает, как с двумя, так и со многими переданными переменными.
 
 // const concatString = function (...params) {
-//   let newString = ' ';
-//   for (const el of params) {
-//     newString += el + ' '
-//   }
-//   console.log(newString);
+//   // let newString = '';
+//   // for (const el of params) {
+//   //   newString += el + ' '
+//   // }
+//   // console.log(newString);
+//   return params.join(' ')
 // }
 
-// concatString('HTML', 'CSS', 'JS');
-// concatString('HTML', 'CSS', 'JS', 'PHP', 'Pyton');
+// const concatString = (...params) => params.join(' ')
+
+// Array -> string
+
+// console.log(concatString('HTML', 'CSS', 'JS'));
+// console.log(concatString('HTML', 'CSS', 'JS', 'PHP', 'Pyton'));
 
 // ================================================================================================ //
 
@@ -106,9 +123,10 @@
 // Написать функцию, на вход которой подаётся массив из чисел, функция возвращает новый массив из чисел, которые делятся на 4.
 
 // const arrayNumbers = [2, 40, 88, 128, 75, 63, 90, 140];
-// const userArrayNumbers = [];
+
 
 // function getNewArrayNumbers(numbers) {
+//   const userArrayNumbers = [];
 //   for (const el of numbers) {
 //     if (el % 4 === 0) {
 //       userArrayNumbers.push(el)
@@ -118,6 +136,24 @@
 // }
 
 // console.log(getNewArrayNumbers(arrayNumbers));
+
+
+
+// const arrayNumbers = [2, 40, 88, 128, 75, 63, 90, 140];
+
+// const getNewArrayNumbers = arrayNumbers => {
+//   const userArrayNumbers = [];
+//   for (const el of arrayNumbers) {
+//     if (el % 4 === 0) {
+//       userArrayNumbers.push(el)
+//     }
+//   }
+//   return userArrayNumbers
+// }
+// console.log(getNewArrayNumbers(arrayNumbers));
+
+
+
 
 // ================================================================================================ //
 
@@ -193,8 +229,8 @@
 
 
 // 1. AF
-// let countSymbols = 0;
-// const countAllSymbolsInStr = (...params) => countSymbols = params.join('').length
+
+// const countAllSymbolsInStr = (...params) => params.join('').length
 
 // console.log(countAllSymbolsInStr('abc'));
 // console.log(countAllSymbolsInStr('abc', 'abc'));
@@ -205,7 +241,7 @@
 // 2. FE
 // let countSymbols = 0;
 // const countAllSymbolsInStr = function (...params) {
-//   return countSymbols = params.join('').length
+//   return params.join('').length
 // }
 
 // console.log(countAllSymbolsInStr('abc'));
@@ -216,9 +252,8 @@
 
 
 // 3. FD
-// let countSymbols = 0;
 // function countAllSymbolsInStr(...params) {
-//   return countSymbols = params.join().length
+//   return params.join().length
 // }
 
 // console.log(countAllSymbolsInStr('abc'));
@@ -233,8 +268,9 @@
 // Написать функцию, на вход которой подаёт любое количество чисел.Функция возвращает сумму всех чисел.
 
 // AF
-// let sumNumbers = 0;
+//
 // const manyDifferentNumbers = (...params) => {
+//   let sumNumbers = 0;
 //   for (const el of params) {
 //     sumNumbers += el
 //   }
@@ -297,7 +333,7 @@
 //   return minNumber
 // }
 // console.log(getMinNumber(userArray)); //? Как вызвать данную функцию?
-// // let result = getMinNumber();
+// let result = getMinNumber(userArray)
 // console.log(result);
 
 
@@ -360,9 +396,8 @@
 // let result = tester([3, 7, 4, 1]);
 
 
-// function tester(number) {
-//   let result = Array.isArray(number);
-//   return result
+// function tester(numbers) {
+//   return Array.isArray(numbers);
 // }
 
 // console.log(tester([3, 7, 4, 1]));
@@ -380,7 +415,7 @@
 // }
 
 // AF
-// const isLongString = string => string.length > 10 ? true : false
+// const isLongString = string => string.length > 10
 // console.log(isLongString('hahahahaha'));
 // console.log(isLongString('hahahahahaha'));
 // ================================================================================================ //
@@ -389,14 +424,20 @@
 // Написать функцию, на вход которой подаётся 2 параметра. Функция вычисляет произведение двух чисел.Функция возвращает объект, в котором хранится 2 параметра и результат умножения.
 
 // const getObject = (num1, num2) => {
-//   let theProductOfTwoNumbers = num1 * num2;
-//   const userObject = {
-//     'число-1': num1,
-//     'число-2': num2,
-//     'Произведение двух чисел': theProductOfTwoNumbers
+
+//   return {
+//     num1, // num1: num1
+//     num2, // num1: num2
+//     multi: num1 * num2
 //   }
-//   return userObject
 // }
+
+// const getObject = (num1, num2) => ({
+//   num1, // num1: num1
+//   num2, // num1: num2
+//   multi: num1 * num2
+// })
+
 
 // console.log(getObject(10, 20));
 // console.log(getObject(20, 30));
@@ -408,7 +449,7 @@
 // ★ 21. Задача ★
 // Что выведется в консоль ?
 
-// const tester = numbers => Array.isArray(numbers);
+// const tester = numbers => Array.isArray(numbers); // Объявление функции
 
 // const res = changeBoolToString(tester([3, 7, 4, 1]));
 
@@ -425,10 +466,18 @@
 // const arr = [3, 7, 4, 1];
 // const tester = numbers => Array.isArray(numbers);
 
+
+
 // const res = changeBoolToString(tester);
 
-// function changeBoolToString(a) {
-//   return a(arr) ? "array" : "Not an Array";
+
+// // a - callback
+// function changeBoolToString(callback) {
+//   // callback = tester
+
+//   return callback(arr) ? "array" : "Not an Array";
 // }
 
 // console.log(res);
+
+
