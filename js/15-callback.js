@@ -10,6 +10,7 @@ console.log(console.log('test')) // Передали то, что возвращ
 // * 1. arr.forEach( (value, index, array) => undefined )
 // Простой перебор
 // forEach ничего не возвращает
+// ! Не работает ключевое слово break / Использовать либо for, либо другие hof
 
 
 const array = [3, 15, 9, 20]
@@ -32,6 +33,8 @@ array.forEach(v => {
 // Поиск значениЯ по условию
 // Метод find возвращает первое встречное value, на котором callback-функция вернула true
 // Если ничего не найдёт, то вернёт undefined
+
+
 
 
 const arrayNumber = [5, 7, -1, 3]
@@ -58,6 +61,122 @@ console.log(negValue);
 // Если ничего не найдёт, то вернёт -1
 
 
+// * 4. let array = arr.filter( (value, index, array) => { return bool })
+// Поиск значениЙ по условию
+// Метод filter возвращает массив значений, на котором callback-функция вернула true
+// Если ничего не найдёт, то вернёт []
 
 
-// * 1 - 8
+const testArr = [654, 6, 546, -54, 765, -876, 8, -678]
+
+const negArray = testArr.filter((v) => v < 0)
+console.log(negArray);
+
+
+// * 5. let array = arr.map( (value, index, array) => { return any })
+// Преобразовывает массив
+
+// Метод map возвращает массив значений, которые вернула callback-функция
+// Возвращаемый массив всегда будет такой же длины, как и входной
+
+// ~ Если не вернулось значение, то будет undefined в массиве
+
+
+const nameUser = ['Alex', 'Nick', 'Pavel'] // [4, 4, 5]
+// Получить преобразованный массив, на основе старого
+// Преобразовать массив так, чтобы вместо имён было число - количество букв
+// Вернуть новый массив, не мутировать исходный
+
+const nameLength = nameUser.map((value) => {
+  return value.length
+})
+console.log(nameLength);
+
+
+// Дан массив чисел, заменить только чётные числа на '#'
+
+const numArray = [6, 53, 2, 6, 65, 75, 4]
+
+
+const newArray = numArray.map((value) => {
+  return value % 2 === 0 ? '#' : value
+  // if (value % 2 === 0) {
+  //   return '#'
+  // } else {
+  //   return value
+  // }
+})
+
+console.log(newArray);
+
+
+// * 6. let hasInclude = arr.some( (value, index, array) => { return bool } )
+// Проверка на нахождении хотя бы одного элемента в массиве (по условию)
+// Метод some возвращает true - если есть хотя бы один элемент удовлетворяет, иначе false
+
+
+// * 7. let hasAllInclude = arr.every( (value, index, array) => { return bool } )
+// Проверяет, удовлятворяют ли все элементы массива условию
+// Если все true, иначе false
+
+
+
+// * 8. let value = arr.reduce( (prReturnValue, value, index, array) => { return any }, startValue )
+
+// Вычисляет значение, на основе всего массива
+// reduce возвращает одно значение
+
+// prReturnValue - то, что вернула callback-функция на прошлой итерации
+// Если итерация первая, то её значение равно startValue
+
+// * Пример
+// Посчитать сумму всего массива
+
+const priceList = [10, 5, 7, 1, 3, 4]
+
+const sum = priceList.reduce((prV, value) => {
+  return prV + value
+}, 0)
+console.log(sum);
+
+// prV = 0  value = 10 -> 10
+// prV = 10 value = 5 -> 15
+// prV = 15 value = 7 -> 22
+// ...
+
+// * Пример
+// Посчитать сумму всеъ чисел
+
+const dirtyArray = [5, '547', 5, 7, 'gfdhfg', null, 10]
+
+const clearSum = dirtyArray.reduce((prV, value) => {
+  return typeof value === 'number' ? prV + value : prV
+}, 0)
+
+console.log(clearSum);
+
+
+
+
+
+
+
+// * 9. sort()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
