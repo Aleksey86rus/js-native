@@ -156,16 +156,80 @@ const clearSum = dirtyArray.reduce((prV, value) => {
 console.log(clearSum);
 
 
-
-
-
-
-
 // * 9. sort()
 
 
 
 
+// * forEach
+
+const testArray = [76, 657, 657, 568, 768, 67]
+
+
+function myForEach(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i], i, array)
+  }
+}
+
+
+
+
+// const testCallback = (value, index, array) => {
+//   console.log(value, index, array);
+// }
+
+// myForEach(testArray, testCallback)
+// myForEach(testArray, (value, index, array) => {
+//   console.log(value, index, array);
+// })
+
+// testArray.forEach(testCallback)
+
+
+// * map
+
+const nameList = ['word', 'hello', 'world', 'symbol']
+
+
+
+function myMap(array, callback) {
+  const newArr = []
+
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(callback(array[i], i, array))
+  }
+
+  return newArr
+}
+
+console.log(myMap(nameList, (text) => text.length));
+
+
+console.log(nameList.map((text) => text.length));
+
+
+
+
+
+
+
+
+
+// * Логическая диагностика
+
+// find - 1 значение такого же типа, как и элемент массива
+// findIndex - 1 значение типа number
+
+// map - массив той же длины, что и была, но любого друго или того же типа
+// filter - массив той же длины или меньше, такого же типа данных и тех же значений, что были
+
+// reduce - 1 значение того же типа данных, что и в массиве
+
+// some - 1 значение булевое
+// every - 1 значение булевое
+
+// forEach - ничего не возвращает
 
 
 
