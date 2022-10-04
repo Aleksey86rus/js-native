@@ -113,14 +113,51 @@
 
 // 9. Задача
 // Написать функцию, которая возвращает из массива чисел массив со всеми чётными числами.
+
+// const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function getEvenArray(array) {
+//   return array.filter((value) => value % 2 === 0)
+// }
+
+// console.log(getEvenArray(myArr));
+
+
+// console.log(newMyArr);
+
+
 // =============================================================================== //
 
 // 10. Задача
 // Написать функцию, которая возвращает из массива строк все строки, которые написаны строго в нижнем регистре(Если хотя бы одна буква большая, то такое слово не подходит).
+
+// const textArray = ['gate', 'exit', 'Floor', 'house'];
+
+// function getAllStringInArray(arrString) {
+//   return arrString.filter((value) => value === value.toLowerCase())
+// }
+// console.log(getAllStringInArray(textArray));
+
+// const foo = getAllStringInArray(textArray);
+// console.log(foo);
+// // const myArr = textArray.filter((value) => {
+// //   if (value === value.toLowerCase()) {
+// //     return value
+// //   }
+// // })
+
+
+// const textArray = ['gate', 'exit', 'Floor', 'house'];
+// const myArr = textArray.filter((value) => value === value.toLowerCase())
+// console.log(myArr);
+
+
 // =============================================================================== //
 
 // 11. Задача
-// Дан массив пользователей.а) Написать функцию, которая возвращает из массива пользователей всех, чьё имя длинее 6 символов; б) Написать функцию, которая возвращает из массива пользователей всех, чей возраст выше 20;
+// Дан массив пользователей.
+// а) Написать функцию, которая возвращает из массива пользователей всех, чьё имя длинее 6 символов;
+// б) Написать функцию, которая возвращает из массива пользователей всех, чей возраст выше 20;
 
 // const userList = [
 //   { age: 20, name: 'ALex' },
@@ -131,23 +168,106 @@
 //   { age: 45, name: 'Lexus' },
 //   { age: 95, name: 'Deda' },
 // ]
+
+// a)
+
+// function nameFilter(userList) {
+//   return userList.filter((user) => user.name.length > 4)
+// }
+
+// console.log(nameFilter(userList));
+
+
+
+// б)
+
+// function getUsersAgeMore20(userList) {
+//   return userList.filter((user) => user.age > 20)
+// }
+
+// console.log(getUsersAgeMore20(userList));
+
+// const ageMore20 = userList.filter((user) => user.age > 20)
+// console.log(ageMore20);
+
 // =============================================================================== //
 
 // 12. Задача
 // Написать функцию, которая выводит переданный массив в консоль в красивой форме:
 // элемент №{ } значение: { }
+
+// const array = ['First', 'Second', 'Third'];
+
+// function outputsArrrayInConsole(arr) {
+//   arr.forEach((value, index) => {
+//     console.log(`элемент №${index} значение: ${value}`);
+//   })
+// }
+
+// outputsArrrayInConsole(array);
+
+// myArr.forEach((value, index) => {
+//   console.log(`элемент №${index} значение: ${value}`);
+// })
+
 // =============================================================================== //
 
 // 13. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает другой массив с индексами всех чётных чисел.
+
+
+
+
+// const userArray = [10, 20, 33, 40, 50, 66, 70, 80, 99, 101];
+
+// const indexAllEvenNumbersInArray = [];
+// userArray.forEach((value, index) => {
+//   if (value % 2 === 0) {
+//     indexAllEvenNumbersInArray.push(index);
+//   }
+// })
+// console.log(indexAllEvenNumbersInArray);
+
 // =============================================================================== //
 
 // 14. Задача
 // Написать функцию, на вход которой подаётся массив, которая добавляет ко всем элементам массива префикс "ext-", не мутируя исходный, а возвращает новый массив.
+
+
+// const array = [2018, 2019, 2020, 2021];
+// const newArray = array.map((value) => 'ext-' + value)
+
+// console.log(newArray);
+// console.log(newArray === array);
+// console.log(array);
+
 // =============================================================================== //
 
 // 15. Задача
 // Написать функцию, на вход которой подаётся массив, функция возвращает новый массив из чётных чисел, которые были во входном массиве.
+
+// const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// FIXME: filter
+
+
+
+
+
+
+// function getNewArrayEvenNumbs(numbers) {
+//   const myArr = [];
+//   // forEach
+//   for (const el of numbers) {
+//     if (el % 2 === 0) {
+//       myArr.push(el)
+//     }
+//   }
+//   return myArr
+// }
+
+// console.log(getNewArrayEvenNumbs([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
 // =============================================================================== //
 
 // 16. Задача
@@ -232,40 +352,40 @@
 // =============================================================================== //
 
 // ★ Условие для следующих задач:
-// Дан массив объектов, выполнить следующие задачи: !Запрещено мутировать исходный массив во всех задачах!!Но можно мутировать объекты!
+// Дан массив объектов, выполнить следующие задачи:
 
 // const users = [
 //   {
 //     id: 100
-//         name: "John",
+//     name: "John",
 //     age: 19,
 //     isMarried: false,
 //     scores: 78
 //   },
 //   {
 //     id: 101
-//         name: "Peter",
+//     name: "Peter",
 //     age: 13,
 //     isMarried: false,
 //     scores: 311
 //   },
 //   {
 //     id: 102
-//         name: "John",
+//     name: "John",
 //     age: 33,
 //     isMarried: false,
 //     scores: 0
 //   },
 //   {
 //     id: 103
-//         name: "Alex",
+//     name: "Alex",
 //     age: 14,
 //     isMarried: true,
 //     scores: 121
 //   },
 //   {
 //     id: 104
-//         name: "Lila",
+//     name: "Lila",
 //     age: 18,
 //     isMarried: true,
 //     scores: 999
