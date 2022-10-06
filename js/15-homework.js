@@ -215,8 +215,19 @@
 // 13. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает другой массив с индексами всех чётных чисел.
 
+// const userArray = [10, 20, 33, 40, 50, 66, 70, 80, 99, 101];
 
+// function getAnotherArrayWithIndexEvenNumbers(arr) {
+//   const indexAllEvenNumbersInArray = [];
+//   arr.forEach((value, index) => {
+//     if (value % 2 === 0) {
+//       indexAllEvenNumbersInArray.push(index)
+//     }
+//   })
+//   return indexAllEvenNumbersInArray;
+// }
 
+// console.log(getAnotherArrayWithIndexEvenNumbers(userArray));
 
 // const userArray = [10, 20, 33, 40, 50, 66, 70, 80, 99, 101];
 
@@ -233,6 +244,14 @@
 // 14. Задача
 // Написать функцию, на вход которой подаётся массив, которая добавляет ко всем элементам массива префикс "ext-", не мутируя исходный, а возвращает новый массив.
 
+// const array = [2018, 2019, 2020, 2021];
+
+// function addaAllElPref(arr) {
+//   return arr.map((value) => `ext-` + value)
+// }
+
+// console.log(addaAllElPref(array));
+
 
 // const array = [2018, 2019, 2020, 2021];
 // const newArray = array.map((value) => 'ext-' + value)
@@ -246,12 +265,15 @@
 // 15. Задача
 // Написать функцию, на вход которой подаётся массив, функция возвращает новый массив из чётных чисел, которые были во входном массиве.
 
-// const myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // FIXME: filter
 
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// function getArrEvenNumers(arr) {
+//   return arr.filter((value) => value % 2 === 0)
+// }
 
-
+// console.log(getArrEvenNumers(array));
 
 
 
@@ -272,64 +294,248 @@
 
 // 16. Задача
 // Написать функцию, которая находит первое положительное число в переданном массиве.
+
+// const userArray = [-4, 23, -15, 80, -19, 25];
+
+// function getFirstPosNumber(arr) {
+//   return arr.find((value) => value > 0)
+// }
+
+// console.log(getFirstPosNumber(userArray));
+
+
 // =============================================================================== //
 
 // 17. Задача
 // Написать функцию, на вход которой подаётся массив чисел, которая возвращает массив, в котором все числа уменьшаются в 2 раза.
+
+// const numbArray = [10, 20, 30, 40, 50];
+
+// function getArrayLessThanTwice(arr) {
+//   return arr.map((value) => value / 2)
+// }
+
+// console.log(getArrayLessThanTwice(numbArray));
+
 // =============================================================================== //
 
 // 18. Задача
-// Написать функцию, на вход которой подаётся массив строк, функция возвращает массив чисел - длины строк каждого слова из исходного массива.Например:
+// Написать функцию, на вход которой подаётся массив строк, функция возвращает массив чисел - длины строк каждого слова из исходного массива. Например:
 
 // ['leg', 'pony', 'dog'] -> [3, 4, 3]
+
+// const arrayString = ['car', 'ship', 'plane', 'train'];
+
+// function getArrayNumb(arr) {
+//   return arr.map((value) => value.length)
+// }
+
+// console.log(getArrayNumb(arrayString));
+
+
 // =============================================================================== //
 
 // 19. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция увеличивает в 10 раз все числа в массиве, но не мутирует его, а возвращает новый.
+
+// const array = [1, 2, 3, 4, 5];
+
+// function getIncreasesBy10(arr) {
+//   const newArray = arr.map((value) => value * 10)
+//   return newArray
+// }
+// console.log(getIncreasesBy10(array));
+
+
+// const newArray = getIncreasesBy10(array);
+// console.log(newArray);
+
+// console.log(array);
+// console.log(array === newArray);
+
 // =============================================================================== //
 
 // 20. Задача
 // Написать функцию, которая считает количество нечётных чисел в массиве.
+
+// const array = [2, 15, 18, 22, 55, 91, 100, 40, 88, 11];
+
+// function countOddNumbers(arr) {
+//   let oddNumbers = 0;
+//   arr.forEach((value) => {
+//     if (value % 2 !== 0) {
+//       oddNumbers++
+//     }
+//   });
+//   return oddNumbers
+// }
+
+// console.log(countOddNumbers(array));
+
 // =============================================================================== //
 
 // 21. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает истину, если все числа в массиве чётные.
+
+// const array = [2, 10, 22, 100, 40, 88];
+// // const array = [2, 10, 22, 100, 40, 88, 91];
+
+// function getTrueIfAllNumbersEven(arr) {
+//   return arr.every((value) => value % 2 === 0 ? true : false
+//   );
+// }
+
+// console.log(getTrueIfAllNumbersEven(array));
 // =============================================================================== //
 
 // 22. Задача
 // Написать функцию, которая считает сумму всех отрицательных чисел.
+
+// const array = [-10, -22, -40, -15];
+//? const array = [20, -10, 55, -22, 30, -40, -15];
+
+// function countSumAllNegativeNumbers(arr) {
+//   let allSumNumbers = 0;
+//   arr.forEach((value) => {
+//     if (value < 0) {
+//       allSumNumbers += value
+//     }
+//   });
+//   return allSumNumbers
+// }
+
+// const sum = array.reduce((prV, value) => {
+//   return value + prV
+// }, 0)
+
+// console.log(sum);
+
+
+// console.log(countSumAllNegativeNumbers(array));
+
 // =============================================================================== //
 
 // 23. Задача
 // Написать функцию, которая возвращает наибольшее и наименьшее число из переданного массива. (функция возвращает объект с двумя свойствами)
+
+// const array = [5, 10, -22, 40, -15, 77];
+
+
+// function geLargestAndSmallestNumb(arr) {
+//   let largestNumber = 0;
+//   let smallestNumber = 0;
+
+//   arr.forEach((value) => {
+//     if (value > largestNumber) {
+//       largestNumber = value
+//     }
+//     if (value < smallestNumber) {
+//       smallestNumber = value
+//     }
+//   });
+//   const userObj = {
+//     'Наибольшее число:': largestNumber,
+//     'Наименьшее число:': smallestNumber
+//   }
+//   return userObj;
+// }
+
+// console.log(geLargestAndSmallestNumb(array));
 // =============================================================================== //
 
 // 24. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает true, если в массиве есть нашлось число, которое делится на 17.
+
+// const array = [2, 4, 6, 8, 10, 17, 12, 14, 16];
+
+// function getNumberShareBy17(arr) {
+//   return arr.some((value) => value / 17 === 1);
+// }
+
+// console.log(getNumberShareBy17(array));
+
 // =============================================================================== //
 
 // 25. Задача
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает массив из отрицательных чисел.
+
+
+// const array = [2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20];
+
+
+// function changeEvenOnOddNumbers(arr) {
+//   const evenOnOddNumbers = [];
+//   arr.forEach((value) => {
+//     if (value % 2 === 0) {
+//       evenOnOddNumbers.push(-value)
+//     }
+//   })
+//   return evenOnOddNumbers
+// }
+// console.log(changeEvenOnOddNumbers(array));
+
+
+// function changeEvenOnOddNumbers(arr) {
+//   return arr.map((value) => value = -value)
+// }
+// console.log(changeEvenOnOddNumbers(array));
+
 // =============================================================================== //
 
 // 26. Задача
 // Написать функцию, которая принимает на вход массив чисел, функция мутирует исходный массив - сортируя его в порядке возрастания.
+
+// sort()
+
 // =============================================================================== //
 
 // 27. Задача
 // Написать функцию, которая мутирует входный массив, заменяя всё чётные числа на слово 'even'.
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function changeEvenNumbsOnStr(arr) {
+//   return arr.map((value) => value % 2 === 0 ? 'even' : value)
+// }
+
+// console.log(changeEvenNumbsOnStr(array));
+
 // =============================================================================== //
 
 // 28. Задача
 // Написать функцию, которая возвращает индекс первого встречного отрицательного числа.
+
+// const array = [1, 5, -7, -9, 10, -12];
+
+// function getFirstIndNegativeNumb(arr) {
+//   return arr.findIndex((value) => value < 0)
+// }
+
+// console.log(getFirstIndNegativeNumb(array));
+
 // =============================================================================== //
 
 // 29. Задача
 // Написать функцию, которая мутирует входной массив строк, заменяя все строки на их длину.
+
+
+// const arrString = ['one', 4, 'three', 6, 'sevennn'];
+
+// function changeAllStrInLength(arr) {
+//   return arr.map((value) => typeof value === 'string' ? value.length : value);
+// }
+
+// console.log(changeAllStrInLength(arrString));
+// console.log(arrString === arrString);
+
 // =============================================================================== //
 
 // 30. Задача
 // Написать функцию, которая принимает на вход массив чисел, функция возвращает отсортированный массив чисел в порядке убывания.Но не мутирует исходный массив.
+
+// sort()
+
+
 // =============================================================================== //
 
 // 31. Задача
