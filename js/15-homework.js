@@ -3,8 +3,7 @@
 // Написать функцию, которая находит индекс первого числа в массиве, кратного 3.
 
 
-// const myArray = [2, 1, 5, 9, 8, 10];
-
+const myArray = [2, 1, 5, 9, 8, 10];
 // // const searchFirstIndexInArray = myArray.findIndex((value) => {
 // //   return value % 3 === 0;
 // // })

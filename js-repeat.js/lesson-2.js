@@ -1,57 +1,49 @@
 // 1. Задача
 // Создать 3 перемнных, все разного типа данных. Вывести в консоль в одну строчку через пробел.
 
-let season = 'весна';
-let month = 5;
-let nullVar = null;
+// let userText = 'JavaScript';
+// let userNum = 20;
+// let isAdmin = true;
 
-console.log(season + " " + month + " " + nullVar);
-console.log(season, month, nullVar);
-
-
-console.log("На дворе " + season + " месяц " + month + " null");
+// console.log(userText + ' ' + userNum + ' ' + isAdmin);
 
 //-------------------------------------------------------------------------------
 
 // 2. Задача
 //Создать переменную, которая хранит имя. Вывести в консоль приветствие:
 //Привет, <имя из переменной>!
-//  <имя из переменной>, привет!
+//<имя из переменной>, привет!
 
-// let userName = "Алексей";
-// console.log(userName + ", Привет!");
+// let userName = 'Karlos';
 
-
+// console.log('Привет, ' + userName);
+// console.log(userName + ',' + ' Привет');
 
 //-------------------------------------------------------------------------------
 
 //3. Задача
 //Объяви переменные intValue, numericValue, size, number типа number. Присвой им любые разные значения. Вывести в консоль переменные через пробел, в обратном порядке их создания.
 
-// let intValue = 20;
-// let numbericValue = 100;
-// let size = 50;
-// let number = NaN;
 
-// console.log(number + " " + size + " " + numbericValue + " " + intValue);
+// let intValue = 'Value';
+// let numbericValue = 55;
+// let size = 'Large';
+// let number = 100;
 
-// console.log(typeof number);
-// console.log(typeof size);
-// console.log(typeof numbericValue);
-// console.log(typeof intValue);
+// console.log(number, size, numbericValue, intValue);
 
 //-------------------------------------------------------------------------------
 
 //4. Задача
 //Создать 3 перемнных, все разного типа данных. Вывести их тип в консоль.
 
-// let number = 20;
-// let string = "JavaScript";
-// let hasUserRight = true;
+// let userStr = 'Winter';
+// let userNum = 12;
+// let hasAdmin = false;
 
-// console.log(typeof number); // "number"
-// console.log(typeof string);
-// console.log(typeof hasUserRight);
+// console.log(typeof userStr);
+// console.log(typeof userNum);
+// console.log(typeof hasAdmin);
 
 //-------------------------------------------------------------------------------
 
@@ -63,11 +55,10 @@ console.log("На дворе " + season + " месяц " + month + " null");
 //user__text = 'Какой-то текст";
 //console.log(chiclo boolian user__text)
 
-
-// userAge = 10;
-// isBoolean = false;
-// userText = "Какой-то текст";
-// console.log(userAge, isBoolean, userText);
+// let userAge = 10;
+// let isAdmin = false;
+// let userText = 'Какой-то текст';
+// console.log(userAge, isAdmin, userText);
 
 //-------------------------------------------------------------------------------
 
@@ -82,12 +73,13 @@ console.log("На дворе " + season + " месяц " + month + " null");
 //console.log(uzerName + "имеет" + "доступ:" + "true")
 
 
-// let userName = "Валентин";
+// let userName = 'Валентин';
 // let userMoney = 2000;
 // let hasAccess = true;
 
-// console.log("У " + userName + "a есть " + userMoney + " монет");
-// console.log(userName + " имеет доступ: " + hasAccess);
+
+// console.log('У ' + userName + 'a есть ' + userMoney + ' монет');
+// console.log(userName + ' имеет доступ: ' + true);
 
 //-------------------------------------------------------------------------------
 
@@ -108,17 +100,19 @@ console.log("На дворе " + season + " месяц " + month + " null");
 //console.log(text);
 
 
-// let text = '';
-// // text = text + "Merry";
-// // text = text + "Christmas\n";
-// // text = text + "Merry New\n";
-// // text = text + "New";
-// // text = text + "weekend\n";
-// text = text + "Happy New";
-// // text = text + "Merry New!";
-// // text = text + " ";
-// text = text + " Year";
-// console.log(text);
+let text = '';
+// text = text + "Merry";
+// text = text + "Christmas\n";
+// text = text + "Merry New\n";
+// text = text + "New";
+// text = text + "weekend\n";
+debugger
+text = "Happy New";
+// text = text + "Merry New!";
+text = text + " ";
+text = text + "Year";
+console.log(text);
+
 
 //-------------------------------------------------------------------------------
 
@@ -131,13 +125,7 @@ console.log("На дворе " + season + " месяц " + month + " null");
 // let x = 2;
 // let y = 12;
 
-// //y = x * y;
-// y = x + y;
 
-// x = y - x;
-// y = y - x;
-// console.log(x);
-// console.log(y);
 
 //-------------------------------------------------------------------------------
 
@@ -162,30 +150,12 @@ console.log("пять");
 console.log(a + b);*/
 
 
-// // 2 плюс 3 равно 5
-// let a = 3;
-// let b = 2;
-
-// //console.log("два");
-// console.log(b);
-// console.log(" плюс ");
-// //console.log(" минус ");
-// console.log(a);
-// //console.log("три");
-// console.log(" равно ");
-// //console.log(" будет ");
-// //console.log("пять");
-// console.log(a + b);
-
 //-------------------------------------------------------------------------------
 
 //10. Задача
 //Пользователь вводит с клавиатуры любое сначала число, а затем текст. Вывести в консоль в следующем виде:
 //Вы ввели текст: <текст пользователя>, вы ввели число: <число пользователя>
 
-//let textUser = prompt('Введите текст');
-//let numberUser = prompt('Введите число');
-//console.log("Вы ввели текст: " + textUser + ", вы ввели число: " + numberUser);
 
 //-------------------------------------------------------------------------------
 
@@ -198,11 +168,6 @@ console.log(a + b);*/
 //console.log(typeof "Pavel");//string
 //console.log(typeof "undefined");//string
 
-//console.log(typeof -106.432);//number
-//console.log(typeof "null");//string
-//console.log(typeof 111);//number
-//console.log(typeof true);//boolean
-//console.log(typeof " ");//string
 
 //-------------------------------------------------------------------------------
 
@@ -215,11 +180,6 @@ console.log(a + b);*/
 //console.log(typeof "true");//string
 //console.log(typeof null);// object
 
-//console.log(typeof "tester");//string
-//console.log(typeof NaN);//number
-//console.log(typeof false);//boolean
-//console.log(typeof -Infinity);//number
-//console.log(typeof undefined);//undefined
 
 //-------------------------------------------------------------------------------
 
