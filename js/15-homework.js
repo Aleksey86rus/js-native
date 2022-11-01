@@ -3,7 +3,8 @@
 // Написать функцию, которая находит индекс первого числа в массиве, кратного 3.
 
 
-const myArray = [2, 1, 5, 9, 8, 10];
+// const myArray = [2, 1, 5, 9, 8, 10];
+
 // // const searchFirstIndexInArray = myArray.findIndex((value) => {
 // //   return value % 3 === 0;
 // // })
@@ -340,8 +341,7 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // const array = [1, 2, 3, 4, 5];
 
 // function getIncreasesBy10(arr) {
-//   const newArray = arr.map((value) => value * 10)
-//   return newArray
+//   return arr.map((value) => value * 10)
 // }
 // console.log(getIncreasesBy10(array));
 
@@ -356,6 +356,8 @@ const myArray = [2, 1, 5, 9, 8, 10];
 
 // 20. Задача
 // Написать функцию, которая считает количество нечётных чисел в массиве.
+
+//  FIXME: reduce
 
 // const array = [2, 15, 18, 22, 55, 91, 100, 40, 88, 11];
 
@@ -377,11 +379,10 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает истину, если все числа в массиве чётные.
 
 // const array = [2, 10, 22, 100, 40, 88];
-// // const array = [2, 10, 22, 100, 40, 88, 91];
+// const array = [2, 10, 22, 100, 40, 88, 91];
 
 // function getTrueIfAllNumbersEven(arr) {
-//   return arr.every((value) => value % 2 === 0 ? true : false
-//   );
+//   return arr.every((value) => value % 2 === 0)
 // }
 
 // console.log(getTrueIfAllNumbersEven(array));
@@ -390,6 +391,8 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // 22. Задача
 // Написать функцию, которая считает сумму всех отрицательных чисел.
 
+
+// FIXME: ! reduce
 // const array = [-10, -22, -40, -15];
 //? const array = [20, -10, 55, -22, 30, -40, -15];
 
@@ -417,6 +420,8 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // 23. Задача
 // Написать функцию, которая возвращает наибольшее и наименьшее число из переданного массива. (функция возвращает объект с двумя свойствами)
 
+// FIXME: вместо 1 forEach 2 reduce
+
 // const array = [5, 10, -22, 40, -15, 77];
 
 
@@ -443,12 +448,13 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // =============================================================================== //
 
 // 24. Задача
-// Написать функцию, на вход которой подаётся массив чисел, функция возвращает true, если в массиве есть нашлось число, которое делится на 17.
+// Написать функцию, на вход которой подаётся массив чисел, функция возвращает true, если в массиве есть число, которое делится на 17.
 
-// const array = [2, 4, 6, 8, 10, 17, 12, 14, 16];
+// const array = [2, 4, 6, 8, 10, 34, 12, 14, 16];
 
 // function getNumberShareBy17(arr) {
-//   return arr.some((value) => value / 17 === 1);
+//   // return arr.some((value) => value % 17 === 0);
+//   return arr.some((value) => value % 17 === 0);
 // }
 
 // console.log(getNumberShareBy17(array));
@@ -459,9 +465,16 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // Написать функцию, на вход которой подаётся массив чисел, функция возвращает массив из отрицательных чисел.
 
 
-// const array = [2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20];
+// const array = [2, 4, 6, 8, -10, -12, 13, 14, 16, 18, 20];
+
+// function getNegativNumbers(arr) {
+//   return arr.filter((value) => value < 0)
+// }
+
+// console.log(getNegativNumbers(array));
 
 
+// ???
 // function changeEvenOnOddNumbers(arr) {
 //   const evenOnOddNumbers = [];
 //   arr.forEach((value) => {
@@ -518,14 +531,18 @@ const myArray = [2, 1, 5, 9, 8, 10];
 // Написать функцию, которая мутирует входной массив строк, заменяя все строки на их длину.
 
 
-// const arrString = ['one', 4, 'three', 6, 'sevennn'];
+const arrString = ['one', 4, 'three', 6, 'sevennn'];
+
+
+// FIXME: forEach - хорошо подходит для мутаций
 
 // function changeAllStrInLength(arr) {
 //   return arr.map((value) => typeof value === 'string' ? value.length : value);
 // }
 
-// console.log(changeAllStrInLength(arrString));
-// console.log(arrString === arrString);
+// const resultArray = changeAllStrInLength(arrString)
+// console.log(resultArray);
+// console.log(arrString === resultArray);
 
 // =============================================================================== //
 
@@ -554,60 +571,127 @@ const myArray = [2, 1, 5, 9, 8, 10];
 //   negArray: [-43, -98, -76, -8, -7]
 //   moreTenArray: [34, 45, 432, 65, 876, 56, 76, 45]
 // }
+
+
+// const array = [3, 6, 7, -43, 34, 6, -98, 45, 432, 65, 876, -76, -8, 56, -7, 76, 45, 6];
+
+// // filter 3x
+
+// const getInfoFromArray = (array) => ({
+//   even: array.filter((value) => value % 2 === 0),
+//   neg: array.filter((value) => value < 0),
+//   moreTen: array.filter((value) => value > 10)
+// })
+
+
+
+// console.log(getInfoFromArray(array));
+
+
+// function gerObj(arr) {
+//   const arrEvenNumbers = [];
+//   const arrNegativeNumbers = [];
+//   const arrNumbersMore10 = [];
+
+
+//   arr.forEach((value) => {
+//     if (value % 2 === 0) {
+//       arrEvenNumbers.push(value)
+//     }
+//     if (value < 0) {
+//       arrNegativeNumbers.push(value)
+//     }
+//     if (value > 10) {
+//       arrNumbersMore10.push(value)
+//     }
+//   });
+
+//   const output = {
+//     'evenArray': arrEvenNumbers,
+//     'negArray': arrNegativeNumbers,
+//     'moreTenArray': arrNumbersMore10
+//   }
+
+//   return output
+// }
+
+
+
+// console.log(gerObj(array));
+
 // =============================================================================== //
 
 // ★ Условие для следующих задач:
 // Дан массив объектов, выполнить следующие задачи:
 
-// const users = [
-//   {
-//     id: 100
-//     name: "John",
-//     age: 19,
-//     isMarried: false,
-//     scores: 78
-//   },
-//   {
-//     id: 101
-//     name: "Peter",
-//     age: 13,
-//     isMarried: false,
-//     scores: 311
-//   },
-//   {
-//     id: 102
-//     name: "John",
-//     age: 33,
-//     isMarried: false,
-//     scores: 0
-//   },
-//   {
-//     id: 103
-//     name: "Alex",
-//     age: 14,
-//     isMarried: true,
-//     scores: 121
-//   },
-//   {
-//     id: 104
-//     name: "Lila",
-//     age: 18,
-//     isMarried: true,
-//     scores: 999
-//   },
-// ]
+const users = [
+  {
+    id: 100,
+    name: "John",
+    age: 19,
+    isMarried: false,
+    scores: 78
+  },
+  {
+    id: 101,
+    name: "Peter",
+    age: 13,
+    isMarried: false,
+    scores: 311
+  },
+  {
+    id: 102,
+    name: "John",
+    age: 33,
+    isMarried: false,
+    scores: 0
+  },
+  {
+    id: 103,
+    name: "Alex",
+    age: 14,
+    isMarried: true,
+    scores: 121
+  },
+  {
+    id: 104,
+    name: "Lila",
+    age: 18,
+    isMarried: true,
+    scores: 999
+  },
+]
 // =============================================================================== //
 
 // 32. Задача
-// Написать функцию, которая получает из массива объектов - массив имён пользователей.
+// Написать функцию, которая получает из массива объектов - массив возрастов пользователя.
 
-// Функция возвращает новый массив, не мутируя исходный так, чтобы можно было использоваться этот же массив во всех следующих задачах.
+
+// function getageUser(userList) {
+//   return userList.map((user) => user.age)
+// }
+
+
+// const arrayAge = []
+// for (let i = 0; i < users.length; i++) {
+//   arrayAge.push(users[i].age)
+// }
+// console.log(arrayAge);
+
+
+
+// console.log(getageUser(users));
+
+
+
+
+
 // =============================================================================== //
 
 // 33. Задача
 // Написать функцию, которая принимает на вход массив пользователей, функция возвращает массив строк вида:
 
-// {/* <div>
+// `<div>
 //   <span>
 //     Имя: <значение>
 //   </span>
@@ -617,7 +701,7 @@ const myArray = [2, 1, 5, 9, 8, 10];
 //   <span>
 //     Семейное положение: <значение>
 //   </span>
-// </div> */}
+// </div>`
 // =============================================================================== //
 
 // 34. Задача
