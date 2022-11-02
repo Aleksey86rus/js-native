@@ -11,25 +11,25 @@
 // 2. Задача
 // Написать функцию, которая проверяет является ли переданная перемнная объектом.
 
-// const capitalsOfCountries = {
-//   'Great Britain': 'London',
-//   'Russia': 'Moscow',
-// };
-// const checkObj = myArray => typeof myArray === 'object' && myArray !== null;
-// console.log(checkObj(capitalsOfCountries));
-// console.log(checkObj({}));
-// console.log(checkObj(null)); // false
+const capitalsOfCountries = {
+  'Great Britain': 'London',
+  'Russia': 'Moscow',
+};
+const checkObj = myArray => typeof myArray === 'object' && myArray !== null;
+console.log(checkObj(capitalsOfCountries));
+console.log(checkObj({}));
+console.log(checkObj(null)); // false
 
 
-// typeof null === 'object' || null !== null;
-// true || false; // true
+typeof null === 'object' || null !== null;
+true || false; // true
 
 // ! Разоабраться раз и навсегда !
 
 // ===================================================================== //
 
 // ! FIXME: 3. Задача
-// Написать функцию, на вход которой подаётся массив и любое количество переменных любого типа. Функция возвращает переданный массив, добавляя в него остальные переданные параметры.
+// Написать функцию, на вход которй подаётся массив и любое количество переменных любого типа. Функция возвращает переданный массив, добавляя в него остальные переданные параметры.
 
 
 // let userStr = 'String';
