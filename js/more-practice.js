@@ -6,6 +6,8 @@
 // console.log(typeof null); // 'object'
 
 // console.log(typeof (() => { })); // 'function'
+
+
 // console.log(typeof typeof (Number('10'))); //'string'
 // console.log(typeof typeof (Number('10') * 5 + parseInt(30.5) && true || 0)); //'string'
 
@@ -105,20 +107,70 @@
 
 // 4.  Написать функцию, которая проверяет перемнную, является ли она чётным числом
 
+// let userNum = 10;
+// let userNum = 11;
 
+// the first option)
+// function checkIsEvenNumber(num) {
+//   if (num % 2 === 0) {
+//     return true
+//   }
+//   return false
+// }
 
+// the second option)
+// function checkIsEvenNumber(num) {
+//   return num % 2 === 0 ? true : false
+// }
+
+// the third option)
+// function checkIsEvenNumber(num) {
+//   return num % 2 === 0
+// }
+
+// console.log(checkIsEvenNumber(userNum));
 
 //=====================================================================================
 
 // 5. Написать функцию, которая проверяет является ли перемнная типом number
+
+// let userNum = 10;
+// let userNum = '10';
+// let userNum = NaN;
+// let userNum = null;
+// let userNum = Infinity;
+
+// function checkIsTypeNumber(num) {
+//   return typeof num === 'number'
+// }
+
+// console.log(checkIsTypeNumber(userNum));
+
+
 //=====================================================================================
 
 // 6. Написать функцию, которая проверяет перемнную, является ли она объектом
 
+// let userType = {};
+// let userType = 10;
+// let userType = '10';
+// let userType = null;
+// let userType = [];
+// let userType = (() => { });
+
+
+// function checkIsObject(params) {
+//   return typeof params === 'object' && params !== null;
+// }
+
+// console.log(checkIsObject(userType));
+
+
+
 
 // * Следим за названием функции или оператором
 
-// Повторить математику и логический тип на приоритет действий
+// Повторить математику и логический тип на приоритет действийs
 // Повторить значения всех типов данных
 // Повторить преобразование к Boolean / Number / String
 // Повтоориьт AF, FD, FE
