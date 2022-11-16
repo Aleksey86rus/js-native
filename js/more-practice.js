@@ -179,6 +179,152 @@
 
 
 
+// * ===== switch - case ===== * //
+
+// Пользователь ввёл число, оно сохранилось в переменную
+// Если оно рано 1, то вывести 1
+// Если оно равно 2, то вывести 4
+// Если оно равно 3, то вывести 'ok'
+// Если оно равно 4, то вывести 'ok-ok'
+// Иначе вывести 'error'
+
+// const userNum = 0
+
+// if (userNum === 1) {
+//   console.log(userNum);
+// } else if (userNum === 2) {
+//   console.log(4);
+// } else if (userNum === 3) {
+//   console.log('ok');
+// } else if (userNum === 4) {
+//   console.log('ok-ok');
+// } else {
+//   console.error('error');
+// }
+
+// switch
+// Только если проверяем одну переменную
+// И только если везде сранвнение ===
+
+
+// switch (userNum) {
+//   case 1:
+//     return userNum
+
+//   case 2:
+//     return 4
+
+//   case 3:
+//     return 'ok';
+
+//   case 4:
+//     return 'ok-ok';
+
+//   default:
+//     return 'error';
+// }
+
+
+
+
+// Если это число чётное, то вывести только: even;
+// Если это число делится на 7, то вывести только: multiple;
+// Но если это число и чётное, и делится на 7, то вывести только: even & multiple;
+
+
+// let userNum = Number(prompt('Write your number'));
+// if (userNum % 2 === 0 && userNum % 7 === 0) {
+//   console.log('even & multiple');
+// } else if (userNum % 2 === 0) {
+//   console.log('even');
+// } else if (userNum % 7 === 0) {
+//   console.log('multiple');
+// }
+
+// let userNum = Number(prompt('Write your number'));
+// if (userNum % 7 === 0 && userNum % 2 !== 0) {
+//   console.log('multiple');
+// } else if (userNum % 2 === 0 && userNum % 7 !== 0) {
+//   console.log('even');
+// } else if (userNum % 2 === 0 && userNum % 7 === 0) {
+//   console.log('even & multiple');
+// }
+
+
+
+
+// Написать функцию, которая проверяет массив, является ли он пустой и если он пустой, то функция возвращает 0
+// Иначе 1
+
+
+function checkArray(arr) {
+  // arr.length -> 0
+  // if (Boolean(arr.length)) -> if (Boolean(0))
+  if (arr.length) { // true  arr.length > 0 <==>  arr.length !== 0
+    return 1
+  } else { // arr.length === 0
+    return 0
+  }
+  // return arr.length ? 1 : 0 //  Refactoring
+}
+
+// const checkArray = arr => arr.length ? 1 : 0 // Full Refactoring
+
+
+
+console.log(7 && 'fd' && null && []); //  null
+console.log(7 && 'fd' && 'null' && []); // []
+console.log(7 && 'fd' && 'null' && 77); // 77
+// console.log(true && true && false && true); //  false
+// 
+
+
+// Написать функцию, которая проверяет строчку, если в ней ест хотя бы 1 символ, то вернуть true
+// Иначе возвращает 0
+
+
+// function checkStr(str) {
+//   // if (str.length) {
+//   //   return true
+//   // } else {
+//   //   return ''
+//   // }
+//   return str.length ? true : 0;
+// }
+
+function checkStr(str) {
+  // return str.length ? true : 0;
+  return str.length && true;
+}
+
+
+
+const userStr = '';
+console.log(checkStr(userStr));
+
+
+
+
+const userArr = [];
+
+console.log(checkArray(userArr)); // expect -> 0
+
+
+
+
+
+
+
+
+
+
+// TODO: https://habr.com/ru/post/298134/
+// Напишите программу, которая выводит на экран числа от 1 до 100.
+// При этом вместо чисел, кратных трем, программа должна выводить слово «Fizz», а вместо чисел, кратных пяти — слово «Buzz».
+// Если число кратно и 3, и 5, то программа должна выводить слово «FizzBuzz»
+
+
+
 
 
 
